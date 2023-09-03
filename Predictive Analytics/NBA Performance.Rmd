@@ -1,0 +1,184 @@
+---
+title: "NBA Performance"
+output: github_document
+date: "2022-04-25"
+---
+
+Load the data
+
+``` {r}
+players.df <- read.csv("players.csv")
+head(players.df)
+dim(players.df)
+```
+
+Remove the one player with no position or stats
+``` {r}
+players.df <- players.df[-which(players.df$position == ""),]
+dim(players.df)
+head(players.df)
+```
+
+Remove players with no NCAA data
+``` {r}
+a <- which(is.na(players.df$NCAA__3ptpct))
+b <- which(is.na(players.df$NCAA_ft))
+c <- which(is.na(players.df$NCAA_ppg))
+no_ncaa <- union(a, union(b, c))
+```
+
+New dataframe without missing data
+``` {r}
+players_no_ncaa.df <- players.df[-no_ncaa,]
+dim(players_no_ncaa.df)
+```
+
+Remove players with less than 10 NBA games played
+``` {r}
+less_10 <- which(players_no_ncaa.df$NBA_g_played < 10)
+players_no_ncaa.df <- players_no_ncaa.df[-less_10,]
+dim(players_no_ncaa.df)
+```
+
+Make a new dataframe with just NCAA data and NBA fg %
+```{r}
+players_no_ncaa.df <- players_no_ncaa.df[,-c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,26)]
+dim(players_no_ncaa.df)
+```
+
+Rename some of the columns for consistency:
+``` {r}
+names(players_no_ncaa.df)[names(players_no_ncaa.df) == "NBA_fg."] <- "NBA_fgpct"
+names(players_no_ncaa.df)[names(players_no_ncaa.df) == "NCAA_ft"] <- "NCAA_ftpct"
+names(players_no_ncaa.df)[names(players_no_ncaa.df) == "NCAA__3ptpct"] <- "NCAA_3ptpct"
+head(players_no_ncaa.df)
+dim(players_no_ncaa.df)
+```
+
+Visualizations used to try to find valuable insights in the data
+``` {r}
+plot(players_no_ncaa.df$NBA_fgpct ~ players_no_ncaa.df$NCAA_ppg, xlab = "NCAA ppg", ylab = "NBA fg %")
+plot(players_no_ncaa.df$NBA_fgpct ~ players_no_ncaa.df$NCAA_fgpct, xlab = "NCAA fg %", ylab = "NBA fg %")
+plot(players_no_ncaa.df$NBA_fgpct ~ players_no_ncaa.df$NCAA_ftpct, xlab = "NCAA ft %", ylab = "NBA fg %")
+plot(players_no_ncaa.df$NBA_fgpct ~ players_no_ncaa.df$NCAA_3ptpct,xlab = "NCAA 3pt %", ylab = "NBA fg %")
+
+hist(players_no_ncaa.df$NBA_fgpct, xlim = c(0,0.7), main = "", xlab = "NBA fg %")
+hist(players_no_ncaa.df$NCAA_fgpct, xlim = c(0,0.7), main = "", xlab = "NCAA fg %")
+
+# These show comparisons between above and below average NBA shooters and their NCAA statistics
+boxplot(players_no_ncaa.df$NCAA_fgpct ~ as.factor(ifelse(players_no_ncaa.df$NBA_fgpct > 0.461, "1", "0")), xlab = "Above Average NBA Shooter (46.1%)", ylab = "NCAA fg %")
+boxplot(players_no_ncaa.df$NCAA_ftpct ~ as.factor(ifelse(players_no_ncaa.df$NBA_fgpct > 0.461, "1", "0")),  ylab = "NCAA ft %")
+```
+
+Partition the data
+``` {r}
+RNGkind(sample.kind = "Rounding")
+set.seed(10)
+
+train.index <- sample(c(1:dim(players_no_ncaa.df)[1]), dim(players_no_ncaa.df)[1]*0.8)  
+train.df <- players_no_ncaa.df[train.index, ]
+valid.df <- players_no_ncaa.df[-train.index, ]
+head(train.df)
+head(valid.df)
+```
+
+Use exhaustive, forward, backward, step-wise, and PCA to get the best NCAA predictive variables
+
+Exhaustive Search
+``` {r}
+library(leaps)
+NCAA_exhaust <- regsubsets(NBA_fgpct ~ ., data = train.df, nbest = 1, nvmax = dim(train.df)[2], method = 'exhaustive')
+
+sum1 <- summary(NCAA_exhaust)
+sum1
+sum1$which
+#find how many variables needed to get max adjusted r2
+Adjr2 = which.max(sum1$adjr2)
+Adjr2
+players.glm.exhaust <- glm(NBA_fgpct ~ NCAA__3ptapg + NCAA_fgapg + NCAA_fgpct + NCAA_fgpg + NCAA_ftpct + NCAA_games, data = train.df)
+# Most important variables: NCAA_fgpct, NCAA_games, NCAA_ftpct
+```
+
+Forward Selection
+``` {r}
+players.glm <- glm(NBA_fgpct ~ ., data = train.df, family = "binomial") 
+options(scipen=999) 
+summary(players.glm)
+players.glm.null <- glm(NBA_fgpct ~ 1, data = train.df) 
+players.glm.forward <- step(players.glm.null, scope=list(lower=players.glm.null, 
+                            upper=players.glm), direction = "forward")
+summary(players.glm.forward)
+```
+
+Backward
+``` {r}
+players.glm.backward <- step(players.glm, direction = "backward") 
+summary(players.glm.backward)
+players.glm
+```
+
+Stepwise
+``` {r}
+players.glm.step <- step(players.glm, direction = "both")
+summary(players.glm.step)
+```
+
+PCA
+``` {r}
+players.pca <- prcomp(train.df, scale. = T)
+summary(players.pca)
+players.pca$rotation[,1:6]
+players.pca$center
+head(players.pca$x[,1:6])
+
+# create a dataframe of the NBA fg % and PC scores from training data
+PC.df <- data.frame(train.df$NBA_fgpct, players.pca$x)
+players.glm.PCA <- glm(train.df.NBA_fgpct ~ PC1 + PC2 + PC3 + PC4 + PC5 + PC6, data = PC.df)
+coefficients <- players.glm.PCA$coefficients
+PC_valid <- as.data.frame(scale(valid.df[,(-1)]))*players.pca$rotation
+dim(PC_valid)
+PC_hat <- coefficients*PC_valid
+
+# new dataframe of the PC_hat and valid.df$NBA_fgpct
+PC.df2 <- data.frame(valid.df$NBA_fgpct, PC_hat)
+
+PCA.valid.glm <- glm(valid.df.NBA_fgpct ~ ., data = PC.df2)
+```
+
+Confusion Matrices
+``` {r}
+library(caret)
+players.glm.exhaust.pred <- predict(players.glm.exhaust, valid.df, type = 'response')
+players.glm.backward.pred <- predict(players.glm.backward, valid.df, type = 'response')
+players.glm.forward.pred <- predict(players.glm.forward, valid.df, type = 'response')
+players.glm.step.pred <- predict(players.glm.step, valid.df, type = 'response')
+players.pca.pred <- predict(PCA.valid.glm, valid.df)
+
+# NBA fg % average is 46.1%, so let's try that as the cutoff
+confusionMatrix(as.factor(ifelse(players.glm.exhaust.pred > 0.461, "1", "0")),
+                as.factor(ifelse(valid.df$NBA_fgpct > 0.461, "1", "0")), positive = "1")
+confusionMatrix(as.factor(ifelse(players.glm.backward.pred > 0.461, "1", "0")), 
+                as.factor(ifelse(valid.df$NBA_fgpct > 0.461, "1", "0")), positive = "1")
+confusionMatrix(as.factor(ifelse(players.glm.forward.pred > 0.461, "1", "0")), 
+                as.factor(ifelse(valid.df$NBA_fgpct > 0.461, "1", "0")), positive = "1")
+confusionMatrix(as.factor(ifelse(players.glm.step.pred > 0.461, "1", "0")), 
+                as.factor(ifelse(valid.df$NBA_fgpct > 0.461, "1", "0")), positive = "1")
+confusionMatrix(as.factor(ifelse(players.pca.pred > 0.461, "1", "0")), 
+                as.factor(ifelse(valid.df$NBA_fgpct > 0.461, "1", "0")), positive = "1")
+```
+
+Check accuracy of the models
+``` {r}
+library(forecast)
+accuracy(players.glm.exhaust.pred, valid.df$NBA_fgpct)
+accuracy(players.glm.backward.pred, valid.df$NBA_fgpct)
+accuracy(players.glm.forward.pred, valid.df$NBA_fgpct)
+accuracy(players.glm.step.pred, valid.df$NBA_fgpct)
+accuracy(players.pca.pred, valid.df$NBA_fgpct)
+```
+
+Residuals Check
+``` {r}
+residuals <- abs(players.glm.forward.pred - valid.df$NBA_fgpct)
+summary(residuals)
+```
