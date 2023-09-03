@@ -1,0 +1,473 @@
+---
+title: "House Data Project"
+output: html_document
+date: '2022-09-21'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Load the data:
+```{r}
+house_data <- read.csv("kc_house_data.csv")
+```
+Here is what we know about the variables:
+id - Unique ID for each home sold
+date - Date of the home sale
+price - Price of each home sold
+bedrooms - Number of bedrooms
+bathrooms - Number of bathrooms, where .5 accounts for a room with a toilet but no shower
+sqft_living - Square footage of the apartments interior living space
+sqft_lot - Square footage of the land space
+floors - Number of floors
+waterfront - A dummy variable for whether the apartment was overlooking the waterfront or not
+view - An index from 0 to 4 of how good the view of the property was
+condition - An index from 1 to 5 on the condition of the apartment
+grade - An index from 1 to 13, where 1-3 falls short of building construction and design, 7 has an average level of construction and design, and 11-13 have a high quality level of construction and design.
+sqft_above - The square footage of the interior housing space that is above ground level
+sqft_basement - The square footage of the interior housing space that is below ground level
+yr_built - The year the house was initially built
+yr_renovated - The year of the house’s last renovation
+zipcode - What zipcode area the house is in
+lat - Latitude
+long - Longitude
+sqft_living15 - The square footage of interior housing living space for the nearest 15 neighbors
+sqft_lot15 - The square footage of the land lots of the nearest 15 neighbors
+
+
+Summary of the data set:
+```{r}
+summary(house_data)
+dim(house_data)
+```
+
+Load the ggplot library:
+```{r}
+library(ggplot2)
+```
+
+```{r}
+ggplot(house_data,
+              aes(y = price,
+                  x = date)) +
+  geom_point(color = "blue", alpha = 0.1, size = 0.5) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank()) +
+  labs(y = "Price ($)",
+       x = "Date of Sale",
+       title = "Date v Price")
+```
+
+
+
+
+Create a visualization:
+```{r}
+options(scipen = 999999)
+g_1 <- ggplot(house_data,
+              aes(y = price,
+                  x = sqft_living)) +
+  geom_point(color = "blue", alpha = 0.1, size = 0.5) +
+  theme_bw() +
+  geom_smooth(method = "lm") +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank()) +
+  labs(y = "Price ($)",
+       x = "Living Space (square ft)",
+       title = "Living Space v Price")
+
+g_1
+```
+
+Visualization 2:
+```{r}
+g_2 <- ggplot(house_data,
+              aes(y = price,
+                  x = factor(bathrooms))) +
+  geom_boxplot(color = "red", alpha = 0.3) + 
+  theme_bw() + 
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank()) +
+  labs(y = "Price", 
+       x = "Number of Bathrooms",
+       title = "Price v Bathrooms")
+
+g_2
+```
+
+Visualization 3:
+```{r}
+g_3 <- ggplot(house_data, aes(x = price)) +
+  geom_density(fill = "blue", alpha = 0.3) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank()) +
+  labs(x = "Price",
+       title = "Density plot of Price")
+
+g_3
+```
+
+Visualization 4:
+```{r}
+library(OneR) #so we can use the bin() function because there are so many years
+```
+
+
+```{r}
+t_bins <- bin(house_data$yr_built, nbins = 8, method = "length")
+
+g_4 <- ggplot(house_data,
+              aes(y = price,
+                  x = t_bins)) +
+  geom_point(color = "blue", alpha = 0.3) + 
+  theme_bw() + 
+  theme(panel.grid.major = element_blank(), 
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank()) +
+  labs(y = "Price", 
+       x = "Year Built",
+       title = "Price vs Year Built")
+
+g_4
+```
+
+Log-adjusted price distribution
+```{r}
+ggplot(house_data, aes(x = log(price))) +
+  geom_density(fill = "blue", alpha = 0.3) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank()) +
+  labs(x = "Log(Price)",
+       title = "Density plot of Log(Price)")
+```
+
+
+Distribution of Latitude
+```{r}
+g_lat <- ggplot(house_data, aes(x = lat)) +
+  geom_density(fill = "blue", alpha = 0.3) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank()) +
+  labs(x = "Latitude",
+       title = "Density plot of Latitudes")
+
+g_lat
+```
+
+Distribution of Longitude
+```{r}
+g_lon <- ggplot(house_data, aes(x = long)) +
+  geom_density(fill = "blue", alpha = 0.3) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        panel.background = element_blank()) +
+  labs(x = "Longitude",
+       title = "Density plot of Longitudes")
+
+g_lon
+```
+
+
+## Split data into Training and Test
+```{r}
+RNGkind(sample.kind="Rounding")
+
+set.seed(725385) #seed number from random number generator on Google
+
+train <- sample(c(1:dim(house_data)[1]), dim(house_data)[1]*.8)
+train_data <- house_data[train,]
+test_data <- house_data[-train,]
+```
+
+## Single Tree Model to compare to
+```{r}
+library(rpart)
+single_tree <- rpart(price ~.,
+                data = train_data[,3:21])
+```
+
+```{r}
+#install.packages("Metrics")
+library(Metrics)
+```
+
+```{r}
+single_tree_pred <- predict(single_tree, test_data)
+rmse(single_tree_pred, test_data$price)
+```
+RMSE of $215,936.30 is not good.
+
+
+## Ensemble Tree Models - Bagging
+```{r}
+library(randomForest)
+```
+We will exclude ID because it will have no predictive value, and exclude date because all sales are within a year so it is unlikely to be significant
+```{r}
+set.seed(725385) #seed number from random number generator on Google
+
+bag_mod <- randomForest(price ~.,
+                data = train_data[,3:21],
+                mtry = 18, # Set mtry to number of variables 
+                ntree = 200)
+bag_mod
+```
+87.83% variation explained is pretty good
+
+Predict using bagging model and get the RMSE:
+```{r}
+bag_preds <- predict(bag_mod, test_data)
+rmse(bag_preds, test_data$price)
+```
+This is not a very accurate model. $132,982.50 root mean square error on predictions of test data.
+
+Let's take a look at the RMSE
+```{r}
+RMSE <- sqrt(bag_mod$mse) # Extract MSE
+plot_dat <- cbind.data.frame(rep(1:length(RMSE)), RMSE) # Create plot data
+names(plot_dat) <- c("trees", "RMSE") # Name plot data
+
+# Plot oob error
+g_5 <- ggplot(plot_dat, aes(x = trees, y = RMSE)) + # Set x as trees and y as error
+  geom_point(alpha = 0.5, color = "blue") + # Select geom point
+  geom_smooth() + # Add smoothing line
+  theme_bw() + # Set theme
+  theme(panel.grid.major = element_blank(), # Remove grid
+        panel.grid.minor = element_blank(), # Remove grid
+        panel.border = element_blank(), # Remove grid
+        panel.background = element_blank()) + # Remove grid 
+  labs(x = "Number of Trees", title = "RMSE v Number of Trees",
+       y = "RMSE")  # Set labels
+g_5 # Print plot
+```
+It appears 200 trees was more than enough since the MSE evened out after about 70 trees.
+
+
+
+Let's tune this model.
+```{r}
+trees <- c(25, 50, 100, 200) # Create vector of possible tree sizes
+nodesize <- c(1, 10, 25, 50, 100) # Create vector of possible node sizes
+
+params <- expand.grid(trees, nodesize) # Expand grid to get data frame of parameter combinations
+names(params) <- c("trees", "nodesize") # Name parameter data frame
+res_vec <- rep(NA, nrow(params)) # Create vector to store accuracy results
+
+for(i in 1:nrow(params)){ # For each set of parameters
+  set.seed(725385) # Set seed for reproducability
+  mod <- randomForest(price ~. , # Set formula
+                      data=train_data[,3:21],# Set data
+                      mtry = 18, # Set number of variables
+                      importance = FALSE,
+                      ntree = params$trees[i], # Set number of trees
+                      nodesize = params$nodesize[i]) # Set node size
+  res_vec[i] <- mod$mse[length(mod$mse)] # MSE values
+}
+```
+
+```{r}
+summary(res_vec)
+RMSE <- sqrt(res_vec)
+summary(RMSE)
+```
+
+```{r}
+res_db <- cbind.data.frame(params, RMSE) # Join parameters and accuracy results
+names(res_db)[3] <- "RMSE" # Name accuracy results column
+res_db
+```
+
+```{r}
+res_db$trees <- as.factor(res_db$trees) # Convert tree number to factor for plotting
+res_db$nodesize <- as.factor(res_db$nodesize) # Convert node size to factor for plotting
+g_6 <- ggplot(res_db, aes(y = trees, x = nodesize, fill = RMSE)) + # set aesthetics
+  geom_tile() + # Use geom_tile for heatmap
+  theme_bw() + # Set theme
+  scale_fill_gradient2(low = "blue", # Choose low color
+    mid = "white", # Choose mid color
+    high = "red", # Choose high color
+    midpoint = mean(res_db$RMSE), # Choose mid point
+    space = "Lab", 
+    na.value ="grey", # Choose NA value
+    guide = "colourbar", # Set color bar
+    aesthetics = "fill") + # Select aesthetics to apply
+  labs(x = "Node Size", y = "Number of Trees", fill = "RMSE") # Set labels
+g_6 # Generate plot
+```
+
+```{r}
+res_db[which.min(res_db$RMSE),]
+```
+
+Let's remove house prices over $2,000,000
+```{r}
+set.seed(725385) #seed number from random number generator on Google
+train_no_outlier <- train_data[train_data$price < 2000000,]
+bag_mod2 <- randomForest(price ~.,
+                data = train_no_outlier[,3:21],
+                mtry = 18,
+                ntree = 200)
+bag_mod2
+```
+
+```{r}
+bag_preds2 <- predict(bag_mod2, test_data)
+rmse(bag_preds2, test_data$price)
+```
+
+
+```{r}
+RMSE2 <- sqrt(bag_mod2$mse) # Extract MSE
+plot_dat2 <- cbind.data.frame(rep(1:length(RMSE2)), RMSE2) # Create plot data
+names(plot_dat2) <- c("trees", "RMSE") # Name plot data
+
+# Plot oob error
+g_7 <- ggplot(plot_dat2, aes(x = trees, y = RMSE)) + # Set x as trees and y as error
+  geom_point(alpha = 0.5, color = "blue") + # Select geom point
+  geom_smooth() + # Add smoothing line
+  theme_bw() + # Set theme
+  theme(panel.grid.major = element_blank(), # Remove grid
+        panel.grid.minor = element_blank(), # Remove grid
+        panel.border = element_blank(), # Remove grid
+        panel.background = element_blank()) + # Remove grid 
+  labs(x = "Number of Trees", title = "RMSE v Number of Trees",
+       y = "RMSE")  # Set labels
+g_7 # Print plot
+```
+This made the predictive power of the model worse.
+
+## Cross-Validated Bagging Model
+```{r}
+set.seed(725385)
+# Create cross-validation index
+cv_ind <- sample(1:5, nrow(train_data), replace = TRUE )
+
+# Create accuracy store
+cv_RMSE <- rep(NA, 5)
+for(i in 1:5){ # For 1 to 5
+  cv_train <- train_data[cv_ind != i ,c(3:21)] # Create training data
+  cv_test <- train_data[cv_ind == i,  c(3:21)] # Create test data
+
+  bag_mod_3 <- randomForest(price ~., # Set tree formula
+                data = cv_train, # Set dataset
+                mtry = 18, # set number of variables to use
+                ntree = 200, # Set number of trees to generate
+                nodesize = 1) # Set node size
+  bag_preds_3 <- predict(bag_mod_3, cv_test) # Create test data predictions
+
+  rmse <- rmse(bag_preds_3, cv_test$price)
+  cv_RMSE[i] <- rmse # RMSE values
+}
+
+# Print cross validated accuracy scores
+cv_RMSE
+```
+```{r}
+mean(cv_RMSE)
+```
+This is a slight improvement from the original bagging model RMSE of 132,982.50 to 127,337.50 for the cross-validated model, however, 127,000 is still a lot of error. This is still a large improvement from the 215,936.30 RMSE of the single tree model.
+
+## Important Variables
+```{r}
+varImpPlot(bag_mod, type =2, n.var = 10)
+varImpPlot(bag_mod2, type =2, n.var = 10)
+varImpPlot(bag_mod_3, type =2, n.var = 10)
+```
+
+## Ensemble Tree Models - Bagging with log(price)
+
+```{r}
+set.seed(725385) #seed number from random number generator on Google
+
+bag_mod_log <- randomForest(log(price) ~.,
+                data = train_data[,3:21],
+                mtry = 18, 
+                ntree = 200)
+bag_mod_log
+```
+88.41% variation explained is pretty good
+
+Predict using bagging model and get the RMSE:
+```{r}
+bag_preds_log <- predict(bag_mod_log, test_data)
+preds_log_adj <- exp(bag_preds_log)
+rmse(preds_log_adj, test_data$price)
+```
+This is not a very accurate model. $127,769.1 root mean square error on predictions of test data.
+This is a slightly better model than the original ensemble.
+
+
+## Log-adjusted ensemble using parameters from before
+```{r}
+mod_log <- randomForest(log(price) ~. ,
+                      data=train_data[,3:21],
+                      mtry = 18,
+                      importance = FALSE,
+                      ntree = 200,
+                      nodesize = 1)
+mod_log
+```
+88.39% variation explained is slightly worse than the first log-adjusted model.
+
+Predict using bagging model and get the RMSE:
+```{r}
+bag_preds_log2 <- predict(mod_log, test_data)
+preds_log_adj2 <- exp(bag_preds_log2)
+rmse(preds_log_adj2, test_data$price)
+```
+129,419.50 RMSE is worse than the previous 2 models
+
+
+```{r}
+varImpPlot(bag_mod_log, type =2, n.var = 10)
+varImpPlot(mod_log, type =2, n.var = 10)
+```
+
+
+## Refined Variables
+
+Lastly, lets try removing latitude and longitude since they are very important but are almost the same for each house since the houses are all in the same general area
+
+```{r}
+train_data_2 <- train_data[,-c(18:19)]
+test_data_2 <- test_data[,-c(18:19)]
+```
+
+
+```{r}
+mod_no_lat_lon <- randomForest(price ~. ,
+                      data=train_data_2[,3:19],# Set data
+                      mtry = 16, # Set number of variables
+                      importance = FALSE,
+                      ntree = 200, # Set number of trees
+                      nodesize = 1) # Set node size
+```
+
+Predict using bagging model and get the RMSE:
+```{r}
+bag_preds_no_lat_lon <- predict(mod_no_lat_lon, test_data_2)
+rmse(bag_preds_no_lat_lon, test_data_2$price)
+```
+This model became much worse without latitude and longitude included, indicating that differences of just a few miles can have strong impacts on the prices of homes.
+
+
