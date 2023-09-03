@@ -1,0 +1,553 @@
+---
+title: "Network Analysis"
+output: github_document
+date: "2022-11-30"
+---
+
+% Web 34 Chesapeake Bay Mesohaline Network; D. Baird; Umcees Ref No. XXX-86; MGC/M2/SUM 1
+% from datall.zip from http://www.cbl.cees.edu/~ulan/ntwk/network.html
+% Chesapeake Bay mesohaline ecosystem. Summer carbon flows.
+% Baird, D. and R.E. Ulanowicz. 1989. The seasonal dynamics of the
+% Chesapeake Bay ecosystem. Ecol. Monogr. 59: 329-364.
+% transformed from SCOR format by Scor2net 15.7.2003
+*partition ECO types / chesapeake
+
+```{r}
+Chesapeake <- read.table("Chesapeake.paj", quote="\"", comment.char="")
+nodelist <- read.csv("Chesapeake Nodelist.csv")
+```
+
+
+```{r}
+library(igraph)
+library(ggraph)
+
+net <- graph_from_data_frame(Chesapeake, directed = T, vertices = union(unique(Chesapeake$V2), unique(Chesapeake$V1)))
+net <- simplify(net, remove.multiple = F, remove.loops = T)
+```
+
+```{r}
+#new_net <- net %>%
+ # delete_vertices(c(34, 35, 36, 37, 38, 39)) 
+#ggraph(new_net) +
+ # geom_edge_link0() +
+ # geom_node_point()
+
+#subset(Chesapeake, V1 = "1:33")
+#subset(Chesapeake, V2 = 1:33)
+#filter(Chesapeake, V1 == 13)
+Chesapeake_1 <- Chesapeake[Chesapeake$V1 %in% 1:33, ]    # Subset data frame
+Chesapeake_2 <- Chesapeake_1[Chesapeake_1$V2 %in% 1:33, ]
+Chesapeake_2
+
+ggraph(Chesapeake_2) +
+  geom_edge_link(color = "black", alpha = 0.3) +
+  geom_node_point(color = "blue") +
+  theme_graph()
+
+#Chesapeake_no_blue_crab <- Chesapeake_2[Chesapeake_2$V1 %in% 1:18 | 20:33, ]
+#Chesapeake_no_blue_crab_final <- Chesapeake_no_blue_crab[Chesapeake_no_blue_crab$V1 %in% 1:18 | 20:33, ]
+#Chesapeake_no_blue_crab_final
+
+Chesapeake_nbc <- subset(Chesapeake_2, V1 != 19)
+Chesapeake_nbc <- subset(Chesapeake_2, V2 != 19)
+Chesapeake_nbc
+```
+
+```{r}
+net <- graph_from_data_frame(Chesapeake_2, directed = T, vertices = union(unique(Chesapeake_2$V2), unique(Chesapeake_2$V1)))
+net <- simplify(net, remove.multiple = F, remove.loops = T)
+#GOOD 
+ggraph(net) +
+  geom_edge_link(color = "black", alpha = 0.3) +
+  geom_node_point(color = "blue") +
+  theme_graph()
+
+#GOOD WITH DEGREE
+ggraph(net) +
+  geom_edge_link(color = "black", alpha = 0.3) +
+  geom_node_point(color = "blue", size = igraph::degree(net, mode = "all")) +
+  theme_graph()
+
+
+plot(net, edge.arrow.size=.4, edge.curved=.1) 
+```
+
+```{r}
+inc.edges <- incident(net, V(net)["19"], mode="all")
+# Set colors to plot the selected edges.
+ecol <- rep("gray80", ecount(net))
+ecol[inc.edges] <- "orange"
+vcol <- rep("grey40", vcount(net))
+vcol[V(net)$V1 == "19"] <- "gold"
+plot(net, vertex.color=vcol, edge.color=ecol, edge.width=2)
+```
+
+
+
+Network containing blue crab 
+```{r}
+library(igraph)
+#setwd("YOUR WORKING DIRECTORY HERE")
+
+
+# igraph's sir function does require the network to be simple (no loops or multiplex ties)
+# Simplified graphs do not have any loops or multiplex ties. 
+is.simple(net) #TRUE, so it's fine
+# igraph's sir function *also* needs the graph to be undirected
+is_directed(net) #TRUE, so we need to change it
+un_net <- as.undirected(net)
+is_directed(un_net) #FALSE, good
+
+# The igraph function uses different arguments than EpiModel
+# beta is the rate of infection, gamma is the rate of recovery
+sir52 <- sir(graph = un_net, beta = 5, gamma = 2) 
+class(sir52) # output is a sir object/list. Use indexing to look inside. 
+invisible(sir52) # lots of pieces
+sir52[[1]] # the first simulation
+sir52[[1]]$times # times of events
+sir52[[1]]$NS # number susceptible
+sir52[[1]]$NI # number infected
+sir52[[1]]$NR # number recovered
+#plot(sir52) # shows all simulations at once
+plot(sir52, comp = "NS")
+plot(sir52, comp = "NI")
+plot(sir52, comp = "NR")
+```
+No Blue crab code
+```{r}
+net_nbc <- graph_from_data_frame(Chesapeake_nbc, directed = T, vertices = union(unique(Chesapeake_nbc$V2), unique(Chesapeake_nbc$V1)))
+net_nbc <- simplify(net_nbc, remove.multiple = F, remove.loops = T)
+```
+
+```{r}
+dim(Chesapeake_2)
+dim(Chesapeake_nbc)
+```
+
+NO BLUE CRAB NETWORK
+```{r}
+#GOOD 
+ggraph(net_nbc) +
+  geom_edge_link(color = "black", alpha = 0.3) +
+  geom_node_point(color = "blue") +
+  theme_graph()
+
+ggraph(net_nbc) +
+  geom_edge_link(color = "black", alpha = 0.3) +
+  geom_node_point(color = "blue", alpha = 0.8, size = igraph::degree(net, mode = "all")) +
+  theme_graph()
+
+deg <- degree(net_nbc)
+V(net_nbc)$size <- deg*3
+```
+NO BLUE CRAB CONTAGION 
+```{r}
+library(igraph)
+#setwd("YOUR WORKING DIRECTORY HERE")
+
+
+# igraph's sir function does require the network to be simple (no loops or multiplex ties)
+# Simplified graphs do not have any loops or multiplex ties. 
+is.simple(net_nbc) #TRUE, so it's fine
+# igraph's sir function *also* needs the graph to be undirected
+is_directed(net_nbc) #TRUE, so we need to change it
+un_net <- as.undirected(net_nbc)
+is_directed(un_net) #FALSE, good
+
+# The igraph function uses different arguments than EpiModel
+# beta is the rate of infection, gamma is the rate of recovery
+sir52 <- sir(graph = un_net, beta = 5, gamma = 2) 
+class(sir52) # output is a sir object/list. Use indexing to look inside. 
+invisible(sir52) # lots of pieces
+sir52[[1]] # the first simulation
+sir52[[1]]$times # times of events
+sir52[[1]]$NS # number susceptible
+sir52[[1]]$NI # number infected
+sir52[[1]]$NR # number recovered
+plot(sir52) # shows all simulations at once
+```
+
+```{r}
+plot(sir52, comp = "NS")
+plot(sir52, comp = "NI")
+plot(sir52, comp = "NR")
+```
+
+```{r}
+#vertex.label=V(net)$media
+net.bg <- net
+plot(net.bg, layout = layout_randomly)
+
+l <- layout_in_circle(net.bg)
+plot(net.bg, layout=l, edge.arrow.size =.1)
+```
+
+```{r}
+library(plyr)
+library(tidyr)
+library(statnet)
+library(ggplot2)
+library(ggnetwork)
+library(dplyr)
+library(igraph) 
+library(igraphdata)
+library(ggraph)
+library(gplots)
+```
+
+create net_sna object
+```{r}
+net_sna <- network(Chesapeake_2, matrix.type = "edgelist", directed = T, loops = TRUE)
+net_sna
+```
+
+Run a CUG Test
+```{r}
+Cug_Size <- cug.test(net_sna, gtrans, cmode="size")
+plot(Cug_Size) 
+```
+
+Find the strong cut-set of the graph
+```{r}
+cp <- cutpoints(net_sna, mode = "digraph")
+cp
+```
+
+Calculate the cluster-louvain algorithm on this graph, find number of communities plus mod
+```{r}
+un_net <- graph_from_data_frame(Chesapeake_2, directed = F, vertices = nodelist)
+clv <- cluster_louvain(un_net, weights = NULL)
+length(clv)
+modularity(clv) 
+```
+
+Calculate spin-glass, find number of communities plus mod
+```{r}
+sgc <- cluster_spinglass(net)
+length(sgc)
+modularity(sgc) 
+```
+
+Increase resolution parameter, how does it affect number of communities and modularity
+```{r}
+clv_5 <- cluster_louvain(un_net, resolution = 0.5)
+length(clv_5)
+modularity(clv_5)
+```
+
+Plot Communities
+```{r}
+library(igraph) 
+set.seed(12345)
+E(net)$weight <- sample(x = 1:10, size = ecount(net), replace = TRUE)
+cl <- cluster_louvain(un_net)
+# V(net)$name <- membership(cl)
+x <- as_edgelist(net, names = T)
+V(net)$name <- 1:vcount(net)
+E(net)[x[,1] != x[,2]]
+ E(net)$color <- ifelse(x[,1] != x[,2], "red", "blue")
+ plot(net, edge.color = E(net)$color)
+ plot(cl, un_net)
+```
+
+
+Centrality Measures
+
+Degree Measures
+```{r}
+# DEGREE
+deg <- igraph::degree(net)
+deg
+
+ggraph(net) + 
+  geom_edge_link0(color = "grey") +
+  geom_node_point(color = "blue", 
+                  size = V(net)$size <- igraph::degree(net, mode = "all")/3) +
+  ggnetwork::theme_blank()
+
+
+# IN DEGREE
+deg_in <- igraph::degree(net, mode = "in")
+deg_in
+
+ggraph(net) + 
+  geom_edge_link(color = "grey", 
+                 arrow = arrow(length = unit(2, 'mm')), 
+                 start_cap = circle(2, 'mm'),
+                 end_cap = circle(2, 'mm')) + 
+  geom_node_point(color = "blue", 
+                  size = igraph::degree(net, mode = "in")) +
+#  geom_node_text(aes(label = name)) +
+  ggnetwork::theme_blank()
+
+
+# OUT DEGREE
+deg_out <- igraph::degree(net, mode = "out")
+deg_out
+
+ggraph(net) + 
+  geom_edge_link(color = "grey", 
+                 arrow = arrow(length = unit(2, 'mm')), 
+                 start_cap = circle(2, 'mm'),
+                 end_cap = circle(2, 'mm')) +
+  geom_node_point(color = "blue", 
+                  size = V(net)$size <- igraph::degree(net, mode = "out")) + 
+#  geom_node_text(aes(label = name)) +
+  ggnetwork::theme_blank()
+```
+
+Closeness Measures
+```{r}
+# CLOSENESS
+close <- igraph::closeness(net)
+close
+
+is_directed(net)
+un_net <- as.undirected(net)
+
+ggraph(un_net) + 
+  geom_edge_link0(color = "grey") +
+  geom_node_point(color = "blue", 
+                  size = igraph::closeness(un_net)*250) +
+  ggnetwork::theme_blank()
+
+
+# IN CLOSENESS
+close_in <- igraph::closeness(net, mode = "in")
+close_in
+
+ggraph(net) + 
+  geom_edge_link0(color = "grey", 
+                  arrow = arrow(length = unit(2, 'mm')), 
+                  start_cap = circle(2, 'mm'),
+                  end_cap = circle(2, 'mm')) +
+  geom_node_point(color = "blue", 
+                  size = igraph::closeness(net, mode = "in")*10) +
+#  geom_node_text(aes(label = name)) +
+  ggnetwork::theme_blank()
+
+
+# OUT CLOSENESS
+close_out <- igraph::closeness(net, mode = "out")
+close_out
+
+ggraph(net) + 
+  geom_edge_link0(color = "grey", 
+                  arrow = arrow(length = unit(2, 'mm')), 
+                  start_cap = circle(2, 'mm'),
+                  end_cap = circle(2, 'mm')) +
+  geom_node_point(color = "blue", 
+                  size = igraph::closeness(net, mode = "out")*10) +
+  ggnetwork::theme_blank()
+```
+
+Betweenness
+```{r}
+bet_d <- igraph::betweenness(net, directed = T)
+bet_d
+
+ggraph(net) + 
+  geom_edge_link0(color = "grey") + 
+  geom_node_point(color = "blue", 
+                  size = igraph::betweenness(net, directed = T)/5) +
+#  geom_node_text(aes(label = name)) +
+  ggnetwork::theme_blank()
+```
+
+Edge Betweenness
+```{r}
+eb_n <- edge.betweenness(net, directed = T)
+eb_n
+
+ggraph(net) + 
+  geom_edge_link0(color = "grey", 
+                  aes(width = edge.betweenness(net, directed = T))) +
+  scale_edge_width(range = c(0.15, 1)) +
+  geom_node_point(color = "blue") +
+  ggnetwork::theme_blank() + theme(legend.position = "none")
+```
+
+
+ERGM Models
+```{r}
+Chesapeake <- read.table("Chesapeake.paj", quote="\"", comment.char="")
+Chesapeake_1 <- Chesapeake[Chesapeake$V1 %in% 1:33, ]
+Chesapeake_2 <- Chesapeake_1[Chesapeake_1$V2 %in% 1:33, ]
+Chesapeake_2
+```
+
+Data Cleaning: Removing the self-loop on node 19
+```{r}
+Chesapeake_2[59,]
+Chesapeake_2 <- Chesapeake_2[-(59),]
+Chesapeake_2
+```
+
+```{r}
+net
+
+ggraph(net) +
+  geom_edge_link(color = "black", alpha = 0.3) +
+  geom_node_point(color = "blue") +
+  theme_graph()
+```
+
+
+```{r}
+library(ergm)
+library(ggraph)
+library(statnet)
+```
+
+```{r}
+net_sna <- network(Chesapeake_2, matrix.type = "edgelist", directed = T, loops = FALSE)
+net_sna
+
+model1 <- ergm(net_sna ~ edges)
+```
+
+```{r}
+ggraph(net_sna) +
+  geom_edge_link0(color = "black") +
+  geom_node_point(color = "#DFE6EB") +
+  ggnetwork::theme_blank()
+```
+
+ERGM
+```{r}
+model1 <- ergm(net_sna ~ edges)
+
+summary(model1)
+```
+
+```{r}
+summary(net_sna ~ edges)
+```
+
+prob
+```{r}
+mod_sum <- summary(model1)
+mod_sum #log-odds
+exp(coef(mod_sum)[1]) #odds
+beta <- coef(mod_sum)[1]
+beta
+```
+
+
+```{r}
+prob <- exp(beta)/(1+exp(beta))
+prob
+plogis(beta)
+plogis(coef(model1)[['edges']])
+```
+the probability of forming a tie with someone else at random is 6.7%
+
+
+```{r}
+gden(net_sna)
+```
+
+simulation
+```{r}
+set.seed(123)
+ergm1 <- simulate(model1)
+ggraph(ergm1) +
+  geom_edge_link0(color = "black") +
+  geom_node_point(color = "#DFE6EB") +
+  ggnetwork::theme_blank()
+```
+
+```{r}
+  # gof####
+model1_gof <- gof(model1) 
+model1_gof
+# We use GOF to see if our simulated network is like our real network
+# If the fit is poor, we need to re-specify
+```
+
+```{r}
+plot(model1_gof) 
+```
+
+Compare to our model
+```{r}
+model1_gof_model = gof(model1, GOF = ~ model)
+model1_gof_model
+```
+
+
+```{r}
+gof(model1, GOF = ~ triadcensus)
+```
+
+
+Adding Reciprocity
+```{r}
+model2 <- ergm(net_sna ~ edges + mutual)
+
+summary(model2)
+```
+
+```{r}
+coef(model2)
+plogis(coef(model2)[['edges']] + coef(model2)[['mutual']])
+```
+There are no mutual ties since this is a food web so each organism is either predator or prey to another organism, but cannot be both.
+
+
+Adding In Degree
+```{r}
+network::set.vertex.attribute(net_sna, "indegree", sna::degree(net_sna, cmode = "indegree"))
+net_sna
+```
+
+```{r}
+model3 <- ergm(net_sna ~ edges + nodeicov("indegree"))
+
+summary(model3)
+```
+
+```{r}
+plogis(coef(model3)[['edges']] + coef(model3)[['nodeicov.indegree']])
+```
+
+```{r}
+set.seed(123)
+ergm3 <- simulate(model3)
+ggraph(ergm3) +
+  geom_edge_link0(color = "black") +
+  geom_node_point(color = "#DFE6EB") +
+  ggnetwork::theme_blank()
+
+plot(gof(model3))
+```
+
+
+Adding Transitivity
+```{r}
+model4 <- ergm(net_sna ~ edges + nodeicov("indegree") + gwesp, 
+                 control = control.ergm(MCMLE.maxit=10))
+
+summary(model4)
+```
+
+
+```{r}
+plogis(coef(model4)[['edges']] + coef(model4)[['nodeicov.indegree']] + 
+  coef(model4)[['gwesp.OTP']] + coef(model4)[['gwesp.OTP.decay']])
+```
+
+
+```{r}
+set.seed(123)
+
+ergm4 <- simulate(model4)
+
+ggraph(ergm4) +
+  geom_edge_link0(color = "black") +
+  geom_node_point(color = "#DFE6EB") +
+  ggnetwork::theme_blank()
+
+plot(gof(model4))
+```
