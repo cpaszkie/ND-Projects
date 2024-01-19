@@ -1,0 +1,734 @@
+---
+title: "College Football API"
+author: "Jack Campanella, Connor Paszkiewicz, Ryan Tressler"
+output: html_document
+date: "2023-09-28"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+API:
+https://api.collegefootballdata.com/api/docs/?url=/api-docs.json#/rankings
+
+Docs:
+https://api.collegefootballdata.com/api-docs.json
+
+Web Version:
+https://collegefootballdata.com/exporter
+
+
+## Packages
+```{r}
+library(httr) # httr is organised around the six most common http verbs: GET(), PATCH(), POST(), HEAD(), PUT(), and DELETE().
+library(tidyverse)
+library(jsonlite)  ## These functions are used to convert between JSON data and R objects.
+library(lubridate)  ## Lubridate provides tools that make it easier to parse and manipulate dates.
+library(dplyr)
+```
+
+
+## API Key
+```{r}
+api_key <- "Bearer IxzAfENmMnwWFbLN9fuiS01pvEMj+TLHmn2WFcCmUiUhNb1fRof4cRSzgCt6HWDp"
+```
+
+
+## Player Recruiting Rankings
+```{r}
+player_ranking_url <- "api.collegefootballdata.com/recruiting/players?classification=HighSchool&team=Notre+Dame"
+
+# retrieves all players from all seasons
+player_ranking_request <- httr::GET(player_ranking_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+player_ranking_request
+
+# Extract the content as JSON text
+player_ranking_content <- httr::content(player_ranking_request, as = "text")
+
+# Convert the JSON text into a data frame
+player_ranking_df <- jsonlite::fromJSON(txt = player_ranking_content)
+head(player_ranking_df)
+```
+
+
+## Team Recruiting Rankings
+```{r}
+team_ranking_url <- "api.collegefootballdata.com/recruiting/teams?team=Notre+Dame"
+
+# retrieves all players from all seasons
+team_ranking_request <- httr::GET(team_ranking_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+team_ranking_request
+
+# Extract the content as JSON text
+team_ranking_content <- httr::content(team_ranking_request, as = "text")
+
+# Convert the JSON text into a data frame
+team_ranking_df <- jsonlite::fromJSON(txt = team_ranking_content)
+head(team_ranking_df)
+```
+
+
+## Team Season Stats
+```{r}
+szn_stats_url <- "api.collegefootballdata.com/stats/season?team=Notre+Dame"
+
+# retrieves all players from all seasons
+szn_stats_request <- httr::GET(szn_stats_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+szn_stats_request
+
+# Extract the content as JSON text
+szn_stats_content <- httr::content(szn_stats_request, as = "text")
+
+# Convert the JSON text into a data frame
+szn_stats_df <- jsonlite::fromJSON(txt = szn_stats_content)
+head(szn_stats_df)
+
+# list of stats recorded
+unique(szn_stats_df$statName)
+```
+
+
+## Advanced Team Season Stats
+```{r}
+adv_szn_stats_url <- "api.collegefootballdata.com/stats/season/advanced?team=Notre+Dame"
+
+# retrieves all players from all seasons
+adv_szn_stats_request <- httr::GET(adv_szn_stats_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+adv_szn_stats_request
+
+# Extract the content as JSON text
+adv_szn_stats_content <- httr::content(adv_szn_stats_request, as = "text")
+
+# Convert the JSON text into a data frame
+adv_szn_stats_df <- jsonlite::fromJSON(txt = adv_szn_stats_content)
+adv_szn_stats_df <- jsonlite::flatten(adv_szn_stats_df)
+head(adv_szn_stats_df)
+
+colnames(adv_szn_stats_df)
+```
+
+
+## Advanced Team Game Stats
+```{r}
+adv_game_stats_url <- "api.collegefootballdata.com/stats/game/advanced?team=Notre+Dame"
+
+# retrieves all players from all seasons
+adv_game_stats_request <- httr::GET(adv_game_stats_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+adv_game_stats_request
+
+# Extract the content as JSON text
+adv_game_stats_content <- httr::content(adv_game_stats_request, as = "text")
+
+# Convert the JSON text into a data frame
+adv_game_stats_df <- jsonlite::fromJSON(txt = adv_game_stats_content)
+adv_game_stats_df <- jsonlite::flatten(adv_game_stats_df)
+head(adv_game_stats_df)
+
+colnames(adv_game_stats_df)
+```
+
+
+## Player Season Stats
+```{r}
+# too big of a query to run... need to specify a specific year
+
+player_szn_stats_url_2007 <- "api.collegefootballdata.com/stats/player/season?team=Notre+Dame&year=2007"
+player_szn_stats_url_2008 <- "api.collegefootballdata.com/stats/player/season?team=Notre+Dame&year=2008"
+player_szn_stats_url_2009 <- "api.collegefootballdata.com/stats/player/season?team=Notre+Dame&year=2009"
+player_szn_stats_url_2010 <- "api.collegefootballdata.com/stats/player/season?team=Notre+Dame&year=2010"
+player_szn_stats_url_2022 <- "api.collegefootballdata.com/stats/player/season?team=Notre+Dame&year=2022"
+player_szn_stats_url_2021 <- "api.collegefootballdata.com/stats/player/season?team=Notre+Dame&year=2021"
+player_szn_stats_url_2020 <- "api.collegefootballdata.com/stats/player/season?team=Notre+Dame&year=2020"
+
+#2022
+# retrieves all players from 2022 season
+player_szn_stats_request_2022 <- httr::GET(player_szn_stats_url_2022, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+player_szn_stats_request_2022
+
+# Extract the content as JSON text
+player_szn_stats_content_2022 <- httr::content(player_szn_stats_request_2022, as = "text")
+
+# Convert the JSON text into a data frame
+player_szn_stats_df_2022 <- jsonlite::fromJSON(txt = player_szn_stats_content_2022)
+head(player_szn_stats_df_2022)
+
+#2021
+# retrieves all players from 2021 season
+player_szn_stats_request_2021 <- httr::GET(player_szn_stats_url_2021, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+player_szn_stats_request_2021
+
+# Extract the content as JSON text
+player_szn_stats_content_2021 <- httr::content(player_szn_stats_request_2021, as = "text")
+
+# Convert the JSON text into a data frame
+player_szn_stats_df_2021 <- jsonlite::fromJSON(txt = player_szn_stats_content_2021)
+head(player_szn_stats_df_2021)
+
+#2020
+# retrieves all players from 2020 season
+player_szn_stats_request_2020 <- httr::GET(player_szn_stats_url_2020, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+player_szn_stats_request_2020
+
+# Extract the content as JSON text
+player_szn_stats_content_2020 <- httr::content(player_szn_stats_request_2020, as = "text")
+
+# Convert the JSON text into a data frame
+player_szn_stats_df_2020 <- jsonlite::fromJSON(txt = player_szn_stats_content_2020)
+head(player_szn_stats_df_2020)
+
+#2007
+# retrieves all players from 2007 season
+player_szn_stats_request_2007 <- httr::GET(player_szn_stats_url_2007, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+player_szn_stats_request_2007
+
+# Extract the content as JSON text
+player_szn_stats_content_2007 <- httr::content(player_szn_stats_request_2007, as = "text")
+
+# Convert the JSON text into a data frame
+player_szn_stats_df_2007 <- jsonlite::fromJSON(txt = player_szn_stats_content_2007)
+head(player_szn_stats_df_2007)
+
+#2008
+# retrieves all players from 2008 season
+player_szn_stats_request_2008 <- httr::GET(player_szn_stats_url_2008, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+player_szn_stats_request_2008
+
+# Extract the content as JSON text
+player_szn_stats_content_2008 <- httr::content(player_szn_stats_request_2008, as = "text")
+
+# Convert the JSON text into a data frame
+player_szn_stats_df_2008 <- jsonlite::fromJSON(txt = player_szn_stats_content_2008)
+head(player_szn_stats_df_2008)
+
+#2009
+# retrieves all players from 2009 season
+player_szn_stats_request_2009 <- httr::GET(player_szn_stats_url_2009, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+player_szn_stats_request_2009
+
+# Extract the content as JSON text
+player_szn_stats_content_2009 <- httr::content(player_szn_stats_request_2009, as = "text")
+
+# Convert the JSON text into a data frame
+player_szn_stats_df_2009 <- jsonlite::fromJSON(txt = player_szn_stats_content_2009)
+head(player_szn_stats_df_2009)
+
+#2010
+# retrieves all players from 2010 season
+player_szn_stats_request_2010 <- httr::GET(player_szn_stats_url_2010, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+player_szn_stats_request_2010
+
+# Extract the content as JSON text
+player_szn_stats_content_2010 <- httr::content(player_szn_stats_request_2010, as = "text")
+
+# Convert the JSON text into a data frame
+player_szn_stats_df_2010 <- jsonlite::fromJSON(txt = player_szn_stats_content_2010)
+head(player_szn_stats_df_2010)
+```
+
+
+## Team Draft Picks
+```{r}
+draft_picks_url <- "api.collegefootballdata.com/draft/picks?college=Notre+Dame"
+
+# retrieves all players from all seasons
+draft_picks_request <- httr::GET(draft_picks_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+draft_picks_request
+
+# Extract the content as JSON text
+draft_picks_content <- httr::content(draft_picks_request, as = "text")
+
+# Convert the JSON text into a data frame
+draft_picks_df <- jsonlite::fromJSON(txt = draft_picks_content)
+draft_picks_df <- jsonlite::flatten(draft_picks_df)
+head(draft_picks_df)
+```   
+
+## Analysis
+```{r}
+# Exploratory Data Analysis - Player Recruiting Rankings
+
+summary(player_ranking_df)
+names(player_ranking_df)
+
+
+```
+
+```{r}
+# EDA - ND Recruiting Ranking 
+
+summary(team_ranking_df)
+names(team_ranking_df)
+
+```
+
+```{r}
+# EDA - ND Stats by Season
+
+summary(szn_stats_df)
+names(szn_stats_df)
+
+```
+
+```{r}
+# EDA - ND Advanced Stats by Season
+
+summary(adv_game_stats_df)
+names(adv_game_stats_df)
+```
+
+
+```{r}
+# EDA - NFL Draft Picks of ND Players
+
+summary(draft_picks_df)
+names(draft_picks_df)
+```
+```{r}
+# merging recruiting and draft pick DFs
+
+
+recruits_draft_picks_combined_df <- merge(player_ranking_df, draft_picks_df, by = 'name')
+names(recruits_draft_picks_combined_df)
+
+
+columns_to_drop <- c('year.y', 'name.y', 'position.y', 'height.y', 'weight.y')
+recruits_draft_picks_combined_df <- recruits_draft_picks_combined_df[, -which(names(recruits_draft_picks_combined_df) %in% columns_to_drop)]
+
+
+recruits_draft_picks_combined_df
+
+
+```
+```{r}
+numeric_data <- recruits_draft_picks_combined_df[, sapply(recruits_draft_picks_combined_df, is.numeric)]
+correlation_matrix <- cor(numeric_data)
+correlation_matrix
+
+# find indices with high correlation
+cor_indices <- which(abs(correlation_matrix) >= 0.5 & abs(correlation_matrix) < 1, arr.ind = TRUE)
+
+# Put into df
+correlation_pairs <- data.frame(
+  Feature_1 = rownames(correlation_matrix)[cor_indices[, 1]],
+  Feature_2 = colnames(correlation_matrix)[cor_indices[, 2]],
+  Correlation = correlation_matrix[cor_indices])
+
+correlation_pairs
+
+cor_ranking_draft_pick <- cor(recruits_draft_picks_combined_df$ranking, recruits_draft_picks_combined_df$overall)
+
+cor_ranking_draft_pick # correlation between recruiting rank and draft number is only 0.2477563, indicating there is essentially none there. A player's recruiting rank does not impact where he will go in the draft.
+```
+```{r}
+# When judging recruits, you want to see how they do as juniors/seniors to be able to judge how they are. Most recruits don't play as freshmen, so I am adding two and three years to the recruiting year to effectively judge how the team played as these recruits are juniors and seniors. I.E. For the 2001 recruiting class, I want to see how the 2003 and 2004 team were to be able to determine how they fared. 
+
+team_ranking_df_add_2_years <- team_ranking_df %>% mutate(year = year + 2)
+team_ranking_df_add_3_years <- team_ranking_df %>% mutate(year = year + 3)  
+
+team_ranking_df
+team_ranking_df_add_2_years
+team_ranking_df_add_3_years
+
+
+```
+
+```{r}
+# Merging original team recruiting rankings df and advanced game stats for team 
+
+team_recruiting_advanced_stats_combined_df <- merge(team_ranking_df, adv_szn_stats_df, by.x = 'year', by.y = 'season')
+
+team_recruiting_advanced_stats_combined_df
+```
+```{r}
+# Looking at correlations between team recruiting ranking and team stats.
+
+
+numeric_data <- team_recruiting_advanced_stats_combined_df[, sapply(team_recruiting_advanced_stats_combined_df, is.numeric)]
+
+
+team_recruiting_rank <- "rank"
+
+correlations <- cor(numeric_data[team_recruiting_rank], numeric_data[, -which(names(numeric_data) == team_recruiting_rank)])
+
+
+
+high_correlation_pairs <- which(abs(correlations) > 0.3, arr.ind = TRUE)
+high_correlation_df <- data.frame(
+  Feature1 = 'rank',
+  Feature2 = names(numeric_data)[high_correlation_pairs[,2]],
+  Correlation = correlations[high_correlation_pairs]
+)
+# Sort the data frame so we can see which season stats have the strongest correlation with rank
+high_correlation_df <- high_correlation_df[order(-abs(high_correlation_df$Correlation)), ]
+
+print(correlations)
+print(high_correlation_df)
+
+```
+
+```{r}
+# Merging recruiting rankings df (plus 2 years) and advanced game stats for team 
+
+team_recruiting_advanced_stats_combined_df_plus2years <- merge(team_ranking_df_add_2_years, adv_szn_stats_df, by.x = 'year', by.y = 'season')
+
+team_recruiting_advanced_stats_combined_df_plus2years
+```
+```{r}
+# Looking at correlations between team recruiting ranking (plus 2 years) and team stats.
+
+numeric_data <- team_recruiting_advanced_stats_combined_df_plus2years[, sapply(team_recruiting_advanced_stats_combined_df_plus2years, is.numeric)]
+
+
+team_recruiting_rank <- "rank"
+
+correlations <- cor(numeric_data[team_recruiting_rank], numeric_data[, -which(names(numeric_data) == team_recruiting_rank)])
+
+
+
+high_correlation_pairs <- which(abs(correlations) > 0.3, arr.ind = TRUE)
+high_correlation_df <- data.frame(
+  Feature1 = 'rank',
+  Feature2 = names(numeric_data)[high_correlation_pairs[,2]],
+  Correlation = correlations[high_correlation_pairs]
+)
+# Sort the data frame so we can see which season stats have the strongest correlation with rank
+high_correlation_df <- high_correlation_df[order(-abs(high_correlation_df$Correlation)), ]
+
+print(correlations)
+print(high_correlation_df)
+
+```
+
+```{r}
+# Merging recruiting rankings df (plus 3 years) and advanced game stats for team 
+
+team_recruiting_advanced_stats_combined_df_plus3years <- merge(team_ranking_df_add_3_years, adv_szn_stats_df, by.x = 'year', by.y = 'season')
+
+head(team_recruiting_advanced_stats_combined_df_plus3years)
+```
+
+```{r}
+# Looking at correlations between team recruiting ranking (plus 3 years) and team stats.
+
+numeric_data <- team_recruiting_advanced_stats_combined_df_plus3years[, sapply(team_recruiting_advanced_stats_combined_df_plus3years, is.numeric)]
+
+
+team_recruiting_rank <- "rank"
+
+correlations <- cor(numeric_data[team_recruiting_rank], numeric_data[, -which(names(numeric_data) == team_recruiting_rank)])
+
+
+
+high_correlation_pairs <- which(abs(correlations) > 0.3, arr.ind = TRUE)
+high_correlation_df <- data.frame(
+  Feature1 = 'rank',
+  Feature2 = names(numeric_data)[high_correlation_pairs[,2]],
+  Correlation = correlations[high_correlation_pairs]
+)
+# Sort the data frame so we can see which season stats have the strongest correlation with rank
+high_correlation_df <- high_correlation_df[order(-abs(high_correlation_df$Correlation)), ]
+
+print(correlations)
+print(high_correlation_df)
+```
+```{r}
+# Tracking some specific recruits to how they played at ND to where they were drafted
+
+michael_mayer_recruiting_draft = recruits_draft_picks_combined_df[recruits_draft_picks_combined_df$name == 'Michael Mayer',]
+michael_mayer_stats_2020 = player_szn_stats_df_2020[player_szn_stats_df_2020$player == 'Michael Mayer',]
+michael_mayer_stats_2021 = player_szn_stats_df_2021[player_szn_stats_df_2021$player == 'Michael Mayer',]
+michael_mayer_stats_2022 = player_szn_stats_df_2022[player_szn_stats_df_2022$player == 'Michael Mayer',]
+
+michael_mayer_recruiting_draft
+michael_mayer_stats_2020
+michael_mayer_stats_2021
+michael_mayer_stats_2022
+```
+
+```{r}
+harrison_smith_recruiting_draft = recruits_draft_picks_combined_df[recruits_draft_picks_combined_df$name == 'Harrison Smith',]
+harrison_smith_stats_2007 = player_szn_stats_df_2007[player_szn_stats_df_2007$player == 'Harrison Smith',]
+harrison_smith_stats_2008 = player_szn_stats_df_2008[player_szn_stats_df_2008$player == 'Harrison Smith',]
+harrison_smith_stats_2009= player_szn_stats_df_2009[player_szn_stats_df_2009$player == 'Harrison Smith',]
+harrison_smith_stats_2010= player_szn_stats_df_2010[player_szn_stats_df_2010$player == 'Harrison Smith',]
+
+
+harrison_smith_recruiting_draft
+harrison_smith_stats_2007
+harrison_smith_stats_2008
+harrison_smith_stats_2009
+harrison_smith_stats_2010
+```
+
+
+```{r}
+# Merging original team recruiting rankings df and normal game stats for team 
+
+team_recruiting_szn_stats_combined_df <- merge(team_ranking_df, szn_stats_df, by.x = 'year', by.y = 'season')
+
+head(team_recruiting_szn_stats_combined_df)
+
+# Flatten the data frame so there is only 1 row per season
+
+team_recruiting_szn_stats_combined_df_flattened <- pivot_wider(team_recruiting_szn_stats_combined_df, 
+                             id_cols = c("year", "rank", "team.x", "points", "team.y", "conference"),
+                             names_from = "statName",
+                             values_from = "statValue")
+
+# Print the flattened data frame
+
+head(team_recruiting_szn_stats_combined_df_flattened)
+```
+
+```{r}
+# Looking at correlations between team recruiting ranking and team stats.
+
+numeric_data <- team_recruiting_szn_stats_combined_df_flattened[, sapply(team_recruiting_szn_stats_combined_df_flattened, is.numeric)]
+# filter out data from before 2004 because all of the data is null in those years
+numeric_data <- numeric_data[numeric_data$year >= 2004, ]
+numeric_data
+
+# filter out non-numeric ranks
+team_recruiting_rank <- "rank"
+
+correlations <- cor(numeric_data[team_recruiting_rank], numeric_data[, -which(names(numeric_data) == team_recruiting_rank)])
+
+high_correlation_pairs <- which(abs(correlations) > 0.3, arr.ind = TRUE)
+high_correlation_df <- data.frame(
+  Feature1 = 'rank',
+  Feature2 = names(numeric_data)[high_correlation_pairs[,2]],
+  Correlation = correlations[high_correlation_pairs]
+)
+# Sort the data frame so we can see which season stats have the strongest correlation with rank
+high_correlation_df <- high_correlation_df[order(-abs(high_correlation_df$Correlation)), ]
+
+print(correlations)
+print(high_correlation_df)
+
+```
+
+
+
+
+```{r}
+# Merging recruiting rankings df (plus 2 years) and advanced game stats for team 
+
+team_recruiting_szn_stats_combined_df_plus2years <- merge(team_ranking_df_add_2_years, szn_stats_df, by.x = 'year', by.y = 'season')
+
+head(team_recruiting_szn_stats_combined_df_plus2years)
+
+# Flatten the dataframe so there is only 1 row per season
+
+team_recruiting_szn_stats_combined_df_plus2years_flattened <- pivot_wider(team_recruiting_szn_stats_combined_df_plus2years, 
+                             id_cols = c("year", "rank", "team.x", "points", "team.y", "conference"),
+                             names_from = "statName",
+                             values_from = "statValue")
+
+# Print the flattened DataFrame
+
+head(team_recruiting_szn_stats_combined_df_plus2years_flattened)
+```
+
+```{r}
+# Looking at correlations between team recruiting ranking and team stats.
+
+numeric_data <- team_recruiting_szn_stats_combined_df_plus2years_flattened[,
+  sapply(
+    team_recruiting_szn_stats_combined_df_plus2years_flattened, 
+    is.numeric
+    )
+  ]
+# filter out data from before 2004 because all of the data is null in those years
+numeric_data <- numeric_data[numeric_data$year >= 2004, ]
+numeric_data
+
+# filter out non-numeric ranks
+team_recruiting_rank <- "rank"
+
+correlations <- cor(numeric_data[team_recruiting_rank], numeric_data[, -which(names(numeric_data) == team_recruiting_rank)])
+
+high_correlation_pairs <- which(abs(correlations) > 0.3, arr.ind = TRUE)
+high_correlation_df <- data.frame(
+  Feature1 = 'rank',
+  Feature2 = names(numeric_data)[high_correlation_pairs[,2]],
+  Correlation = correlations[high_correlation_pairs]
+)
+# Sort the data frame so we can see which season stats have the strongest correlation with rank
+high_correlation_df <- high_correlation_df[order(-abs(high_correlation_df$Correlation)), ]
+
+print(correlations)
+print(high_correlation_df)
+
+```
+
+
+
+```{r}
+# Merging recruiting rankings df (plus 3 years) and advanced game stats for team 
+
+team_recruiting_szn_stats_combined_df_plus3years <- merge(team_ranking_df_add_3_years, szn_stats_df, by.x = 'year', by.y = 'season')
+
+head(team_recruiting_szn_stats_combined_df_plus3years)
+
+# Flatten the dataframe so there is only 1 row per season
+
+team_recruiting_szn_stats_combined_df_plus3years_flattened <- pivot_wider(team_recruiting_szn_stats_combined_df_plus3years, 
+                             id_cols = c("year", "rank", "team.x", "points", "team.y", "conference"),
+                             names_from = "statName",
+                             values_from = "statValue")
+
+# Print the flattened DataFrame
+
+print(team_recruiting_szn_stats_combined_df_plus3years_flattened)
+```
+
+```{r}
+# Looking at correlations between team recruiting ranking and team stats.
+
+numeric_data <- team_recruiting_szn_stats_combined_df_plus3years_flattened[,sapply(team_recruiting_szn_stats_combined_df_plus3years_flattened, is.numeric)]
+# filter out data from before 2004 because all of the data is null in those years
+numeric_data <- numeric_data[numeric_data$year >= 2004, ]
+numeric_data
+
+# filter out non-numeric ranks
+team_recruiting_rank <- "rank"
+
+correlations <- cor(numeric_data[team_recruiting_rank], numeric_data[, -which(names(numeric_data) == team_recruiting_rank)])
+
+high_correlation_pairs <- which(abs(correlations) > 0.3, arr.ind = TRUE)
+high_correlation_df <- data.frame(
+  Feature1 = 'rank',
+  Feature2 = names(numeric_data)[high_correlation_pairs[,2]],
+  Correlation = correlations[high_correlation_pairs]
+)
+# Sort the data frame so we can see which season stats have the strongest correlation with rank
+high_correlation_df <- high_correlation_df[order(-abs(high_correlation_df$Correlation)), ]
+
+print(correlations)
+print(high_correlation_df)
+
+```
+
+
+
+## Visualizations
+
+```{r}
+# Load the ggplot2 package
+library(ggplot2)
+```
+
+```{r}
+hist(szn_stats_df[szn_stats_df$statName == 'passingTDs', 'statValue'], 
+     main = "Histogram of Passing TD's",
+     xlab = "Values",
+     ylab = "Frequency",
+     col = "lightblue",  # Bar color
+     border = "black",  # Border color
+     breaks = 12         # Number of bins or breaks
+)
+```
+
+```{r}
+# Sort the data frame so we can plot a line graph over time
+szn_stats_df_sorted <- szn_stats_df[order(szn_stats_df$season), ]
+
+plot(szn_stats_df_sorted[szn_stats_df_sorted$statName == 'passingTDs', 'season'], 
+     szn_stats_df_sorted[szn_stats_df_sorted$statName == 'passingTDs', 'statValue'], 
+     type = "l",          # "l" for line graph
+     main = "Passing TD's per Season",
+     xlab = "Season",
+     ylab = "Passing TD's",
+     col = "blue"
+)
+```
+
+
+```{r}
+# 2-year lag on season stats compared to recruit rank
+two_yr_lag <- subset(team_recruiting_szn_stats_combined_df_plus2years_flattened, 
+                     select = -c(team.x, team.y, conference))
+
+plot(two_yr_lag$year, 
+     two_yr_lag$totalYards, 
+     type = "l",    # "l" for line graph
+     main = "Total Yards per Season",
+     xlab = "Season",
+     ylab = "Total Yards",
+     col = "blue"
+)
+#lines(two_yr_lag$year, 
+#     two_yr_lag$rank,
+#     col = 'red')
+```
+
+```{r}
+plot(team_ranking_df$year, 
+     team_ranking_df$rank, 
+     type = "l",    # "l" for line graph
+     main = "Recruiting Rank vs. Season",
+     xlab = "Current Season",
+     ylab = "Recruiting Rank",
+     col = "red"
+)
+```
+
+```{r}
+y1 = two_yr_lag$totalYards
+y2 = two_yr_lag$rank
+
+# Create a plot with 2 separate y-axes
+ggplot(two_yr_lag, aes(x = year)) +
+  geom_line(aes(y = y1, color = "Total Yards"), size = 1) +
+  geom_line(aes(y = y2 * 200, color = "Rank"), size = 1) +
+  scale_color_manual(values = c("Total Yards" = "blue", "Rank" = "red")) +
+  labs(x = "Season", y = "Total Yards", color = "Series") +
+  theme_minimal() +
+  theme(legend.position = "top") +
+  scale_y_continuous(
+    name = "Total Yards",
+    sec.axis = sec_axis(~ . / 200, name = "Recruiting Rank 2 Years Prior")
+  )
+```
+
+
+```{r}
+no_outlier <- subset(recruits_draft_picks_combined_df, ranking < 1000)
+
+ggplot(data = no_outlier, 
+       aes(x = ranking, y = overall)) +
+  geom_point() +
+  labs(title = "Scatterplot of Player Recruiting Rank v. NFL Draft Pick",
+       x = "Player Recruiting Rank",
+       y = "NFL Draft Pick")
+
+```
+
+
