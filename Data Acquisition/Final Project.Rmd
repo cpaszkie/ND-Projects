@@ -1,0 +1,230 @@
+---
+title: "College Football API"
+author: "Jack Campanella, Connor Paszkiewicz, Ryan Tressler"
+output: html_document
+date: "2023-09-28"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+API:
+https://api.collegefootballdata.com/api/docs/?url=/api-docs.json#/rankings
+
+Docs:
+https://api.collegefootballdata.com/api-docs.json
+
+Web Version:
+https://collegefootballdata.com/exporter
+
+
+## Packages
+```{r}
+library(httr) # httr is organised around the six most common http verbs: GET(), PATCH(), POST(), HEAD(), PUT(), and DELETE().
+library(tidyverse)
+library(jsonlite)  ## These functions are used to convert between JSON data and R objects.
+library(lubridate)  ## Lubridate provides tools that make it easier to parse and manipulate dates.
+```
+
+
+## API Key
+```{r}
+api_key <- "Bearer IxzAfENmMnwWFbLN9fuiS01pvEMj+TLHmn2WFcCmUiUhNb1fRof4cRSzgCt6HWDp"
+```
+
+## Loading in the Tables
+
+### Player Recruiting Rankings
+```{r}
+player_ranking_url <- "api.collegefootballdata.com/recruiting/players?classification=HighSchool&team=Notre+Dame"
+
+# retrieves all players from all seasons
+player_ranking_request <- httr::GET(player_ranking_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+player_ranking_request
+
+# Extract the content as JSON text
+player_ranking_content <- httr::content(player_ranking_request, as = "text")
+
+# Convert the JSON text into a data frame
+player_ranking_df <- jsonlite::fromJSON(txt = player_ranking_content)
+head(player_ranking_df)
+```
+
+
+### Team Recruiting Rankings
+```{r}
+team_ranking_url <- "api.collegefootballdata.com/recruiting/teams?team=Notre+Dame"
+
+# retrieves all players from all seasons
+team_ranking_request <- httr::GET(team_ranking_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+team_ranking_request
+
+# Extract the content as JSON text
+team_ranking_content <- httr::content(team_ranking_request, as = "text")
+
+# Convert the JSON text into a data frame
+team_ranking_df <- jsonlite::fromJSON(txt = team_ranking_content)
+head(team_ranking_df)
+```
+
+
+### Team Season Stats
+```{r}
+szn_stats_url <- "api.collegefootballdata.com/stats/season?team=Notre+Dame"
+
+# retrieves all players from all seasons
+szn_stats_request <- httr::GET(szn_stats_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+szn_stats_request
+
+# Extract the content as JSON text
+szn_stats_content <- httr::content(szn_stats_request, as = "text")
+
+# Convert the JSON text into a data frame
+szn_stats_df <- jsonlite::fromJSON(txt = szn_stats_content)
+head(szn_stats_df)
+
+# list of stats recorded
+unique(szn_stats_df$statName)
+```
+
+
+### Advanced Team Season Stats
+```{r}
+adv_szn_stats_url <- "api.collegefootballdata.com/stats/season/advanced?team=Notre+Dame"
+
+# retrieves all players from all seasons
+adv_szn_stats_request <- httr::GET(adv_szn_stats_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+adv_szn_stats_request
+
+# Extract the content as JSON text
+adv_szn_stats_content <- httr::content(adv_szn_stats_request, as = "text")
+
+# Convert the JSON text into a data frame
+adv_szn_stats_df <- jsonlite::fromJSON(txt = adv_szn_stats_content)
+adv_szn_stats_df <- jsonlite::flatten(adv_szn_stats_df)
+head(adv_szn_stats_df)
+
+colnames(adv_szn_stats_df)
+```
+
+
+### Advanced Team Game Stats
+```{r}
+adv_game_stats_url <- "api.collegefootballdata.com/stats/game/advanced?team=Notre+Dame"
+
+# retrieves all players from all seasons
+adv_game_stats_request <- httr::GET(adv_game_stats_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+adv_game_stats_request
+
+# Extract the content as JSON text
+adv_game_stats_content <- httr::content(adv_game_stats_request, as = "text")
+
+# Convert the JSON text into a data frame
+adv_game_stats_df <- jsonlite::fromJSON(txt = adv_game_stats_content)
+adv_game_stats_df <- jsonlite::flatten(adv_game_stats_df)
+head(adv_game_stats_df)
+
+colnames(adv_game_stats_df)
+```
+
+
+### Player Season Stats
+```{r}
+# too big of a query to run... need to specify a year
+
+player_szn_stats_url <- "api.collegefootballdata.com/stats/player/season?team=Notre+Dame"
+
+# retrieves all players from all seasons
+player_szn_stats_request <- httr::GET(player_szn_stats_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+player_szn_stats_request
+
+# Extract the content as JSON text
+player_szn_stats_content <- httr::content(player_szn_stats_request, as = "text")
+
+# Convert the JSON text into a data frame
+player_szn_stats_df <- jsonlite::fromJSON(txt = player_szn_stats_content)
+head(player_szn_stats_df)
+```
+
+
+### Team Draft Picks
+```{r}
+draft_picks_url <- "api.collegefootballdata.com/draft/picks?college=Notre+Dame"
+
+# retrieves all players from all seasons
+draft_picks_request <- httr::GET(draft_picks_url, 
+                                    accept_json(), 
+                                    add_headers('Authorization' = api_key))
+draft_picks_request
+
+# Extract the content as JSON text
+draft_picks_content <- httr::content(draft_picks_request, as = "text")
+
+# Convert the JSON text into a data frame
+draft_picks_df <- jsonlite::fromJSON(txt = draft_picks_content)
+draft_picks_df <- jsonlite::flatten(draft_picks_df)
+head(draft_picks_df)
+```
+
+
+## Export Tables to CSV
+```{r}
+#write.csv(player_ranking_df, file="./player_ranking.csv")
+#write.csv(team_ranking_df, file="./team_ranking.csv")
+#write.csv(szn_stats_df, file="./season_stats.csv")
+#write.csv(adv_szn_stats_df, file="./adv_season_stats.csv")
+#write.csv(adv_game_stats_df, file="./adv_game_stats.csv")
+#write.csv(player_szn_stats_df, file="./player_season_stats.csv")
+#write.csv(draft_picks_df, file="./draft_picks.csv")
+```
+
+
+## Data Quality Check
+
+Let's see what percentage of each column is null
+```{r}
+(colMeans(is.na(player_ranking_df)))*100
+(colMeans(is.na(team_ranking_df)))*100
+(colMeans(is.na(szn_stats_df)))*100
+(colMeans(is.na(adv_szn_stats_df)))*100
+(colMeans(is.na(adv_game_stats_df)))*100
+#(colMeans(is.na(player_szn_stats_df)))*100
+(colMeans(is.na(draft_picks_df)))*100
+```
+
+
+## A Quick Look at the Data
+```{r}
+dim(player_ranking_df)
+dim(team_ranking_df)
+dim(szn_stats_df)
+dim(adv_szn_stats_df)
+dim(adv_game_stats_df)
+#dim(player_szn_stats_df)
+dim(draft_picks_df)
+```
+
+
+```{r}
+length(player_ranking_df$athleteId)
+
+summary(player_ranking_df$year)
+summary(draft_picks_df$year)
+
+draft_post_2000 <- draft_picks_df[draft_picks_df$year >= 2000,]
+length(draft_post_2000$year)
+```
+

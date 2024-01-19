@@ -1,0 +1,244 @@
+"","collegeAthleteId","nflAthleteId","collegeId","collegeTeam","collegeConference","nflTeam","year","overall","round","pick","name","position","height","weight","preDraftRanking","preDraftPositionRanking","preDraftGrade","hometownInfo.city","hometownInfo.state","hometownInfo.country","hometownInfo.latitude","hometownInfo.longitude","hometownInfo.countyFips"
+"1",NA,14413,87,"Notre Dame","FBS Independents","Buffalo",1972,1,1,1,"Walt Patulski","Defensive End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2",NA,780,87,"Notre Dame","FBS Independents","Seattle",1993,2,1,2,"Rick Mirer","Quarterback",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3",NA,16183,87,"Notre Dame","FBS Independents","Seattle",1976,2,1,2,"Steve Niehaus","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"4",NA,13532,87,"Notre Dame","FBS Independents","Green Bay",1970,2,1,2,"Mike McCoy","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"5",NA,13090,87,"Notre Dame","FBS Independents","Atlanta",1969,2,1,2,"George Kunz","Offensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"6",NA,4634,87,"Notre Dame","FBS Independents","Los Angeles",1991,5,1,5,"Todd Lyght","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"7",3129308,101518,87,"Notre Dame","FBS Independents","Indianapolis",2018,6,1,6,"Quenton Nelson","Offensive Guard",77,325,3,1,95,"Holmdel","NJ","USA","40.3451095","-74.1840322","34025"
+"8",-1026408,49919,87,"Notre Dame","FBS Independents","Baltimore",2016,6,1,6,"Ronnie Stanley","Offensive Tackle",78,312,5,2,93,"Las Vegas","NV","USA","36.1672559","-115.1485163","32003"
+"9",NA,17009,87,"Notre Dame","FBS Independents","San Francisco",1978,7,1,7,"Ken MacAfee","Tight End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"10",NA,12633,87,"Notre Dame","FBS Independents","New Orleans",1968,7,1,7,"Kevin Hardy","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"11",NA,4554,87,"Notre Dame","FBS Independents","San Francisco",1994,7,1,7,"Bryant Young","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"12",NA,17010,87,"Notre Dame","FBS Independents","Cincinnati",1978,8,1,8,"Ross Browner","Defensive End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"13",550954,101516,87,"Notre Dame","FBS Independents","San Francisco",2018,9,1,9,"Mike McGlinchey","Offensive Tackle",80,309,13,1,91,"Philadelphia","PA","USA","39.9527237","-75.1635262","42101"
+"14",NA,15747,87,"Notre Dame","FBS Independents","Los Angeles",1975,9,1,9,"Mike Fanning","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"15",NA,13098,87,"Notre Dame","FBS Independents","Los Angeles",1969,10,1,10,"Jim Seymour","Wide Receiver",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"16",NA,4584,87,"Notre Dame","FBS Independents","Los Angeles",1993,10,1,10,"Jerome Bettis","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"17",NA,17013,87,"Notre Dame","FBS Independents","Detroit",1978,11,1,11,"Luther Bradley","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"18",NA,18677,87,"Notre Dame","FBS Independents","Buffalo",1983,12,1,12,"Tony Hunter","Tight End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"19",NA,23601,87,"Notre Dame","FBS Independents","New York",1967,12,1,12,"Paul Seiler","Offensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"20",379067,28158,87,"Notre Dame","FBS Independents","Arizona",2012,13,1,13,"Michael Floyd","Wide Receiver",75,220,15,2,93,"Saint Paul","MN","USA","44.9504037","-93.1015026","27123"
+"21",NA,4615,87,"Notre Dame","FBS Independents","New York",1992,14,1,14,"Derek Brown","Tight End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"22",4575517,105536,87,"Notre Dame","FBS Independents","Baltimore",2022,14,1,14,"Kyle Hamilton","Safety",76,220,9,1,92,"Atlanta","GA","USA","33.7490987","-84.3901849","13121"
+"23",NA,23604,87,"Notre Dame","FBS Independents","Minnesota",1967,15,1,15,"Alan Page","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"24",NA,20688,87,"Notre Dame","FBS Independents","Seattle",1989,15,1,15,"Andy Heck","Offensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"25",NA,14427,87,"Notre Dame","FBS Independents","Atlanta",1972,15,1,15,"Clarence Ellis","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"26",-1026442,34107,87,"Notre Dame","FBS Independents","Dallas",2014,16,1,16,"Zack Martin","Offensive Tackle",76,308,9,4,93,"Indianapolis","IN","USA","39.7683331","-86.1583502","18097"
+"27",NA,4562,87,"Notre Dame","FBS Independents","Green Bay",1994,16,1,16,"Aaron Taylor","Offensive Guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"28",NA,4591,87,"Notre Dame","FBS Independents","Washington",1993,17,1,17,"Tom Carter","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"29",NA,4422,87,"Notre Dame","FBS Independents","New York",1999,19,1,19,"Luke Petitgout","Offensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"30",NA,19691,87,"Notre Dame","FBS Independents","New York",1986,19,1,19,"Eric Dorsey","Defensive End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"31",NA,4594,87,"Notre Dame","FBS Independents","New Orleans",1993,20,1,20,"Irv Smith","Tight End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"32",NA,6951,87,"Notre Dame","FBS Independents","Cleveland",2003,21,1,21,"Jeff Faine","Center",NA,303,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"33",NA,4479,87,"Notre Dame","FBS Independents","Jacksonville",1997,21,1,21,"Renaldo Wynn","Defensive End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"34",483387,29260,87,"Notre Dame","FBS Independents","Cincinnati",2013,21,1,21,"Tyler Eifert","Tight End",78,250,13,1,93,"Ft. Wayne","IN","USA","41.0799898","-85.1386015","18003"
+"35",-1026400,50132,87,"Notre Dame","FBS Independents","Houston",2016,21,1,21,"Will Fuller","Wide Receiver",72,186,21,4,90,"Philadelphia","PA","USA","39.9527237","-75.1635262","42101"
+"36",2129232,10302,87,"Notre Dame","FBS Independents","Cleveland",2007,22,1,22,"Brady Quinn","Quarterback",76,232,7,2,97,NA,NA,NA,NA,NA,NA
+"37",NA,18354,87,"Notre Dame","FBS Independents","New York",1982,23,1,23,"Bob Crable","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"38",NA,23612,87,"Notre Dame","FBS Independents","Tennessee",1967,23,1,23,"Tom Regner","Offensive Guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"39",NA,14437,87,"Notre Dame","FBS Independents","Miami",1972,25,1,25,"Mike Kadish","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"40",NA,17691,87,"Notre Dame","FBS Independents","New England",1980,25,1,25,"Vagas Ferguson","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"41",NA,19026,87,"Notre Dame","FBS Independents","Buffalo",1984,26,1,26,"Greg Bell","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"42",NA,4573,87,"Notre Dame","FBS Independents","Buffalo",1994,27,1,27,"Jeff Burris","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"43",3863182,103538,87,"Notre Dame","FBS Independents","Los Angeles",2019,28,1,28,"Jerry Tillery","Defensive Tackle",79,295,32,6,88,"Shreveport","LA","USA","32.5221828","-93.7651944","22017"
+"44",500930,28160,87,"Notre Dame","FBS Independents","Minnesota",2012,29,1,29,"Harrison Smith","Safety",74,213,29,2,89,"Knoxville","TN","USA","35.9603948","-83.9210261","47093"
+"45",NA,13118,87,"Notre Dame","FBS Independents","Pittsburgh",1969,30,2,4,"Terry Hanratty","Quarterback",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"46",NA,21930,87,"Notre Dame","FBS Independents","Tampa Bay",1993,34,2,5,"Demetrius DuBose","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"47",550965,49872,87,"Notre Dame","FBS Independents","Dallas",2016,34,2,3,"Jaylon Smith","Outside Linebacker",74,223,76,7,77,"Fort Wayne","IN","USA","41.0799898","-85.1386015","18003"
+"48",NA,15773,87,"Notre Dame","FBS Independents","San Francisco",1975,35,2,9,"Greg Collins","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"49",4429086,106313,87,"Notre Dame","FBS Independents","Las Vegas",2023,35,2,4,"Michael Mayer","Tight End",77,249,19,2,90,"Independence","KY","USA","38.9431183","-84.544109","21117"
+"50",NA,21626,87,"Notre Dame","FBS Independents","New England",1992,35,2,7,"Rod Smith","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"51",NA,21019,87,"Notre Dame","FBS Independents","Indianapolis",1990,36,2,11,"Anthony Johnson","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"52",2129218,11929,87,"Notre Dame","FBS Independents","Seattle",2008,38,2,7,"John Carlson","Tight End",77,251,54,3,83,NA,NA,NA,NA,NA,NA
+"53",517633,29240,87,"Notre Dame","FBS Independents","Los Angeles",2013,38,2,6,"Manti Te'o","Inside Linebacker",73,241,21,2,91,"Laie","HI","USA","21.647244399999998","-157.93069756074482","15003"
+"54",NA,14893,87,"Notre Dame","FBS Independents","Atlanta",1973,39,2,13,"Greg Marx","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"55",4426457,106319,87,"Notre Dame","FBS Independents","New Orleans",2023,40,2,9,"Isaiah Foskey","Defensive End",77,264,77,9,75,"Antioch","CA","USA","38.0049214","-121.805789","06013"
+"56",NA,21023,87,"Notre Dame","FBS Independents","Kansas City",1990,40,2,15,"Tim Grunhard","Center",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"57",NA,17707,87,"Notre Dame","FBS Independents","New Orleans",1980,41,2,13,"Dave Waymer","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"58",NA,21024,87,"Notre Dame","FBS Independents","Tennessee",1990,41,2,16,"Jeff Alm","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"59",4046694,104827,87,"Notre Dame","FBS Independents","Miami",2021,42,2,10,"Liam Eichenberg","Offensive Tackle",78,306,33,5,88,"Cleveland","OH","USA","41.5051613","-81.6934446","39035"
+"60",NA,17379,87,"Notre Dame","FBS Independents","Minnesota",1979,43,2,15,"Dave Huffman","Center",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"61",1953120,7890,87,"Notre Dame","FBS Independents","Dallas",2004,43,2,11,"Julius Jones","Running Back",70,214,82,7,76,NA,NA,NA,NA,NA,NA
+"62",385438,27020,87,"Notre Dame","FBS Independents","Minnesota",2011,43,2,11,"Kyle Rudolph","Tight End",78,259,30,1,89,"Cincinnati","OH","USA","39.1014537","-84.5124602","39061"
+"63",4258595,104431,87,"Notre Dame","FBS Independents","Chicago",2020,43,2,11,"Cole Kmet","Tight End",78,262,45,1,85,"Lake Barrington","IL","USA","42.2125241","-88.1525798","17097"
+"64",NA,22325,87,"Notre Dame","FBS Independents","New Orleans",1995,44,2,12,"Ray Zellars","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"65",NA,15341,87,"Notre Dame","FBS Independents","Las Vegas",1974,45,2,19,"Dave Casper","Tight End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"66",NA,20718,87,"Notre Dame","FBS Independents","Los Angeles",1989,45,2,17,"Frank Stams","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"67",NA,19381,87,"Notre Dame","FBS Independents","Atlanta",1985,45,2,17,"Mike Gann","Defensive End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"68",NA,21941,87,"Notre Dame","FBS Independents","Washington",1993,45,2,16,"Reggie Brooks","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"69",NA,21329,87,"Notre Dame","FBS Independents","San Francisco",1991,45,2,18,"Ricky Watters","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"70",517634,33608,87,"Notre Dame","FBS Independents","Pittsburgh",2014,46,2,14,"Stephon Tuitt","Defensive End",78,304,27,2,89,"Monroe","GA","USA","33.7948364","-83.713229","13297"
+"71",NA,23634,87,"Notre Dame","FBS Independents","Cleveland",1967,46,2,20,"Larry Conjar","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"72",NA,12350,87,"Notre Dame","FBS Independents","Kansas City",1967,47,2,21,"Jim Lynch","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"73",2129225,11934,87,"Notre Dame","FBS Independents","Philadelphia",2008,47,2,16,"Trevor Laws","Defensive Tackle",73,304,55,5,83,NA,NA,NA,NA,NA,NA
+"74",NA,20053,87,"Notre Dame","FBS Independents","Washington",1987,48,2,20,"Wally Kleine","Offensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"75",231813,25716,87,"Notre Dame","FBS Independents","Carolina",2010,48,2,16,"Jimmy Clausen","Quarterback",75,222,35,2,89,"Westlake Village","CA","USA","34.1460234","-118.8061794","06037"
+"76",4242390,105178,87,"Notre Dame","FBS Independents","San Francisco",2021,48,2,16,"Aaron Banks","Offensive Guard",77,325,92,6,73,"Alameda","CA","USA","37.7652076","-122.2416355","06001"
+"77",NA,21333,87,"Notre Dame","FBS Independents","Chicago",1991,49,2,22,"Chris Zorich","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"78",NA,17051,87,"Notre Dame","FBS Independents","Pittsburgh",1978,49,2,21,"Willie Fry","Defensive End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"79",4046692,104180,87,"Notre Dame","FBS Independents","Pittsburgh",2020,49,2,17,"Chase Claypool","Wide Receiver",76,238,62,11,78,"Abbotsford","BC","CAN",NA,NA,NA
+"80",NA,21032,87,"Notre Dame","FBS Independents","Los Angeles",1990,49,2,24,"Pat Terrell","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"81",-1026402,49817,87,"Notre Dame","FBS Independents","Houston",2016,50,2,19,"Nick Martin","Center",76,299,63,2,79,"Indianapolis","IN","USA","39.7683331","-86.1583502","18097"
+"82",NA,22331,87,"Notre Dame","FBS Independents","Philadelphia",1995,50,2,18,"Bobby Taylor","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"83",NA,17717,87,"Notre Dame","FBS Independents","Indianapolis",1980,51,2,23,"Tim Foley","Offensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"84",3129302,51681,87,"Notre Dame","FBS Independents","Cleveland",2017,52,2,20,"DeShone Kizer","Quarterback",76,233,54,4,82,"Toledo","OH","USA","41.6786754","-83.5127283","39095"
+"85",517624,34771,87,"Notre Dame","FBS Independents","Arizona",2014,52,2,20,"Troy Niklas","Tight End",79,270,59,4,79,"Fullerton","CA","USA","33.8708215","-117.9294165","06059"
+"86",NA,17388,87,"Notre Dame","FBS Independents","New England",1979,52,2,24,"Bob Golic","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"87",4258599,104749,87,"Notre Dame","FBS Independents","Cleveland",2021,52,2,20,"Jeremiah Owusu-Koramoah","Inside Linebacker",74,221,12,1,91,"Hampton","VA","USA","37.0520315","-76.2856365","51650"
+"88",NA,4021,87,"Notre Dame","FBS Independents","Baltimore",2002,52,2,20,"Anthony Weaver","Defensive Tackle",NA,296,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"89",NA,14465,87,"Notre Dame","FBS Independents","Buffalo",1972,53,3,1,"Fred Swendsen","Defensive End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"90",2080098,10312,87,"Notre Dame","FBS Independents","Dallas",2006,53,2,21,"Anthony Fasano","Tight End",76,259,48,4,86,NA,NA,NA,NA,NA,NA
+"91",NA,22778,87,"Notre Dame","FBS Independents","San Francisco",1997,55,2,25,"Marc Edwards","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"92",NA,13587,87,"Notre Dame","FBS Independents","Buffalo",1970,57,3,5,"Jim Reilly","Offensive Guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"93",2129213,10432,87,"Notre Dame","FBS Independents","Philadelphia",2007,57,2,25,"Victor Abiamiri","Defensive End",76,267,69,11,79,NA,NA,NA,NA,NA,NA
+"94",NA,23646,87,"Notre Dame","FBS Independents","Denver",1967,59,3,6,"George Goeddeke","Center",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"95",237421,25744,87,"Notre Dame","FBS Independents","Seattle",2010,60,2,28,"Golden Tate","Wide Receiver",70,199,51,4,84,"Hendersonville","TN","USA","36.3049177","-86.621443","47165"
+"96",1953138,7568,87,"Notre Dame","FBS Independents","New Orleans",2004,60,2,28,"Courtney Watson","Linebacker",73,238,134,5,64,NA,NA,NA,NA,NA,NA
+"97",NA,19733,87,"Notre Dame","FBS Independents","Tennessee",1986,61,3,6,"Allen Pinkett","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"98",NA,18729,87,"Notre Dame","FBS Independents","Chicago",1983,64,3,8,"Dave Duerson","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"99",NA,22155,87,"Notre Dame","FBS Independents","Miami",1994,65,2,36,"Tim Ruddy","Center",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"100",4046690,104109,87,"Notre Dame","FBS Independents","Detroit",2020,67,3,3,"Julian Okwara","Outside Linebacker",76,252,64,6,77,"Charlotte","NC","USA","35.2272","-80.843083","37119"
+"101",NA,154,87,"Notre Dame","FBS Independents","Chicago",2001,68,3,6,"Mike Gandy","Offensive Guard",NA,315,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"102",NA,15807,87,"Notre Dame","FBS Independents","Denver",1975,69,3,17,"Drew Mahalic","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"103",2129221,10754,87,"Notre Dame","FBS Independents","Denver",2007,70,3,6,"Ryan Harris","Offensive Tackle",77,305,92,7,73,NA,NA,NA,NA,NA,NA
+"104",NA,23655,87,"Notre Dame","FBS Independents","Buffalo",1967,70,3,17,"Tom Rhoads","Defensive End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"105",NA,21356,87,"Notre Dame","FBS Independents","Cincinnati",1991,72,3,17,"Bob Dahl","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"106",2013262,9099,87,"Notre Dame","FBS Independents","New York",2005,74,3,10,"Justin Tuck","Defensive End",77,265,45,8,87,NA,NA,NA,NA,NA,NA
+"107",NA,22164,87,"Notre Dame","FBS Independents","Chicago",1994,74,3,9,"Jim Flanigan","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"108",2980150,49441,87,"Notre Dame","FBS Independents","Kansas City",2016,74,3,11,"Keivarae Russell","Cornerback",71,192,84,10,75,NA,NA,NA,NA,NA,NA
+"109",NA,18407,87,"Notre Dame","FBS Independents","New Orleans",1982,76,3,21,"John Krimm","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"110",NA,12702,87,"Notre Dame","FBS Independents","Minnesota",1968,76,3,21,"Mike McGill","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"111",NA,17081,87,"Notre Dame","FBS Independents","San Francisco",1978,79,3,23,"Ernie Hughes","Offensive Guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"112",NA,13168,87,"Notre Dame","FBS Independents","Philadelphia",1969,80,4,2,"Bob Kuechenberg","Offensive Guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"113",NA,22172,87,"Notre Dame","FBS Independents","Los Angeles",1994,82,3,17,"Willie Clark","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"114",NA,19418,87,"Notre Dame","FBS Independents","Tennessee",1985,82,3,26,"Mike Kelley","Center",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"115",NA,17418,87,"Notre Dame","FBS Independents","San Francisco",1979,82,3,26,"Joe Montana","Quarterback",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"116",4372780,105276,87,"Notre Dame","FBS Independents","Carolina",2021,83,3,20,"Tommy Tremble","Tight End",75,241,93,4,73,"Johns Creek","GA","USA","34.0181557","-84.190196","13121"
+"117",-1026446,33599,87,"Notre Dame","FBS Independents","Houston",2014,83,3,19,"Louis Nix III","Defensive Tackle",74,331,36,2,88,"Jacksonville","FL","USA","30.3321838","-81.655651","12031"
+"118",NA,23018,87,"Notre Dame","FBS Independents","Philadelphia",1998,85,3,24,"Allen Rossum","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"119",NA,21676,87,"Notre Dame","FBS Independents","Indianapolis",1992,85,4,1,"Rodney Culver","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"120",NA,15382,87,"Notre Dame","FBS Independents","Minnesota",1974,86,4,8,"Mike Townsend","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"121",NA,22809,87,"Notre Dame","FBS Independents","Indianapolis",1997,86,3,26,"Bert Berry","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"122",2129241,11931,87,"Notre Dame","FBS Independents","Baltimore",2008,86,3,23,"Tom Zbikowski","Safety",71,211,98,4,71,NA,NA,NA,NA,NA,NA
+"123",NA,475,87,"Notre Dame","FBS Independents","New England",2001,86,3,24,"Brock Williams","Defensive Back",NA,188,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"124",NA,14498,87,"Notre Dame","FBS Independents","Green Bay",1972,86,4,8,"Eric Patton","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"125",NA,22810,87,"Notre Dame","FBS Independents","Carolina",1997,87,3,27,"Kinnon Tatum","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"126",NA,17755,87,"Notre Dame","FBS Independents","Arizona",1980,89,4,6,"Rusty Lisch","Quarterback",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"127",-1026454,33630,87,"Notre Dame","FBS Independents","Los Angeles",2014,89,3,25,"Chris Watt","Offensive Guard",75,310,163,10,54,"Glen Ellyn","IL","USA","41.8775293","-88.0670118","17043"
+"128",535958,50030,87,"Notre Dame","FBS Independents","Seattle",2016,90,3,27,"C.J. Prosise","Running Back",73,220,88,5,73,"Petersburg","VA","USA","37.227928","-77.4019268","51730"
+"129",2080111,9181,87,"Notre Dame","FBS Independents","Tampa Bay",2006,90,3,26,"Maurice Stovall","Wide Receiver",76,217,57,5,84,NA,NA,NA,NA,NA,NA
+"130",NA,21074,87,"Notre Dame","FBS Independents","Cincinnati",1990,91,4,10,"Mike Brennan","Offensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"131",NA,18756,87,"Notre Dame","FBS Independents","Chicago",1983,91,4,7,"Tom Thayer","Center",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"132",NA,22182,87,"Notre Dame","FBS Independents","Kansas City",1994,92,3,27,"Lake Dawson","Wide Receiver",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"133",NA,21683,87,"Notre Dame","FBS Independents","Philadelphia",1992,92,4,8,"Tony Brooks","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"134",3932423,103864,87,"Notre Dame","FBS Independents","Baltimore",2019,93,3,29,"Miles Boykin","Wide Receiver",76,220,61,9,80,"Tinley Park","IL","USA","41.5733669","-87.7844944","17031"
+"135",NA,21686,87,"Notre Dame","FBS Independents","New Orleans",1992,95,4,11,"Gene McGuire","Center",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"136",4242391,105189,87,"Notre Dame","FBS Independents","Tampa Bay",2021,95,3,32,"Robert Hainsey","Offensive Tackle",77,306,175,15,57,"Pittsburgh","PA","USA","40.4416941","-79.9900861","42003"
+"137",NA,14069,87,"Notre Dame","FBS Independents","Miami",1971,99,4,21,"Joe Theismann","Quarterback",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"138",NA,21384,87,"Notre Dame","FBS Independents","Las Vegas",1991,100,4,17,"Raghib Ismail","Wide Receiver",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"139",NA,19436,87,"Notre Dame","FBS Independents","New York",1985,100,4,16,"Mark Bavaro","Tight End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"140",-1026398,49661,87,"Notre Dame","FBS Independents","Jacksonville",2016,103,4,5,"Sheldon Day","Defensive Tackle",73,293,60,10,79,"Indianapolis","IN","USA","39.7683331","-86.1583502","18097"
+"141",NA,14075,87,"Notre Dame","FBS Independents","New England",1971,105,5,1,"Tim Kelly","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"142",NA,22003,87,"Notre Dame","FBS Independents","Indianapolis",1993,107,4,23,"Devon McDonald","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"143",NA,14519,87,"Notre Dame","FBS Independents","New York",1972,107,5,3,"Tom Gatewood","Wide Receiver",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"144",NA,13637,87,"Notre Dame","FBS Independents","New England",1970,107,5,3,"Bob Olson","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"145",4046675,103540,87,"Notre Dame","FBS Independents","New York",2019,108,4,6,"Julian Love","Cornerback",71,195,54,7,82,"Westchester","IL","USA","41.8505866","-87.8820048","17031"
+"146",NA,18108,87,"Notre Dame","FBS Independents","Atlanta",1981,109,4,26,"John Scully","Center",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"147",NA,20115,87,"Notre Dame","FBS Independents","Las Vegas",1987,110,4,26,"Steve Beuerlein","Quarterback",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"148",NA,15849,87,"Notre Dame","FBS Independents","Los Angeles",1975,111,5,7,"Kevin Nosbusch","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"149",NA,17113,87,"Notre Dame","FBS Independents","Miami",1978,111,5,1,"Ted Burgmeier","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"150",4046679,104171,87,"Notre Dame","FBS Independents","Carolina",2020,113,4,7,"Troy Pride Jr.","Cornerback",72,193,103,13,69,"Greer","SC","USA","34.9381361","-82.2272119","45045"
+"151",NA,18779,87,"Notre Dame","FBS Independents","Tennessee",1983,114,5,2,"Larry Moriarty","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"152",2184340,24562,87,"Notre Dame","FBS Independents","Denver",2009,114,4,14,"David Bruton","Safety",74,219,184,13,51,NA,NA,NA,NA,NA,NA
+"153",NA,15852,87,"Notre Dame","FBS Independents","San Francisco",1975,114,5,10,"Wayne Bullock","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"154",NA,12741,87,"Notre Dame","FBS Independents","New England",1968,116,5,5,"Jim Smithberger","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"155",2027840,114,87,"Notre Dame","FBS Independents","New England",2001,119,4,24,"Jabari Holloway","Tight End",NA,255,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"156",NA,13207,87,"Notre Dame","FBS Independents","Chicago",1969,119,5,15,"Jim Winegardner","Tight End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"157",NA,22401,87,"Notre Dame","FBS Independents","Pittsburgh",1995,120,4,22,"Oliver Gibson","Defensive End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"158",1953181,7415,87,"Notre Dame","FBS Independents","Houston",2004,122,4,26,"Glenn Earl","Defensive Back",73,222,140,11,63,NA,NA,NA,NA,NA,NA
+"159",NA,21106,87,"Notre Dame","FBS Independents","Las Vegas",1990,123,5,14,"Stan Smagala","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"160",550966,101617,87,"Notre Dame","FBS Independents","Miami",2018,123,4,23,"Durham Smythe","Tight End",77,253,186,13,55,"Belton","TX","USA","31.0560132","-97.464453","48027"
+"161",NA,13659,87,"Notre Dame","FBS Independents","Kansas City",1970,130,5,26,"Mike Oriard","Center",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"162",3129310,103729,87,"Notre Dame","FBS Independents","Los Angeles",2019,130,4,28,"Drue Tranquill","Inside Linebacker",74,234,121,4,68,"Fort Wayne","IN","USA","41.0799898","-85.1386015","18003"
+"163",NA,20803,87,"Notre Dame","FBS Independents","Chicago",1989,130,5,18,"Mark Green","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"164",NA,22026,87,"Notre Dame","FBS Independents","Kansas City",1993,130,5,18,"Lindsay Knapp","Offensive Guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"165",NA,22223,87,"Notre Dame","FBS Independents","Indianapolis",1994,133,5,2,"John Covington","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"166",NA,4033,87,"Notre Dame","FBS Independents","Tennessee",2002,133,4,35,"Rocky Boiman","Linebacker",NA,244,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"167",4046678,105150,87,"Notre Dame","FBS Independents","New Orleans",2021,133,4,28,"Ian Book","Quarterback",72,211,221,10,43,"El Dorado Hills","CA","USA","38.6561185","-121.0743265","06017"
+"168",NA,22858,87,"Notre Dame","FBS Independents","Detroit",1997,135,5,5,"Pete Chryplewicz","Tight End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"169",NA,21420,87,"Notre Dame","FBS Independents","Tampa Bay",1991,136,5,25,"Tim Ryan","Offensive Guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"170",NA,18468,87,"Notre Dame","FBS Independents","Dallas",1982,137,5,26,"Phil Pozderac","Offensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"171",NA,4292,87,"Notre Dame","FBS Independents","Detroit",2002,138,5,3,"John Owens","Tight End",NA,266,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"172",NA,14992,87,"Notre Dame","FBS Independents","Chicago",1973,138,6,8,"Mike Creaney","Center",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"173",385320,29044,87,"Notre Dame","FBS Independents","Minnesota",2012,139,5,4,"Robert Blanton","Safety",73,208,177,13,51,"Matthews","NC","USA","35.1170873","-80.723718","37119"
+"174",-1026451,33081,87,"Notre Dame","FBS Independents","Atlanta",2014,139,4,39,"Prince Shembo","Outside Linebacker",73,253,172,16,52,"Charlotte","NC","USA","35.2272","-80.843083","37119"
+"175",NA,13229,87,"Notre Dame","FBS Independents","Miami",1969,141,6,11,"Ed Tuck","Offensive Guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"176",NA,23286,87,"Notre Dame","FBS Independents","Chicago",1999,143,5,10,"Jerry Wisne","Offensive Guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"177",1940320,8906,87,"Notre Dame","FBS Independents","Los Angeles",2005,144,5,8,"Jerome Collins","Tight End",76,261,190,10,57,NA,NA,NA,NA,NA,NA
+"178",NA,21129,87,"Notre Dame","FBS Independents","Seattle",1990,146,6,9,"Ned Bolcar","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"179",4039029,104133,87,"Notre Dame","FBS Independents","Cincinnati",2020,147,5,1,"Khalid Kareem","Defensive End",76,268,148,18,59,"Detroit","MI","USA","42.3315509","-83.0466403","26163"
+"180",NA,20820,87,"Notre Dame","FBS Independents","Miami",1989,147,6,8,"Wes Pritchett","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"181",NA,22428,87,"Notre Dame","FBS Independents","Cleveland",1995,147,5,13,"Mike Miller","Wide Receiver",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"182",NA,23292,87,"Notre Dame","FBS Independents","New York",1999,149,5,16,"Mike Rosenthal","Offensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"183",NA,22243,87,"Notre Dame","FBS Independents","San Francisco",1994,153,5,22,"Anthony Peterson","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"184",NA,6930,87,"Notre Dame","FBS Independents","Kansas City",2003,153,5,18,"Jordan Black","Offensive Tackle",NA,314,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"185",NA,12783,87,"Notre Dame","FBS Independents","Philadelphia",1968,157,6,19,"Dave Martin","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"186",NA,14569,87,"Notre Dame","FBS Independents","Buffalo",1972,157,7,1,"Ralph Stepaniak","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"187",NA,13687,87,"Notre Dame","FBS Independents","Philadelphia",1970,158,7,2,"Terry Brennan","Offensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"188",NA,14128,87,"Notre Dame","FBS Independents","New Orleans",1971,158,7,2,"Larry DiNardo","Offensive Guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"189",2222802,4620,87,"Notre Dame","FBS Independents","Kansas City",1992,159,6,19,"Tony Smith","Wide Receiver",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"190",NA,21753,87,"Notre Dame","FBS Independents","Cleveland",1992,163,6,23,"George Williams","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"191",4430737,105597,87,"Notre Dame","FBS Independents","Los Angeles",2022,164,5,21,"Kyren Williams","Running Back",69,194,163,13,59,"Saint Louis","MO","USA","38.6264178","-90.1998378","29510"
+"192",2980137,19164,87,"Notre Dame","FBS Independents","Pittsburgh",1984,164,6,24,"Chris Brown","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"193",385329,28747,87,"Notre Dame","FBS Independents","San Francisco",2012,165,5,30,"Darius Fleming","Outside Linebacker",74,245,163,14,55,"Chicago","IL","USA","41.8755616","-87.6244212","17031"
+"194",2080102,10877,87,"Notre Dame","FBS Independents","Jacksonville",2007,166,5,29,"Derek Landri","Defensive Tackle",75,288,109,11,69,NA,NA,NA,NA,NA,NA
+"195",NA,23309,87,"Notre Dame","FBS Independents","Pittsburgh",1999,166,5,33,"Malcolm Johnson","Wide Receiver",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"196",NA,19168,87,"Notre Dame","FBS Independents","Las Vegas",1984,168,6,28,"Stacey Toran","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"197",NA,7245,87,"Notre Dame","FBS Independents","Tampa Bay",2003,168,5,33,"Sean Mahan","Offensive Guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"198",1940173,7294,87,"Notre Dame","FBS Independents","Houston",2004,170,6,5,"Vontez Duff","Defensive Back",71,198,174,20,57,NA,NA,NA,NA,NA,NA
+"199",NA,6787,87,"Notre Dame","FBS Independents","Los Angeles",2003,170,5,35,"Shane Walton","Defensive Back",NA,184,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"200",4039028,105147,87,"Notre Dame","FBS Independents","Baltimore",2021,171,5,27,"Daelin Hayes","Defensive End",76,253,134,12,65,"Belleville","MI","USA","42.2048414","-83.4852106","17163"
+"201",2313911,30011,87,"Notre Dame","FBS Independents","Cleveland",2013,175,6,7,"Jamoris Slaughter","Safety",72,195,230,19,46,NA,NA,NA,NA,NA,NA
+"202",NA,20181,87,"Notre Dame","FBS Independents","Tennessee",1987,176,7,8,"Robert Banks","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"203",NA,14589,87,"Notre Dame","FBS Independents","New York",1972,177,7,21,"Mike Zikas","Defensive Tackle",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"204",NA,415,87,"Notre Dame","FBS Independents","Buffalo",2001,178,6,15,"Tony Driver","Defensive Back",NA,215,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"205",-1026555,25392,87,"Notre Dame","FBS Independents","Dallas",2010,179,6,10,"Sam Young","Offensive Tackle",80,316,NA,15,49,"Coral Springs","FL","USA","26.26485615","-80.26534203798758","12011"
+"206",1953126,7761,87,"Notre Dame","FBS Independents","Washington",2004,180,6,15,"Jim Molinaro","Offensive Tackle",78,308,215,18,50,NA,NA,NA,NA,NA,NA
+"207",NA,6776,87,"Notre Dame","FBS Independents","Baltimore",2003,182,6,9,"Gerome Sapp","Defensive Back",NA,216,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"208",4046693,104905,87,"Notre Dame","FBS Independents","Atlanta",2021,182,5,38,"Adetokunbo Ogundeji","Defensive End",77,260,181,18,55,"West Bloomfield","MI","USA","42.5679","-83.3733","36069"
+"209",-1026544,25797,87,"Notre Dame","FBS Independents","Denver",2010,183,6,14,"Eric Olsen","Center",76,306,NA,6,31,"Staten Island","NY","USA","40.564209","-74.12530461995391","36085"
+"210",NA,21469,87,"Notre Dame","FBS Independents","Pittsburgh",1991,185,7,18,"Andre Jones","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"211",4039413,104552,87,"Notre Dame","FBS Independents","Los Angeles",2020,186,6,7,"Alohi Gilman","Safety",71,201,142,11,60,"Laie","HI","USA","21.647244399999998","-157.93069756074482","15003"
+"212",500914,34142,87,"Notre Dame","FBS Independents","New York",2014,187,6,11,"Bennett Jackson","Cornerback",72,195,251,34,39,"Hazlet","NJ","USA","40.4154057","-74.1905486","34025"
+"213",2129236,11930,87,"Notre Dame","FBS Independents","Minnesota",2008,187,6,21,"John Sullivan","Center",76,301,121,3,65,NA,NA,NA,NA,NA,NA
+"214",500915,34707,87,"Notre Dame","FBS Independents","Detroit",2014,189,6,13,"TJ Jones","Wide Receiver",72,188,169,25,53,"Roswell","GA","USA","34.02332","-84.360022","13121"
+"215",NA,18188,87,"Notre Dame","FBS Independents","Los Angeles",1981,189,7,23,"Pete Holohan","Tight End",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"216",3932449,103641,87,"Notre Dame","FBS Independents","Green Bay",2019,194,6,21,"Dexter Williams","Running Back",71,212,212,16,54,"Winter Garden","FL","USA","28.5656649","-81.5856742","12095"
+"217",NA,123,87,"Notre Dame","FBS Independents","Buffalo",2001,195,6,32,"Dan O'Leary","Tight End",NA,252,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"218",NA,7150,87,"Notre Dame","FBS Independents","San Francisco",2003,197,6,24,"Arnaz Battle","Wide Receiver",NA,217,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"219",NA,4053,87,"Notre Dame","FBS Independents","Philadelphia",2002,198,6,26,"Tyreo Harrison","Linebacker",NA,232,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"220",483393,30196,87,"Notre Dame","FBS Independents","Detroit",2013,199,6,31,"Theo Riddick","Running Back",NA,201,NA,NA,NA,"Manville","NJ","USA","40.5409367","-74.587657","34035"
+"221",-1026465,29213,87,"Notre Dame","FBS Independents","Baltimore",2013,200,6,32,"Kapron Lewis-Moore","Defensive End",76,298,241,25,44,"Weatherford","TX","USA","32.7589648","-97.7970748","48367"
+"222",4372774,106391,87,"Notre Dame","FBS Independents","Houston",2023,201,6,24,"Jarrett Patterson","Center",77,306,235,8,43,"Laguna Hills","CA","USA","33.5948758","-117.6882067","06059"
+"223",NA,16382,87,"Notre Dame","FBS Independents","New Orleans",1976,201,7,19,"Ed Bauer","Offensive Guard",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"224",2080107,11078,87,"Notre Dame","FBS Independents","New England",2007,202,6,28,"Mike Richardson","Defensive Back",71,189,NA,43,30,NA,NA,NA,NA,NA,NA
+"225",2013255,9696,87,"Notre Dame","FBS Independents","New England",2006,205,6,36,"Dan Stevenson","Offensive Guard",77,300,NA,12,47,NA,NA,NA,NA,NA,NA
+"226",NA,4331,87,"Notre Dame","FBS Independents","Baltimore",2002,206,6,34,"Javin Hunter","Wide Receiver",NA,186,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"227",3932442,101808,87,"Notre Dame","FBS Independents","Green Bay",2018,207,6,33,"Equanimeous St. Brown","Wide Receiver",77,214,139,19,64,"Anaheim","CA","USA","33.8347516","-117.911732","06059"
+"228",3052895,23353,87,"Notre Dame","FBS Independents","Indianapolis",1999,210,7,4,"Hunter Smith","Punter",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"229",NA,22301,87,"Notre Dame","FBS Independents","Minnesota",1994,211,7,17,"Pete Bercich","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"230",NA,6942,87,"Notre Dame","FBS Independents","Green Bay",2003,212,6,39,"Brennan Curtin","Offensive Tackle",NA,318,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"231",NA,237,87,"Notre Dame","FBS Independents","Jacksonville",2001,213,7,13,"Anthony Denman","Linebacker",NA,236,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"232",NA,23548,87,"Notre Dame","FBS Independents","Denver",2000,214,7,8,"Jarious Jackson","Quarterback",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"233",550963,51600,87,"Notre Dame","FBS Independents","Los Angeles",2017,225,7,7,"Isaac Rochell","Defensive End",76,280,181,16,55,"McDonough","GA","USA","33.4473361","-84.1468616","13151"
+"234",517617,46987,87,"Notre Dame","FBS Independents","Jacksonville",2015,229,7,12,"Ben Koyack","Tight End",77,255,178,10,50,"Oil City","PA","USA","41.433948","-79.706441","42121"
+"235",2080109,11104,87,"Notre Dame","FBS Independents","Cincinnati",2007,230,7,20,"Dan Santucci","Center",76,301,179,9,53,NA,NA,NA,NA,NA,NA
+"236",3932433,103698,87,"Notre Dame","FBS Independents","New Orleans",2019,231,7,17,"Alize Mack","Tight End",76,249,204,16,55,"Las Vegas","NV","USA","36.1672559","-115.1485163","32003"
+"237",NA,23376,87,"Notre Dame","FBS Independents","Tampa Bay",1999,233,7,27,"Autry Denson","Running Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"238",NA,23377,87,"Notre Dame","FBS Independents","San Francisco",1999,234,7,28,"Kory Minor","Linebacker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"239",NA,22522,87,"Notre Dame","FBS Independents","New Orleans",1995,242,7,34,"Travis Davis","Defensive Back",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"240",483392,29532,87,"Notre Dame","FBS Independents","Atlanta",2013,244,7,38,"Zeke Motta","Safety",74,213,174,13,55,"Vero Beach","FL","USA","27.6387163","-80.3975399","12061"
+"241",4035656,105179,87,"Notre Dame","FBS Independents","Los Angeles",2021,249,7,22,"Ben Skowronek","Wide Receiver",75,220,210,36,48,"Fort Wayne","IN","USA","41.0799898","-85.1386015","18003"
+"242",NA,4325,87,"Notre Dame","FBS Independents","New England",2002,253,7,42,"David Givens","Wide Receiver",NA,213,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"243",2129228,10989,87,"Notre Dame","FBS Independents","Cincinnati",2007,253,7,43,"Chinedum Ndukwe","Defensive Back",74,206,271,20,34,NA,NA,NA,NA,NA,NA

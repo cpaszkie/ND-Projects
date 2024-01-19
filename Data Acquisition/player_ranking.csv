@@ -1,0 +1,505 @@
+"","id","athleteId","recruitType","year","ranking","name","school","committedTo","position","height","weight","stars","rating","city","stateProvince","country","hometownInfo.latitude","hometownInfo.longitude","hometownInfo.fipsCode"
+"1","10417","231813","HighSchool",2007,   2,"Jimmy Clausen","Oaks Christian","Notre Dame","PRO",75.00,200,5,0.9987,"Thousand Oaks","CA","USA",34.17142715,-118.91058772974445,06111
+"2","24958","550965","HighSchool",2013,   2,"Jaylon Smith","Bishop Luers","Notre Dame","OLB",75.00,218,5,0.9986,"Fort Wayne","IN","USA",41.0799898,-85.1386015,18003
+"3","14800","517633","HighSchool",2009,   4,"Manti Te'o","Punahou","Notre Dame","ILB",74.00,225,5,0.9977,"Honolulu","HI","USA",21.304547,-157.8556764,15003
+"4","8270",NA,"HighSchool",2006,   8,"Sam Young","St. Thomas Aquinas","Notre Dame","OT",80.00,305,5,0.9960,"Fort Lauderdale","FL","USA",26.1223084,-80.1433786,12011
+"5","19579","-1026487","HighSchool",2011,   9,"Aaron Lynch","Island Coast","Notre Dame","SDE",78.00,240,5,0.9945,"Cape Coral","FL","USA",26.6059432,-81.9806771,12071
+"6","12643","379067","HighSchool",2008,  14,"Michael Floyd","Cretin Derham Hall","Notre Dame","WR",75.00,195,5,0.9908,"Saint Paul","MN","USA",44.9504037,-93.1015026,27123
+"7","12648",NA,"HighSchool",2008,  22,"Dayne Crist","Notre Dame","Notre Dame","PRO",77.00,228,5,0.9886,"Sherman Oaks","CA","USA",34.1508718,-118.4489865,06037
+"8","35210","4046691","HighSchool",2016,  26,"Tommy Kraemer","Elder","Notre Dame","OT",77.50,309,5,0.9835,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"9","22063","-1026464","HighSchool",2012,  26,"Gunner Kiel","Columbus East","Notre Dame","PRO",76.00,210,5,0.9878,"Columbus","IN","USA",39.2014405,-85.9213796,18005
+"10","19596","-1026410","HighSchool",2011,  26,"Ishaq Williams","Abraham Lincoln","Notre Dame","OLB",77.00,242,5,0.9881,"Brooklyn","NY","USA",40.6501038,-73.9495823,36047
+"11","65921",NA,"HighSchool",2001,  27,"Mark LeVoir","Eden Prairie","Notre Dame","OT",79.00,310,5,0.9884,"Eden Prairie","MN","USA",44.8546856,-93.470786,27053
+"12","8287",NA,"HighSchool",2006,  27,"James Aldridge","Crown Point","Notre Dame","RB",73.00,215,5,0.9873,"Crown Point","IN","USA",41.4169806,-87.3653136,18089
+"13","12658","385438","HighSchool",2008,  29,"Kyle Rudolph","Elder","Notre Dame","TE",78.00,229,4,0.9809,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"14","1902",NA,"HighSchool",2003,  29,"Victor Abiamiri","Gilman","Notre Dame","SDE",77.00,245,5,0.9861,"Baltimore","MD","USA",39.2908816,-76.610759,24510
+"15","24986","550961","HighSchool",2013,  29,"Max Redfield","Mission Viejo","Notre Dame","S",75.00,195,5,0.9856,"Mission Viejo","CA","USA",33.5965685,-117.659405,06059
+"16","10443","237402","HighSchool",2007,  31,"Duval Kamara","Hoboken","Notre Dame","WR",77.00,209,5,0.9834,"Hoboken","NJ","USA",40.7433066,-74.0323752,34017
+"17","19602","517634","HighSchool",2011,  31,"Stephon Tuitt","Monroe Area","Notre Dame","SDE",77.00,270,4,0.9824,"Monroe","GA","USA",33.7948364,-83.713229,13297
+"18","61599","4429086","HighSchool",2020,  32,"Michael Mayer","Covington Catholic","Notre Dame","TE",76.00,232,5,0.9833,"Alexandria","KY","USA",38.9595078,-84.3879946,21037
+"19","90137","4685527","HighSchool",2022,  34,"Jaylen Sneed","Hilton Head","Notre Dame","LB",74.00,210,5,0.9835,"Hilton Head Island","SC","USA",32.1618488,-80.7512616,45013
+"20","95177",NA,"HighSchool",2024,  35,"Cam Williams","Glenbard South","Notre Dame","WR",74.00,190,5,0.9839,"Glen Ellyn","IL","USA",41.8775293,-88.0670118,17043
+"21","12665",NA,"HighSchool",2008,  36,"Ethan Johnson","Lincoln","Notre Dame","SDE",76.00,285,4,0.9787,"Portland","OR","USA",45.5202471,-122.6741949,41051
+"22","61604","4689632","HighSchool",2020,  37,"Jordan Johnson","DeSmet","Notre Dame","WR",73.00,182,4,0.9822,"Saint Louis","MO","USA",38.6264178,-90.1998378,29510
+"23","14836","-1026454","HighSchool",2009,  40,"Chris Watt","Glenbard West","Notre Dame","OG",75.00,280,4,0.9768,"Glen Ellyn","IL","USA",41.8775293,-88.0670118,17043
+"24","19613","517617","HighSchool",2011,  42,"Ben Koyack","Oil City","Notre Dame","TE",77.00,242,4,0.9765,"Oil City","PA","USA",41.433948,-79.706441,42121
+"25","163",NA,"HighSchool",2002,  43,"Rhema McKnight","John F. Kennedy","Notre Dame","WR",75.00,180,4,0.9819,"La Palma","CA","USA",33.846404,-118.0467306,06059
+"26","10453",NA,"HighSchool",2007,  44,"Gary Gray","Richland Northeast","Notre Dame","CB",71.00,163,4,0.9787,"Columbia","SC","USA",34.0007493,-81.0343313,45079
+"27","25001","550938","HighSchool",2013,  45,"Greg Bryant","American Heritage B/D","Notre Dame","RB",71.00,196,4,0.9764,"Delray Beach","FL","USA",26.4614625,-80.0728201,12099
+"28","8473",NA,"HighSchool",2006,  45,"Demetrius Jones","Morgan Park","Notre Dame","DUAL",75.00,195,4,0.9792,"Chicago","IL","USA",41.8755616,-87.6244212,17031
+"29","95186",NA,"HighSchool",2024,  46,"CJ Carr","Saline","Notre Dame","QB",74.00,195,4,0.9756,"Saline","MI","USA",42.1667072,-83.7816075,26161
+"30","8301",NA,"HighSchool",2006,  46,"Konrad Reuland","Mission Viejo","Notre Dame","TE",78.00,240,4,0.9791,"Mission Viejo","CA","USA",33.5965685,-117.659405,06059
+"31","31904","3932451","HighSchool",2015,  46,"Brandon Wimbush","St. Peters Prep","Notre Dame","DUAL",74.00,205,4,0.9792,"Jersey City","NJ","USA",40.7281575,-74.0776417,34017
+"32","95189",NA,"HighSchool",2024,  48,"Guerby Lambert","Catholic Memorial","Notre Dame","OT",78.00,280,4,0.9750,"West Roxbury","MA","USA",42.2792649,-71.1494972,25025
+"33","174",NA,"HighSchool",2002,  53,"Derek Landri","De La Salle","Notre Dame","DT",74.00,285,4,0.9769,"Concord","CA","USA",37.9768525,-122.0335624,06013
+"34","71509","4432699","HighSchool",2021,  54,"Blake Fisher","Avon","Notre Dame","OT",77.00,336,4,0.9739,"Avon","IN","USA",39.7628227,-86.3997168,18063
+"35","28261","3129306","HighSchool",2014,  54,"Nyles Morgan","Crete-Monee","Notre Dame","ILB",73.00,225,4,0.9739,"Crete","IL","USA",41.4445334,-87.6313829,17197
+"36","19626","-1026420","HighSchool",2011,  56,"Matt Hegarty","Aztec","Notre Dame","OT",77.00,280,4,0.9708,"Aztec","NM","USA",36.8220629,-107.9928992,35045
+"37","65950",NA,"HighSchool",2001,  56,"Corey Mays","Morgan Park","Notre Dame","OLB",73.00,234,4,0.9795,"Chicago","IL","USA",41.8755616,-87.6244212,17031
+"38","10464","237411","HighSchool",2007,  57,"Mike Ragone","Camden Catholic","Notre Dame","TE",76.00,221,4,0.9758,"Cherry Hill","NJ","USA",39.9348351,-75.0307264,34007
+"39","22090","535956","HighSchool",2012,  57,"DaVonte' Neal","Central","Notre Dame","ATH",69.00,170,4,0.9732,"Paradise Valley","AZ","USA",33.5428006,-111.9556001,04013
+"40","10482",NA,"HighSchool",2007,  58,"Matt Romine","Union","Notre Dame","OT",78.00,285,4,0.9751,"Tulsa","OK","USA",36.1556805,-95.9929113,40143
+"41","71517","4431593","HighSchool",2021,  59,"Rocco Spindler","Clarkston","Notre Dame","OG",76.00,315,4,0.9715,"Clarkston","MI","USA",42.735863,-83.4188304,26125
+"42","60",NA,"HighSchool",2000,  59,"Greg Pauly","South","Notre Dame","DT",78.00,275,4,0.9771,"Waukesha","WI","USA",43.0116784,-88.2314813,55133
+"43","46856","4575517","HighSchool",2019,  60,"Kyle Hamilton","Marist School","Notre Dame","S",75.00,190,4,0.9700,"Atlanta","GA","USA",33.7490987,-84.3901849,13121
+"44","28270","3129308","HighSchool",2014,  61,"Quenton Nelson","Red Bank Catholic","Notre Dame","OT",77.00,295,4,0.9707,"Red Bank","NJ","USA",40.3470543,-74.0643065,34025
+"45","92395","4899359","HighSchool",2023,  61,"Charles Jagusah","Alleman","Notre Dame","OT",78.00,308,4,0.9715,"Rock Island","IL","USA",41.5094771,-90.5787477,17161
+"46","8315",NA,"HighSchool",2006,  62,"Darrin Walls","Woodland Hills","Notre Dame","CB",72.00,190,4,0.9738,"Pittsburgh","PA","USA",40.4416941,-79.9900861,42003
+"47","12691",NA,"HighSchool",2008,  63,"Darius Fleming","St. Rita","Notre Dame","OLB",75.00,230,4,0.9705,"Chicago","IL","USA",41.8755616,-87.6244212,17031
+"48","14860","480250","HighSchool",2009,  63,"Cierre Wood","Santa Clara","Notre Dame","RB",72.00,192,4,0.9694,"Santa Clara","CA","USA",37.3541132,-121.9551744,06085
+"49","31921","3932433","HighSchool",2015,  63,"Alize Mack","Bishop Gorman","Notre Dame","TE",76.50,218,4,0.9693,"Las Vegas","NV","USA",36.1672559,-115.1485163,32003
+"50","17155","-1026515","HighSchool",2010,  64,"Louis Nix III","Raines","Notre Dame","DT",74.00,230,4,0.9685,"Jacksonville","FL","USA",30.3321838,-81.655651,12031
+"51","8314",NA,"HighSchool",2006,  64,"Raeshon McNeil","Davie County","Notre Dame","CB",72.00,175,4,0.9734,"Mocksville","NC","USA",35.8940236,-80.5617846,37059
+"52","93361","4870808","HighSchool",2023,  68,"Jeremiyah Love","Christian Brothers College","Notre Dame","ATH",72.00,190,4,0.9683,"Saint Louis","MO","USA",38.6264178,-90.1998378,29510
+"53","42977","4361322","HighSchool",2018,  70,"Houston Griffith","IMG Academy","Notre Dame","CB",73.00,192,4,0.9651,"Bradenton","FL","USA",27.4989278,-82.5748194,12081
+"54","71522","4431513","HighSchool",2021,  70,"Tyler Buchner","Helix","Notre Dame","DUAL",74.00,205,4,0.9685,"La Jolla","CA","USA",32.83259,-117.2716839,06073
+"55","61637","4430804","HighSchool",2020,  70,"Chris Tyree","Thomas Dale","Notre Dame","APB",70.00,179,4,0.9680,"Chester","VA","USA",37.3569086,-77.4421818,51041
+"56","38692","4242392","HighSchool",2017,  71,"Brock Wright","Cy-Fair","Notre Dame","TE",76.50,243,4,0.9669,"Cypress","TX","USA",29.9691116,-95.6971686,48201
+"57","73",NA,"HighSchool",2000,  72,"Vontez Duff","Copperas Cove","Notre Dame","RB",73.00,175,4,0.9743,"Copperas Cove","TX","USA",31.124062,-97.9030785,48099
+"58","10473","237399","HighSchool",2007,  74,"Robert Hughes","Hubbard","Notre Dame","RB",71.00,226,4,0.9648,"Chicago","IL","USA",41.8755616,-87.6244212,17031
+"59","1948",NA,"HighSchool",2003,  75,"John Sullivan","Greenwich","Notre Dame","OC",76.00,270,4,0.9493,"Greenwich","CT","USA",41.0264862,-73.6284598,09001
+"60","76",NA,"HighSchool",2000,  75,"Carlyle Holiday","Roosevelt","Notre Dame","WR",75.00,185,4,0.9739,"San Antonio","TX","USA",29.4246002,-98.4951405,48029
+"61","94784","4870808","HighSchool",2023,  79,"Jeremiyah Love","Christian Brothers College","Notre Dame","RB",72.00,190,4,0.9635,"Saint Louis","MO","USA",38.6264178,-90.1998378,29510
+"62","35263","4046694","HighSchool",2016,  79,"Liam Eichenberg","St. Ignatius","Notre Dame","OT",78.00,290,4,0.9614,"Cleveland","OH","USA",41.5051613,-81.6934446,39035
+"63","95244",NA,"HighSchool",2024,  80,"Kyngstonn Viliamu-Asa","St. John Bosco","Notre Dame","LB",75.00,230,4,0.9587,"Bellflower","CA","USA",33.8825705,-118.1167679,06037
+"64","10665","237421","HighSchool",2007,  81,"Golden Tate","Pope John Paul II","Notre Dame","WR",71.00,175,4,0.9594,"Hendersonville","TN","USA",36.3049177,-86.621443,47165
+"65","38709","4258595","HighSchool",2017,  82,"Cole Kmet","St. Viator","Notre Dame","TE",77.00,230,4,0.9609,"Arlington Heights","IL","USA",42.0811563,-87.9802164,17031
+"66","1955",NA,"HighSchool",2003,  82,"Brady Quinn","Dublin Coffman","Notre Dame","PRO",76.00,215,4,0.9422,"Dublin","OH","USA",40.0992294,-83.1140771,39049
+"67","42989","4372758","HighSchool",2018,  82,"Kevin Austin","North Broward Prep","Notre Dame","WR",75.00,198,4,0.9601,"Pompano Beach","FL","USA",26.2378597,-80.1247667,12011
+"68","42990","4372768","HighSchool",2018,  83,"Phil Jurkovec","Pine-Richland","Notre Dame","DUAL",77.00,215,4,0.9593,"Gibsonia","PA","USA",40.6300671,-79.9695004,42003
+"69","38706","4242391","HighSchool",2017,  84,"Robert Hainsey","IMG Academy","Notre Dame","OG",76.50,276,4,0.9605,"Bradenton","FL","USA",27.4989278,-82.5748194,12081
+"70","12714",NA,"HighSchool",2008,  85,"Trevor Robinson","Elkhorn","Notre Dame","OG",78.00,304,4,0.9558,"Elkhorn","NE","USA",41.2860699,-96.2346121,31055
+"71","22122","535961","HighSchool",2012,  87,"Elijah Shumate","Don Bosco Prep","Notre Dame","S",73.00,185,4,0.9595,"Ramsey","NJ","USA",41.0573188,-74.1409771,34003
+"72","17176",NA,"HighSchool",2010,  87,"T.J. Jones","Gainesville","Notre Dame","WR",72.00,184,4,0.9591,"Gainesville","GA","USA",34.2978794,-83.8240663,13139
+"73","12713",NA,"HighSchool",2008,  88,"Steve Filer","Mount Carmel","Notre Dame","OLB",75.00,220,4,0.9587,"Chicago","IL","USA",41.8755616,-87.6244212,17031
+"74","31948","3863089","HighSchool",2015,  89,"Tristen Hoge","Highland","Notre Dame","OC",76.00,276,4,0.9563,"Pocatello","ID","USA",42.8688613,-112.4401098,16005
+"75","42997","4372778","HighSchool",2018,  90,"Shayne Simon","St. Peters Prep","Notre Dame","OLB",75.00,215,4,0.9567,"Jersey City","NJ","USA",40.7281575,-74.0776417,34017
+"76","12716",NA,"HighSchool",2008,  90,"Deion Walker","Christchurch School","Notre Dame","WR",76.00,186,4,0.9572,"Church View","VA","USA",37.6776411,-76.6782906,51119
+"77","14882","-1026535","HighSchool",2009,  92,"Shaquelle Evans","Inglewood","Notre Dame","WR",73.00,203,4,0.9575,"Inglewood","CA","USA",33.9562003,-118.353132,06037
+"78","65986",NA,"HighSchool",2001,  92,"Carlos Campbell","Hampton","Notre Dame","WR",72.00,190,4,0.9707,"Hampton","VA","USA",37.0520315,-76.2856365,51650
+"79","12717","385332","HighSchool",2008,  92,"Jonas Gray","Detroit Country Day","Notre Dame","RB",70.00,213,4,0.9565,"Franklin","MI","USA",42.5222567,-83.3060432,26125
+"80","19663","517610","HighSchool",2011,  93,"DaVaris Daniels","Vernon Hills","Notre Dame","WR",74.00,175,4,0.9534,"Vernon Hills","IL","USA",42.2204892,-87.9803604,17097
+"81","31953","3932449","HighSchool",2015,  94,"Dexter Williams","West Orange","Notre Dame","RB",72.00,192,4,0.9551,"Winter Garden","FL","USA",28.5656649,-81.5856742,12095
+"82","28302","-1026374","HighSchool",2014,  95,"Justin Brent","Speedway","Notre Dame","WR",75.00,190,4,0.9554,"Indianapolis","IN","USA",39.7683331,-86.1583502,18097
+"83","46891","4426414","HighSchool",2019,  95,"Zeke Correll","Anderson","Notre Dame","OC",76.00,285,4,0.9578,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"84","96",NA,"HighSchool",2000,  95,"Mike Goolsby","Joliet Catholic Academy","Notre Dame","ILB",76.00,225,4,0.9663,"Joliet","IL","USA",41.5263603,-88.0840212,17197
+"85","14888","-1026453","HighSchool",2009,  96,"Tyler Stockton","Hun School","Notre Dame","DT",73.00,290,4,0.9549,"Princeton","NJ","USA",40.3492744,-74.6592958,34021
+"86","25053","-1026360","HighSchool",2013,  97,"Hunter Bivin","Apollo","Notre Dame","OT",79.00,290,4,0.9531,"Owensboro","KY","USA",37.7742152,-87.1133304,21059
+"87","218",NA,"HighSchool",2002,  98,"Travis Leitko","The Woodlands","Notre Dame","SDE",77.00,265,4,0.9380,"The Woodlands","TX","USA",30.1734194,-95.504686,48339
+"88","43006","4361324","HighSchool",2018,  99,"Jack Lamb","Great Oak","Notre Dame","ILB",76.00,220,4,0.9547,"Temecula","CA","USA",33.4946353,-117.1473661,06065
+"89","61667","4430863","HighSchool",2020, 100,"Tosh Baker","Pinnacle","Notre Dame","OT",79.00,271,4,0.9549,"Phoenix","AZ","USA",33.4484367,-112.0741417,04013
+"90","220",NA,"HighSchool",2002, 100,"Maurice Stovall","Archbishop John Carroll","Notre Dame","WR",77.00,205,4,0.9369,"Wayne","PA","USA",40.0440149,-75.3878616,42045
+"91","6186",NA,"HighSchool",2005, 100,"D.J. Hord","Rockhurst","Notre Dame","WR",73.00,195,4,0.9440,"Kansas City","MO","USA",39.100105,-94.5781416,29095
+"92","10682",NA,"HighSchool",2007, 100,"Kerry Neal","Bunn","Notre Dame","OLB",75.00,234,4,0.9458,"Bunn","NC","USA",35.959537,-78.2543185,37069
+"93","71555","4431213","HighSchool",2021, 102,"Deion Colzie","Athens Academy","Notre Dame","WR",76.00,193,4,0.9571,"Athens","GA","USA",33.9597677,-83.376398,13059
+"94","92437","4870708","HighSchool",2023, 103,"Christian Gray","DeSmet","Notre Dame","CB",72.00,175,4,0.9524,"Saint Louis","MO","USA",38.6264178,-90.1998378,29510
+"95","224",NA,"HighSchool",2002, 104,"James Bonelli","St. Bonaventure","Notre Dame","OG",76.00,285,4,0.9353,"Ventura","CA","USA",34.3435092,-119.29560423163717,06111
+"96","1978",NA,"HighSchool",2003, 105,"Freddie Parish","Long Beach Poly","Notre Dame","S",73.00,195,4,0.9357,"Long Beach","CA","USA",33.7690164,-118.1916048,06037
+"97","92353","4870622","HighSchool",2023, 105,"Drayk Bowen","Andrean","Notre Dame","LB",74.00,215,4,0.9496,"Merrillville","IN","USA",41.4828144,-87.3328139,18089
+"98","25060","550944","HighSchool",2013, 106,"Tarean Folston","Cocoa","Notre Dame","RB",69.00,185,4,0.9508,"Cocoa","FL","USA",28.3553873,-80.7318827,12009
+"99","43013","4372757","HighSchool",2018, 106,"Derrik Allen","Lassiter","Notre Dame","S",74.00,211,4,0.9516,"Marietta","GA","USA",33.9528472,-84.5496148,13067
+"100","28315","-1026348","HighSchool",2014, 109,"Alex Bars","Montgomery Bell Academy","Notre Dame","OT",78.00,309,4,0.9484,"Nashville","TN","USA",36.1622296,-86.7743531,47037
+"101","90212",NA,"HighSchool",2022, 109,"Josh Burnham","Central","Notre Dame","LB",76.00,225,4,0.9550,"Traverse City","MI","USA",44.7606441,-85.6165301,26055
+"102","22148","-1026398","HighSchool",2012, 111,"Sheldon Day","Warren Central","Notre Dame","DT",74.00,286,4,0.9509,"Indianapolis","IN","USA",39.7683331,-86.1583502,18097
+"103","25069","550963","HighSchool",2013, 111,"Isaac Rochell","Eagles Landing Christian Academy","Notre Dame","SDE",77.00,260,4,0.9482,"Mcdonough","GA","USA",33.4473361,-84.1468616,13151
+"104","31972","3932426","HighSchool",2015, 112,"Shaun Crawford","St. Edward","Notre Dame","CB",69.50,170,4,0.9484,"Lakewood","OH","USA",41.4819932,-81.7981908,39035
+"105","8352",NA,"HighSchool",2006, 112,"Zach Frazer","Mechanicsburg Area","Notre Dame","PRO",76.00,215,4,0.9406,"Mechanicsburg","PA","USA",40.2101972,-77.0047276,42041
+"106","90215","4685564","HighSchool",2022, 112,"Aamil Wagner","Wayne","Notre Dame","OT",78.00,265,4,0.9548,"Dayton","OH","USA",39.7589478,-84.1916069,39113
+"107","35294","4046686","HighSchool",2016, 113,"Javon McKinley","Centennial","Notre Dame","WR",73.75,194,4,0.9464,"Corona","CA","USA",33.8752945,-117.5664449,06065
+"108","1987",NA,"HighSchool",2003, 114,"Tommy Zbikowski","Buffalo Grove","Notre Dame","DUAL",73.00,190,4,0.9331,"Buffalo Grove","IL","USA",42.1675825,-87.95564020833334,17097
+"109","12735",NA,"HighSchool",2008, 115,"Jamoris Slaughter","Tucker","Notre Dame","S",73.00,185,4,0.9439,"Tucker","GA","USA",33.8532701,-84.2200729,13089
+"110","71572","4432768","HighSchool",2021, 115,"Lorenzo Styles Jr.","Pickerington Central","Notre Dame","WR",73.00,185,4,0.9485,"Pickerington","OH","USA",39.896277299999994,-82.77319049748806,39045
+"111","25068","-1026399","HighSchool",2013, 115,"Steve Elmer","Midland","Notre Dame","OT",78.00,315,4,0.9467,"Midland","MI","USA",43.6155825,-84.2472117,26111
+"112","17196",NA,"HighSchool",2010, 116,"Matt James","St. Xavier","Notre Dame","OT",80.00,290,4,0.9471,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"113","66010",NA,"HighSchool",2001, 116,"Zachary Giles","Marshfield","Notre Dame","OC",75.00,285,4,0.9647,"Marshfield","MA","USA",42.091769,-70.7055941,25023
+"114","12739",NA,"HighSchool",2008, 117,"Braxston Cave","Penn","Notre Dame","OC",76.00,295,4,0.9419,"Mishawaka","IN","USA",41.6619927,-86.1586156,18141
+"115","71573","4431533","HighSchool",2021, 117,"Gabriel Rubio","Lutheran Of St Charles County","Notre Dame","DT",77.00,305,4,0.9474,"Saint Peters","MO","USA",38.791612,-90.5958468,29183
+"116","46914","4426436","HighSchool",2019, 118,"Quinn Carroll","Edina Senior","Notre Dame","OT",78.00,295,4,0.9472,"Minneapolis","MN","USA",44.9772995,-93.2654692,27053
+"117","90223","4685341","HighSchool",2022, 120,"Tyson Ford","John Burroughs School","Notre Dame","DL",77.00,260,4,0.9518,"Saint Louis","MO","USA",38.6264178,-90.1998378,29510
+"118","61687","4429101","HighSchool",2020, 120,"Jordan Botelho","St. Louis","Notre Dame","ILB",75.00,230,4,0.9478,"Honolulu","HI","USA",21.304547,-157.8556764,15003
+"119","67821","4258596","HighSchool",2017, 120,"Josh Lugg","North Allegheny","Notre Dame","OT",79.00,293,4,0.9443,"Wexford","PA","USA",40.6264561,-80.055891,42003
+"120","38746",NA,"HighSchool",2017, 121,"Joshua Lugg","North Allegheny","Notre Dame","OT",79.00,293,4,0.9417,"Wexford","PA","USA",40.6264561,-80.055891,42003
+"121","90225","4685476","HighSchool",2022, 121,"Tobias Merriweather","Union","Notre Dame","WR",76.00,185,4,0.9513,"Camas","WA","USA",45.5911103,-122.4122248,53011
+"122","1995",NA,"HighSchool",2003, 122,"Ryan Harris","Cretin Derham Hall","Notre Dame","OT",77.00,255,4,0.9290,"Saint Paul","MN","USA",44.9504037,-93.1015026,27123
+"123","22164","-1026408","HighSchool",2012, 125,"Ronnie Stanley","Bishop Gorman","Notre Dame","OT",78.00,285,4,0.9462,"Las Vegas","NV","USA",36.1672559,-115.1485163,32003
+"124","1998",NA,"HighSchool",2003, 125,"Isaiah Gardner","Salem","Notre Dame","CB",71.00,195,4,0.9248,"Salem","VA","USA",37.293378,-80.054667,51775
+"125","43035","4372754","HighSchool",2018, 128,"Jayson Ademilola","St. Peters Prep","Notre Dame","DT",75.00,290,4,0.9453,"Jersey City","NJ","USA",40.7281575,-74.0776417,34017
+"126","302",NA,"HighSchool",2002, 128,"Jamie Ryan","Marian Catholic","Notre Dame","OT",77.00,275,4,0.9000,"Tamaqua","PA","USA",40.7974296,-75.9696186,42107
+"127","35316","4039028","HighSchool",2016, 132,"Daelin Hayes","Skyline","Notre Dame","OLB",76.00,249,4,0.9409,"Ann Arbor","MI","USA",42.2681569,-83.7312291,26161
+"128","92397","4870809","HighSchool",2023, 136,"Braylon James","Del Valle","Notre Dame","WR",74.00,175,4,0.9421,"Del Valle","TX","USA",30.2091,-97.647,06037
+"129","8553",NA,"HighSchool",2006, 136,"Richard Jackson","East Ridge","Notre Dame","WR",75.00,195,4,0.9316,"Clermont","FL","USA",28.5494447,-81.7728543,12069
+"130","31996","-1026371","HighSchool",2015, 138,"Josh Barajas","Andrean","Notre Dame","OLB",75.00,215,4,0.9382,"Merrillville","IN","USA",41.4828144,-87.3328139,18089
+"131","92420","4870768","HighSchool",2023, 138,"Jaden Greathouse","Westlake","Notre Dame","WR",74.00,206,4,0.9407,"Austin","TX","USA",30.2711286,-97.7436995,48453
+"132","10708","389142","HighSchool",2007, 138,"Armando Allen","Hialeah-Miami Lakes","Notre Dame","RB",69.00,181,4,0.9304,"Hialeah","FL","USA",25.8575963,-80.2781057,12086
+"133","2013",NA,"HighSchool",2003, 139,"Trevor Laws","Apple Valley","Notre Dame","DT",75.00,285,4,0.9000,"Saint Paul","MN","USA",44.9504037,-93.1015026,27123
+"134","336",NA,"HighSchool",2002, 141,"Nate Schiccatano","Southern Columbia","Notre Dame","RB",75.00,215,4,0.9000,"Catawissa","PA","USA",40.9548267,-76.4609868,42037
+"135","318",NA,"HighSchool",2002, 142,"Bobby Morton","McKinney","Notre Dame","OG",76.00,305,4,0.9000,"Mckinney","TX","USA",33.1976496,-96.6154471,48085
+"136","4098",NA,"HighSchool",2004, 142,"Anthony Vernaglia","Orange Lutheran","Notre Dame","ATH",76.00,218,4,0.9222,"Orange","CA","USA",33.7872568,-117.8503088,06059
+"137","15172",NA,"HighSchool",2009, 142,"Zack Martin","Bishop Chatard","Notre Dame","OT",77.00,270,4,0.9319,"Indianapolis","IN","USA",39.7683331,-86.1583502,18097
+"138","22183","535960","HighSchool",2012, 144,"KeiVarae Russell","Mariner","Notre Dame","APB",72.00,175,4,0.9403,"Everett","WA","USA",47.9673056,-122.2013998,53061
+"139","71610","4682989","HighSchool",2021, 145,"Prince Kollie","David Crockett","Notre Dame","OLB",73.00,210,4,0.9367,"Jonesborough","TN","USA",36.2944928,-82.4734089,47179
+"140","61713","4429060","HighSchool",2020, 146,"Michael Carmody","Mars Area","Notre Dame","OT",77.00,283,4,0.9352,"Mars","PA","USA",40.6958342,-80.011878,42019
+"141","8409",NA,"HighSchool",2006, 147,"Daniel Wenger","St. Thomas Aquinas","Notre Dame","OLB",76.00,280,4,0.9000,"Fort Lauderdale","FL","USA",26.1223084,-80.1433786,12011
+"142","28352","3125208","HighSchool",2014, 147,"Andrew Trumbetti","N Valley Reg Demarest","Notre Dame","SDE",77.00,250,4,0.9363,"Demarest","NJ","USA",40.9573205,-73.9634708,34003
+"143","38774","-1026351","HighSchool",2017, 147,"Darnell Ewell","Lake Taylor","Notre Dame","DT",76.00,295,4,0.9358,"Norfolk","VA","USA",36.8462923,-76.2929252,51710
+"144","90251","4685549","HighSchool",2022, 149,"Billy Schrauth","St. Mary's Springs","Notre Dame","IOL",77.00,300,4,0.9402,"Fond Du Lac","WI","USA",43.7748763,-88.4458033,55039
+"145","14933","483392","HighSchool",2009, 149,"Zeke Motta","Vero Beach","Notre Dame","OLB",74.00,207,4,0.9295,"Vero Beach","FL","USA",27.6387163,-80.3975399,12061
+"146","22186","535952","HighSchool",2012, 152,"Jarron Jones","Aquinas Institute","Notre Dame","OT",78.00,300,4,0.9382,"Rochester","NY","USA",43.157285,-77.615214,36055
+"147","25097","-1026386","HighSchool",2013, 152,"John Montelus","Everett","Notre Dame","OG",77.00,305,4,0.9330,"Everett","MA","USA",42.40843,-71.0536625,25017
+"148","8563",NA,"HighSchool",2006, 152,"Luke Schmidt","Jasper","Notre Dame","FB",75.00,230,4,0.9270,"Jasper","IN","USA",38.3914228,-86.9308719,18037
+"149","6233",NA,"HighSchool",2005, 153,"Joey Hiben","Waconia Senior","Notre Dame","TE",77.00,235,4,0.9000,"Waconia","MN","USA",44.8507957,-93.7869088,27019
+"150","25100","550952","HighSchool",2013, 154,"Cole Luke","Hamilton","Notre Dame","CB",72.00,170,4,0.9325,"Chandler","AZ","USA",33.3062223,-111.8413317,04013
+"151","32016","3863182","HighSchool",2015, 156,"Jerry Tillery","Evangel Christian Academy","Notre Dame","OT",78.00,308,4,0.9325,"Shreveport","LA","USA",32.5221828,-93.7651944,22017
+"152","8375",NA,"HighSchool",2006, 157,"Matt Carufel","Cretin Derham Hall","Notre Dame","OT",77.00,280,4,0.9250,"Saint Paul","MN","USA",44.9504037,-93.1015026,27123
+"153","90257","4685586","HighSchool",2022, 158,"Joey Tanona","Zionsville","Notre Dame","OT",77.00,295,4,0.9377,"Zionsville","IN","USA",39.950724,-86.2616968,18011
+"154","61727","4430838","HighSchool",2020, 159,"Rylie Mills","Lake Forest","Notre Dame","SDE",77.00,275,4,0.9306,"Lake Forest","IL","USA",42.2586342,-87.840625,17097
+"155","90260",NA,"HighSchool",2022, 159,"Niuafe Tuihalamaka","Bishop Alemany","Notre Dame","LB",74.00,235,4,0.9373,"Mission Hills","CA","USA",34.687584,-120.43901754304565,06083
+"156","25126","550967","HighSchool",2013, 162,"Malik Zaire","Archbishop Alter","Notre Dame","DUAL",73.00,185,4,0.9300,"Dayton","OH","USA",39.7589478,-84.1916069,39113
+"157","32019","3932442","HighSchool",2015, 162,"Equanimeous St. Brown","Servite","Notre Dame","WR",77.00,205,4,0.9298,"Anaheim","CA","USA",33.8347516,-117.911732,06059
+"158","92357","4870589","HighSchool",2023, 163,"Jaiden Ausberry","University Lab","Notre Dame","LB",74.00,205,4,0.9339,"Baton Rouge","LA","USA",30.4459596,-91.18738,22033
+"159","38796","4242390","HighSchool",2017, 166,"Aaron Banks","El Cerrito","Notre Dame","OT",79.00,315,4,0.9301,"El Cerrito","CA","USA",37.9154056,-122.301411,06013
+"160","92811","4918099","HighSchool",2023, 167,"Kenny Minchey","Pope John Paul II","Notre Dame","QB",73.00,206,4,0.9323,"Hendersonville","TN","USA",36.3049177,-86.621443,47165
+"161","90280","4703026","HighSchool",2022, 168,"Aiden Gobaira","Chantilly","Notre Dame","EDGE",76.00,230,4,0.9332,"Chantilly","VA","USA",38.8941543,-77.4311513,51059
+"162","10739",NA,"HighSchool",2007, 169,"Ian Williams","Lyman","Notre Dame","DT",74.00,294,4,0.9190,"Longwood","FL","USA",28.7007225,-81.34927797143865,12117
+"163","35353","4046692","HighSchool",2016, 170,"Chase Claypool","Abbotsford","Notre Dame","WR",77.00,205,4,0.9258,"Abbotsford","BC","CAN",NA,NA,NA
+"164","25118","550954","HighSchool",2013, 172,"Mike McGlinchey","William Penn Charter","Notre Dame","OT",81.00,275,4,0.9280,"Philadelphia","PA","USA",39.9527237,-75.1635262,42101
+"165","46968","4570065","HighSchool",2019, 172,"Jacob Lacey","South Warren","Notre Dame","DT",74.00,285,4,0.9304,"Bowling Green","KY","USA",36.9903199,-86.4436018,21227
+"166","2022",NA,"HighSchool",2003, 172,"Ambrose Wooden","Gilman","Notre Dame","S",73.00,190,4,0.9000,"Baltimore","MD","USA",39.2908816,-76.610759,24510
+"167","95319",NA,"HighSchool",2024, 173,"Loghan Thomas","Paetow","Notre Dame","EDGE",75.00,210,4,0.9301,"Katy","TX","USA",29.7857853,-95.8243956,48157
+"168","90289","4831959","HighSchool",2022, 173,"Eli Raridon","Valley","Notre Dame","TE",78.00,228,4,0.9310,"West Des Moines","IA","USA",41.5645337,-93.7595281,19153
+"169","95316",NA,"HighSchool",2024, 175,"Brauntae Johnson","North Side","Notre Dame","ATH",75.00,170,4,0.9302,"Fort Wayne","IN","USA",41.0799898,-85.1386015,18003
+"170","12788",NA,"HighSchool",2008, 176,"Dan McCarthy","Cardinal Mooney","Notre Dame","S",74.00,190,4,0.9221,"Youngstown","OH","USA",41.1035786,-80.6520161,39099
+"171","8577",NA,"HighSchool",2006, 178,"Toryan Smith","Rome","Notre Dame","ILB",72.00,230,4,0.9160,"Rome","GA","USA",34.257038,-85.1646726,13115
+"172","17253","-1026426","HighSchool",2010, 178,"Christian Lombard","Palatine","Notre Dame","OG",77.00,290,4,0.9233,"Palatine","IL","USA",42.1105779,-88.0336888,17031
+"173","95324",NA,"HighSchool",2024, 178,"Kedren Young","Lufkin","Notre Dame","RB",70.00,220,4,0.9294,"Lufkin","TX","USA",31.3386242,-94.7288558,48005
+"174","19747","517624","HighSchool",2011, 179,"Troy Niklas","Servite","Notre Dame","SDE",79.00,240,4,0.9187,"Anaheim","CA","USA",33.8347516,-117.911732,06059
+"175","28386","3129312","HighSchool",2014, 182,"Nick Watkins","Bishop Dunne","Notre Dame","CB",73.00,185,4,0.9257,"Dallas","TX","USA",32.7762719,-96.7968559,48113
+"176","46979","4426468","HighSchool",2019, 183,"Andrew Kristofic","Pine-Richland","Notre Dame","OT",77.00,282,4,0.9254,"Gibsonia","PA","USA",40.6300671,-79.9695004,42003
+"177","46981","4426480","HighSchool",2019, 185,"John Olmstead","Saint Joseph","Notre Dame","OT",78.00,300,4,0.9242,"Metuchen","NJ","USA",40.5431598,-74.3632049,34023
+"178","28388","3129300","HighSchool",2014, 187,"Corey Holmes","St. Thomas Aquinas","Notre Dame","WR",74.00,175,4,0.9249,"Fort Lauderdale","FL","USA",26.1223084,-80.1433786,12011
+"179","11281",NA,"HighSchool",2007, 193,"Steve Paskorz","Hampton","Notre Dame","ILB",73.00,215,4,0.9000,"Allison Park","PA","USA",40.5584013,-79.9581094,42003
+"180","15201","-1026502","HighSchool",2009, 193,"E.J. Banks","Montour","Notre Dame","S",71.00,181,4,0.9165,"Mckees Rocks","PA","USA",40.4656244,-80.0656106,42003
+"181","25149","-1026385","HighSchool",2013, 193,"Colin McGovern","Lincoln Way West","Notre Dame","OT",78.00,295,4,0.9188,"New Lenox","IL","USA",41.5119761,-87.9656098,17197
+"182","35373","4039029","HighSchool",2016, 194,"Khalid Kareem","Harrison","Notre Dame","SDE",76.00,260,4,0.9228,"Farmington","MI","USA",42.4644795,-83.3763219,27037
+"183","32042","3932422","HighSchool",2015, 194,"Asmar Bilal","Ben Davis","Notre Dame","ILB",74.00,205,4,0.9200,"Indianapolis","IN","USA",39.7683331,-86.1583502,18097
+"184","19766","-1026419","HighSchool",2011, 196,"Eilar Hardy","Pickerington Central","Notre Dame","CB",72.00,172,4,0.9142,"Pickerington","OH","USA",39.896277299999994,-82.77319049748806,39045
+"185","92379","4871082","HighSchool",2023, 200,"Brenan Vernon","Mentor","Notre Dame","DL",77.00,275,4,0.9236,"Mentor","OH","USA",41.6661573,-81.339552,39085
+"186","90299","4685512","HighSchool",2022, 201,"Jadarian Price","Denison","Notre Dame","RB",71.00,180,4,0.9207,"Denison","TX","USA",33.7556593,-96.536658,48181
+"187","292",NA,"HighSchool",2002, 202,"Anthony Fasano","Verona","Notre Dame","TE",75.00,230,4,0.9000,"Verona","NJ","USA",40.829822,-74.2401466,34013
+"188","32054","3932423","HighSchool",2015, 203,"Miles Boykin","Providence Catholic","Notre Dame","WR",76.00,220,4,0.9177,"New Lenox","IL","USA",41.5119761,-87.9656098,17197
+"189","19773","517609","HighSchool",2011, 204,"Ben Councell","A C Reynolds","Notre Dame","OLB",77.00,220,4,0.9100,"Asheville","NC","USA",35.6009498,-82.5540161,37021
+"190","47004","4428411","HighSchool",2019, 208,"Isaiah Rutherford","Jesuit","Notre Dame","CB",72.00,192,4,0.9171,"Carmichael","CA","USA",38.62709845,-121.32224222755409,06067
+"191","25161","550947","HighSchool",2013, 208,"Torii Hunter Jr.","Prosper","Notre Dame","WR",73.00,172,4,0.9171,"Prosper","TX","USA",33.2385763,-96.7866058,48085
+"192","4284",NA,"HighSchool",2004, 210,"Junior Jabbie","Hun School","Notre Dame","S",72.00,185,4,0.9000,"Princeton","NJ","USA",40.3492744,-74.6592958,34021
+"193","12816",NA,"HighSchool",2008, 210,"Sean Cwynar","Marian Central Catholic","Notre Dame","DT",76.00,284,4,0.9116,"Woodstock","IL","USA",42.3147529,-88.4474302,17111
+"194","47007","4426457","HighSchool",2019, 211,"Isaiah Foskey","De La Salle","Notre Dame","WDE",76.00,233,4,0.9164,"Concord","CA","USA",37.9768525,-122.0335624,06013
+"195","12817",NA,"HighSchool",2008, 211,"Joseph Fauria","Crespi","Notre Dame","TE",80.00,250,4,0.9110,"Encino","CA","USA",34.1591324,-118.5016166,06037
+"196","47008","4426433","HighSchool",2019, 212,"Osita Ekwonu","Providence Day School","Notre Dame","ILB",74.00,220,4,0.9163,"Charlotte","NC","USA",35.2272,-80.843083,37119
+"197","12821",NA,"HighSchool",2008, 215,"Anthony McDonald","Notre Dame","Notre Dame","ILB",75.00,220,4,0.9102,"Sherman Oaks","CA","USA",34.1508718,-118.4489865,06037
+"198","43122","4372770","HighSchool",2018, 215,"Braden Lenzy","Tigard","Notre Dame","ATH",72.00,175,4,0.9174,"Portland","OR","USA",45.5202471,-122.6741949,41051
+"199","90315","4685474","HighSchool",2022, 217,"Jaden Mickey","Centennial","Notre Dame","CB",71.00,175,4,0.9160,"Corona","CA","USA",33.8752945,-117.5664449,06065
+"200","92463","4871079","HighSchool",2023, 219,"Boubacar Traore","Catholic Memorial","Notre Dame","DL",76.00,250,4,0.9183,"West Roxbury","MA","USA",42.2792649,-71.1494972,25025
+"201","17281","-1026455","HighSchool",2010, 220,"Alex Welch","Elder","Notre Dame","TE",77.00,225,4,0.9124,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"202","90320","4685711","HighSchool",2022, 223,"Ty Chan","Lawrence Academy","Notre Dame","OT",78.00,300,4,0.9150,"Groton","MA","USA",42.6112242,-71.5745402,25017
+"203","92473","4870713","HighSchool",2023, 223,"Rico Flores","Folsom","Notre Dame","WR",73.00,190,4,0.9170,"Folsom","CA","USA",38.6779591,-121.1760583,06067
+"204","19793","517604","HighSchool",2011, 224,"George Atkinson III","Granada","Notre Dame","WR",74.00,190,4,0.9051,"Livermore","CA","USA",37.6820583,-121.7680531,06001
+"205","28425","3129307","HighSchool",2014, 225,"Sam Mustipher","Good Counsel","Notre Dame","OG",75.00,285,4,0.9123,"Olney","MD","USA",39.1532123,-77.0668408,24031
+"206","330",NA,"HighSchool",2002, 225,"Brian Mattes","Wyoming Valley West","Notre Dame","TE",78.00,245,4,0.9000,"Plymouth","PA","USA",41.2403596,-75.9446428,42079
+"207","61793","4429088","HighSchool",2020, 225,"Drew Pyne","New Canaan","Notre Dame","PRO",72.00,194,4,0.9166,"New Canaan","CT","USA",41.146763,-73.4948446,09001
+"208","8616",NA,"HighSchool",2006, 225,"Eric Olsen","Poly Prep","Notre Dame","OT",77.00,300,4,0.8924,"Brooklyn","NY","USA",40.6501038,-73.9495823,36047
+"209","71682","4432662","HighSchool",2021, 227,"Cane Berrong","Hart County","Notre Dame","TE",76.00,230,4,0.9137,"Hartwell","GA","USA",34.3528825,-82.932087,13147
+"210","38856","-1026359","HighSchool",2017, 229,"David Adams","Central Catholic","Notre Dame","ILB",73.50,224,4,0.9125,"Pittsburgh","PA","USA",40.4416941,-79.9900861,42003
+"211","47026","4427470","HighSchool",2019, 230,"Litchfield Ajavon","Episcopal","Notre Dame","S",72.50,189,4,0.9126,"Alexandria","VA","USA",38.8051095,-77.0470229,51510
+"212","4121",NA,"HighSchool",2004, 234,"Justin Hoskins","Creston","Notre Dame","RB",71.00,190,3,0.8778,"Grand Rapids","MI","USA",42.9632405,-85.6678639,26081
+"213","61803","4429174","HighSchool",2020, 236,"Kevin Bauman","Red Bank Catholic","Notre Dame","TE",77.00,238,4,0.9128,"Red Bank","NJ","USA",40.3470543,-74.0643065,34025
+"214","10771","237416","HighSchool",2007, 237,"Brian Smith","St. Thomas Aquinas","Notre Dame","OLB",74.00,222,4,0.8906,"Overland Park","KS","USA",38.9742502,-94.6851702,20091
+"215","71701","4569682","HighSchool",2021, 241,"Audric Estime","St Joseph Regional","Notre Dame","RB",73.00,215,4,0.9108,"Montvale","NJ","USA",41.0467635,-74.0229173,34003
+"216","28441","3129302","HighSchool",2014, 242,"DeShone Kizer","Central Catholic","Notre Dame","PRO",77.00,207,4,0.9073,"Toledo","OH","USA",41.6786754,-83.5127283,39095
+"217","25203","550959","HighSchool",2013, 242,"Doug Randolph","Woodberry Forest","Notre Dame","OLB",75.00,236,4,0.9082,"Woodberry Forest","VA","USA",35.1668118,-80.7514585,37119
+"218","22275","-1026441","HighSchool",2012, 243,"Will Mahone","Fitch","Notre Dame","RB",71.00,205,4,0.9140,"Youngstown","OH","USA",41.1035786,-80.6520161,39099
+"219","13010",NA,"HighSchool",2008, 244,"Lane Clelland","McDonogh School","Notre Dame","OT",77.00,270,4,0.9043,"Owings Mills","MD","USA",39.4010753,-76.796299,24005
+"220","28446","3129298","HighSchool",2014, 245,"Jay Hayes","Poly Prep","Notre Dame","DT",77.00,260,4,0.9060,"Brooklyn","NY","USA",40.6501038,-73.9495823,36047
+"221","38880","4279235","HighSchool",2017, 245,"CJ Holmes","Cheshire Academy","Notre Dame","RB",72.00,200,4,0.9079,"Cheshire","CT","USA",41.4989861,-72.900658,09009
+"222","28456","3129314","HighSchool",2014, 246,"Nic Weishar","Marist","Notre Dame","TE",77.00,233,4,0.9059,"Chicago","IL","USA",41.8755616,-87.6244212,17031
+"223","38876","4258586","HighSchool",2017, 246,"Avery Davis","Cedar Hill","Notre Dame","DUAL",71.00,192,4,0.9078,"Cedar Hill","TX","USA",32.5888072,-96.9553675,48113
+"224","35420","4046679","HighSchool",2016, 247,"Troy Pride Jr.","Greer","Notre Dame","CB",72.00,175,4,0.9089,"Greer","SC","USA",34.9381361,-82.2272119,45045
+"225","25212","-1026421","HighSchool",2013, 247,"Mike Heuerman","Barron Collier","Notre Dame","TE",76.00,220,4,0.9068,"Naples","FL","USA",26.1421976,-81.7942944,12021
+"226","95395",NA,"HighSchool",2024, 249,"Aneyas Williams","Hannibal","Notre Dame","RB",70.00,195,4,0.9121,"Hannibal","MO","USA",39.7082498,-91.3587413,29127
+"227","12848",NA,"HighSchool",2008, 253,"John Goodman","Bishop Dwenger","Notre Dame","WR",76.00,192,4,0.9020,"Fort Wayne","IN","USA",41.0799898,-85.1386015,18003
+"228","25205","550966","HighSchool",2013, 253,"Durham Smythe","Belton","Notre Dame","TE",77.00,233,4,0.9056,"Belton","TX","USA",31.0560132,-97.464453,48027
+"229","10801",NA,"HighSchool",2007, 253,"Andrew Nuss","Stone Bridge","Notre Dame","OG",77.00,290,3,0.8875,"Ashburn","VA","USA",39.0437192,-77.4874899,51107
+"230","92460","4899136","HighSchool",2023, 255,"Micah Bell","The Kinkaid School","Notre Dame","CB",71.00,160,4,0.9122,"Houston","TX","USA",29.7589382,-95.3676974,48201
+"231","2161",NA,"HighSchool",2003, 255,"Chinedum Ndukwe","Dublin Coffman","Notre Dame","WR",75.00,190,3,0.8667,"Dublin","OH","USA",40.0992294,-83.1140771,39049
+"232","95399",NA,"HighSchool",2024, 256,"Micah Gilbert","Charlotte Christian","Notre Dame","WR",75.00,203,4,0.9113,"Charlotte","NC","USA",35.2272,-80.843083,37119
+"233","6605",NA,"HighSchool",2005, 257,"Paul Duncan","East Paulding","Notre Dame","OT",78.00,282,3,0.8778,"Dallas","GA","USA",33.9237141,-84.8407732,13223
+"234","95394",NA,"HighSchool",2024, 258,"Peter Jones","Malvern Preparatory School","Notre Dame","IOL",77.00,297,4,0.9106,"Malvern","PA","USA",40.034444,-75.514444,01061
+"235","92621","4918125","HighSchool",2023, 262,"Devan Houstan","St. James School","Notre Dame","DL",76.00,270,4,0.9116,"Hagerstown","MD","USA",39.6419219,-77.7202641,24043
+"236","15015","-1026505","HighSchool",2009, 264,"Alex Bullard","Brentwood Academy","Notre Dame","OT",75.00,275,4,0.9002,"Brentwood","TN","USA",36.0325687,-86.7825235,47187
+"237","10787",NA,"HighSchool",2007, 264,"Harrison Smith","Knoxville Catholic","Notre Dame","S",74.00,201,3,0.8875,"Knoxville","TN","USA",35.9603948,-83.9210261,47093
+"238","2140",NA,"HighSchool",2003, 265,"Travis Thomas","Washington","Notre Dame","RB",73.00,200,3,0.8667,"Washington","PA","USA",40.17396,-80.2461714,42125
+"239","4109",NA,"HighSchool",2004, 266,"Terrail Lambert","St. Bonaventure","Notre Dame","S",72.00,185,3,0.8778,"Ventura","CA","USA",34.3435092,-119.29560423163717,06111
+"240","19837","515409","HighSchool",2011, 268,"Everett Golson","Myrtle Beach","Notre Dame","PRO",72.00,170,4,0.8937,"Myrtle Beach","SC","USA",33.6956461,-78.8900409,45051
+"241","12861","385320","HighSchool",2008, 271,"Robert Blanton","Butler","Notre Dame","CB",73.00,177,4,0.8979,"Matthews","NC","USA",35.1170873,-80.723718,37119
+"242","8665",NA,"HighSchool",2006, 271,"John Ryan","St. Ignatius","Notre Dame","SDE",77.00,240,3,0.8826,"Cleveland","OH","USA",41.5051613,-81.6934446,39035
+"243","93107","4917976","HighSchool",2023, 276,"Sullivan Absher","South Point","Notre Dame","OT",79.00,290,4,0.9075,"Belmont","NC","USA",35.2438272,-81.0377322,37071
+"244","485",NA,"HighSchool",2002, 276,"Chris Frome","Hart","Notre Dame","WDE",77.00,240,3,0.8667,"Newhall","CA","USA",37.3485422,-121.9203988069216,06085
+"245","25234","-1026400","HighSchool",2013, 281,"Will Fuller","Roman Catholic","Notre Dame","WR",72.00,169,4,0.9005,"Philadelphia","PA","USA",39.9527237,-75.1635262,42101
+"246","28478","-1026394","HighSchool",2014, 281,"Grant Blankenship","The Colony","Notre Dame","SDE",78.00,252,4,0.8982,"The Colony","TX","USA",33.0890094,-96.8863922,48121
+"247","95455",NA,"HighSchool",2024, 282,"Bryce Young","Charlotte Christian","Notre Dame","DL",78.00,245,4,0.9084,"Charlotte","NC","USA",35.2272,-80.843083,37119
+"248","38898","4242386","HighSchool",2017, 282,"Isaiah Robertson","Neuqua Valley","Notre Dame","S",75.00,190,4,0.8986,"Naperville","IL","USA",41.7728699,-88.1479278,17043
+"249","43190","4361328","HighSchool",2018, 283,"George Takacs","Gulf Coast","Notre Dame","TE",79.00,242,4,0.9031,"Naples","FL","USA",26.1421976,-81.7942944,12021
+"250","17513","500913","HighSchool",2010, 283,"Andrew Hendrix","Archbishop Moeller","Notre Dame","PRO",75.00,220,4,0.8999,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"251","92509","4870733","HighSchool",2023, 284,"Cooper Flanagan","De La Salle","Notre Dame","TE",77.00,228,4,0.9076,"Concord","CA","USA",37.9768525,-122.0335624,06013
+"252","4146",NA,"HighSchool",2004, 284,"Darius Walker","Buford","Notre Dame","RB",71.00,197,3,0.8778,"Buford","GA","USA",34.1206564,-84.0043513,13135
+"253","404",NA,"HighSchool",2002, 284,"Scott Raridon","Mason City","Notre Dame","OT",79.00,275,3,0.8667,"Mason City","IA","USA",43.1535728,-93.2010367,19033
+"254","90379","4685509","HighSchool",2022, 285,"Gi'Bran Payne","LaSalle","Notre Dame","RB",70.00,190,4,0.9036,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"255","19854","517612","HighSchool",2011, 286,"Jarrett Grace","Colerain","Notre Dame","ILB",75.00,235,3,0.8897,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"256","43193","4372769","HighSchool",2018, 286,"Lawrence Keys III","McDonogh 35","Notre Dame","WR",70.50,160,4,0.9026,"New Orleans","LA","USA",29.9499323,-90.0701156,22071
+"257","28494","3129303","HighSchool",2014, 288,"Tyler Luatua","La Mirada","Notre Dame","TE",76.00,230,4,0.8964,"La Mirada","CA","USA",33.9060971,-118.0107092,06037
+"258","32139","3932440","HighSchool",2015, 288,"CJ Sanders","Notre Dame","Notre Dame","WR",69.00,177,4,0.8997,"Sherman Oaks","CA","USA",34.1508718,-118.4489865,06037
+"259","90381","4685573","HighSchool",2022, 288,"Holden Staes","Westminster School","Notre Dame","TE",76.00,230,4,0.9026,"Atlanta","GA","USA",33.7490987,-84.3901849,13121
+"260","28487","3129310","HighSchool",2014, 289,"Drue Tranquill","Carroll","Notre Dame","S",74.00,210,4,0.8961,"Fort Wayne","IN","USA",41.0799898,-85.1386015,18003
+"261","66935","3862861","HighSchool",2015, 289,"Te'von Coney","Palm Beach Gardens","Notre Dame","ILB",73.00,222,4,0.8995,"Palm Beach Gardens","FL","USA",26.8418256,-80.13590694666684,12099
+"262","12873",NA,"HighSchool",2008, 290,"Brandon Newman","Pleasure Ridge Park","Notre Dame","DT",73.00,300,4,0.8943,"Louisville","KY","USA",38.2542376,-85.759407,21111
+"263","4832",NA,"HighSchool",2004, 291,"Maurice Crum","Tampa Bay Tech","Notre Dame","OLB",73.00,215,3,0.8778,"Tampa","FL","USA",27.9477595,-82.458444,12057
+"264","2139",NA,"HighSchool",2003, 292,"Jeff Samardzija","Valparaiso","Notre Dame","WR",76.00,190,3,0.8667,"Valparaiso","IN","USA",41.4730948,-87.0611412,18127
+"265","15038","483393","HighSchool",2009, 292,"Theo Riddick","Immaculata","Notre Dame","APB",70.00,185,4,0.8939,"Somerville","NJ","USA",40.5742696,-74.60988,34035
+"266","43200","4361321","HighSchool",2018, 293,"Bo Bauer","Cathedral Prep","Notre Dame","ILB",74.50,222,4,0.9015,"Erie","PA","USA",42.1294712,-80.0852695,42049
+"267","90412","4689451","HighSchool",2022, 293,"Nolan Ziegler","Catholic Central","Notre Dame","LB",76.00,210,4,0.9021,"Grand Rapids","MI","USA",42.9632405,-85.6678639,26081
+"268","47091","4426464","HighSchool",2019, 295,"KJ Wallace","Lovett School","Notre Dame","CB",70.00,187,4,0.9017,"Atlanta","GA","USA",33.7490987,-84.3901849,13121
+"269","35486","4046687","HighSchool",2016, 298,"Donte Vaughn","Whitehaven","Notre Dame","CB",75.00,192,4,0.8981,"Memphis","TN","USA",35.1490215,-90.0516285,47157
+"270","47094",NA,"HighSchool",2019, 298,"NaNa Osafo-Mensah","Nolan Catholic","Notre Dame","WDE",75.00,224,4,0.9014,"Fort Worth","TX","USA",32.753177,-97.3327459,48439
+"271","17518","-1026496","HighSchool",2010, 299,"Cameron Roberson","Newbury Park","Notre Dame","RB",73.00,215,4,0.8965,"Newbury Park","CA","USA",34.183671,-118.9118302,06111
+"272","35479","4046690","HighSchool",2016, 299,"Julian Okwara","Ardrey Kell","Notre Dame","WDE",76.00,220,4,0.8976,"Charlotte","NC","USA",35.2272,-80.843083,37119
+"273","94989","4917976","HighSchool",2023, 302,"Sullivan Absher","South Point","Notre Dame","IOL",77.00,309,4,0.9039,"Belmont","NC","USA",35.2438272,-81.0377322,37071
+"274","71770","4683230","HighSchool",2021, 304,"Philip Riley","Bloomingdale","Notre Dame","CB",72.00,195,4,0.8992,"Valrico","FL","USA",27.9484265,-82.23621545220522,12057
+"275","71765","4431600","HighSchool",2021, 305,"Jayden Thomas","Pace Academy","Notre Dame","WR",73.00,205,4,0.8991,"Atlanta","GA","USA",33.7490987,-84.3901849,13121
+"276","32159","3932420","HighSchool",2015, 306,"Josh Adams","Central Bucks South","Notre Dame","RB",74.00,208,4,0.8973,"Warrington","PA","USA",40.2492741,-75.1340604,42017
+"277","32166","3862861","HighSchool",2015, 307,"Tevon Coney","Palm Beach Gardens","Notre Dame","ILB",73.00,222,4,0.8960,"Palm Beach Gardens","FL","USA",26.8418256,-80.13590694666684,12099
+"278","10846",NA,"HighSchool",2007, 307,"Emeka Nwankwo","Chaminade-Madonna Prep","Notre Dame","SDE",75.00,285,3,0.8795,"Hollywood","FL","USA",26.0112014,-80.1494901,12011
+"279","25259","550958","HighSchool",2013, 308,"James Onwualu","Cretin Derham Hall","Notre Dame","WR",73.75,205,4,0.8950,"Saint Paul","MN","USA",44.9504037,-93.1015026,27123
+"280","28509","-1026363","HighSchool",2014, 311,"Jimmy Byrne","St. Ignatius","Notre Dame","OG",76.00,290,4,0.8926,"Cleveland","OH","USA",41.5051613,-81.6934446,39035
+"281","28510","3129295","HighSchool",2014, 313,"Daniel Cage","Winton Woods","Notre Dame","DT",75.00,295,4,0.8923,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"282","92468","4880937","HighSchool",2023, 315,"Adon Shuler","Irvington","Notre Dame","S",72.00,190,4,0.9023,"Irvington","NJ","USA",40.7323235,-74.2348684,34013
+"283","25286","-1026375","HighSchool",2013, 319,"Devin Butler","Gonzaga","Notre Dame","CB",73.00,180,4,0.8933,"Washington","DC","USA",38.8949855,-77.0365708,11001
+"284","32173","3932443","HighSchool",2015, 319,"Elijah Taylor","Archbishop Moeller","Notre Dame","DT",75.00,285,4,0.8945,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"285","90436","4816107","HighSchool",2022, 320,"Benjamin Morrison","Brophy College Preparatory","Notre Dame","CB",72.00,175,4,0.9000,"Phoenix","AZ","USA",33.4484367,-112.0741417,04013
+"286","71781","4432720","HighSchool",2021, 320,"Caleb Johnson","Trinity Catholic","Notre Dame","OT",79.00,295,4,0.8958,"Ocala","FL","USA",29.1871986,-82.1400923,12083
+"287","35495","4046676","HighSchool",2016, 323,"Tony Jones Jr.","IMG Academy","Notre Dame","RB",70.50,216,4,0.8926,"Bradenton","FL","USA",27.4989278,-82.5748194,12081
+"288","4933",NA,"HighSchool",2004, 325,"Brandon Nicolas","Mater Dei","Notre Dame","SDE",77.00,260,3,0.8556,"Santa Ana","CA","USA",33.7494951,-117.8732213,06059
+"289","6724",NA,"HighSchool",2005, 327,"Michael Turkovich","Valley Forge Military Academy (HS)","Notre Dame","OT",79.00,280,3,0.8556,"Wayne","PA","USA",40.0440149,-75.3878616,42045
+"290","13052",NA,"HighSchool",2008, 328,"Kapron Lewis-Moore","Weatherford","Notre Dame","SDE",76.00,225,4,0.8906,"Weatherford","TX","USA",32.7589648,-97.7970748,48367
+"291","47124","4426501","HighSchool",2019, 328,"Hunter Spears","Sachse","Notre Dame","DT",76.00,280,4,0.8964,"Sachse","TX","USA",32.9762327,-96.5952703,48113
+"292","2197",NA,"HighSchool",2003, 329,"Dwight Stephenson","Pope John Paul II","Notre Dame","OLB",74.00,215,3,0.8333,"Boca Raton","FL","USA",26.3586885,-80.0830984,12099
+"293","6698",NA,"HighSchool",2005, 336,"Kevin Washington","Fort Bend Austin","Notre Dame","OLB",73.00,213,3,0.8556,"Sugar Land","TX","USA",29.6196787,-95.6349463,48157
+"294","47133","4426992","HighSchool",2019, 337,"Howard Cross","St. Joseph Regional","Notre Dame","SDE",74.00,265,4,0.8958,"Montvale","NJ","USA",41.0467635,-74.0229173,34003
+"295","94197","5086467","HighSchool",2023, 341,"Ben Minich","Lakota West","Notre Dame","S",71.00,185,4,0.8991,"West Chester","OH","USA",39.3303357,-84.408275,39017
+"296","478",NA,"HighSchool",2002, 343,"Christian Olsen","Wayne Hills","Notre Dame","PRO",76.00,220,3,0.8667,"Wayne","NJ","USA",40.9491723,-74.2376802,34031
+"297","95483",NA,"HighSchool",2024, 344,"Styles Prescod","Hamilton Southeastern","Notre Dame","OT",78.00,280,4,0.8991,"Fishers","IN","USA",39.9555928,-86.0138729,18057
+"298","17644","-1026451","HighSchool",2010, 346,"Prince Shembo","Ardrey Kell","Notre Dame","ILB",74.00,232,3,0.8899,"Charlotte","NC","USA",35.2272,-80.843083,37119
+"299","8440",NA,"HighSchool",2006, 346,"Kallen Wade","Withrow","Notre Dame","WDE",77.00,220,3,0.8733,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"300","8709",NA,"HighSchool",2006, 349,"Bartley Webb","Springdale","Notre Dame","OT",79.00,290,3,0.8733,"Springdale","AR","USA",36.1867442,-94.1288142,05143
+"301","2433",NA,"HighSchool",2003, 350,"Joe Brockington","Palmyra Area","Notre Dame","OLB",74.00,215,3,0.8333,"Palmyra","PA","USA",40.3088578,-76.5932369,42075
+"302","19920","-1026430","HighSchool",2011, 351,"Anthony Rabasa","Columbus","Notre Dame","OLB",75.00,233,3,0.8772,"Miami","FL","USA",25.7742658,-80.1936589,12086
+"303","28576","3129304","HighSchool",2014, 353,"Greer Martini","Woodberry Forest","Notre Dame","ILB",75.00,232,3,0.8871,"Woodberry Forest","VA","USA",35.1668118,-80.7514585,37119
+"304","22377","535949","HighSchool",2012, 353,"Justin Ferguson","Charles W Flanagan","Notre Dame","WR",73.00,205,4,0.8932,"Hollywood","FL","USA",26.0112014,-80.1494901,12011
+"305","4927",NA,"HighSchool",2004, 360,"Chauncey Incarnato","Dover","Notre Dame","OT",78.00,280,3,0.8556,"Dover","OH","USA",40.5213381,-81.4741475,39157
+"306","15065","-1026434","HighSchool",2009, 361,"Carlo Calabrese","Verona","Notre Dame","ILB",74.00,225,3,0.8864,"Verona","NJ","USA",40.829822,-74.2401466,34013
+"307","25320","-1026439","HighSchool",2013, 364,"Rashad Kinlaw","Absegami","Notre Dame","ATH",72.00,175,3,0.8827,"Absecon","NJ","USA",39.4284503,-74.4957076,34001
+"308","90428","4685694","HighSchool",2022, 365,"Steve Angeli","Bergen Catholic","Notre Dame","QB",75.00,215,4,0.8962,"Oradell","NJ","USA",40.9543943,-74.0308504,34003
+"309","22396","535958","HighSchool",2012, 365,"C.J. Prosise","Woodberry Forest","Notre Dame","S",74.00,190,4,0.8915,"Woodberry Forest","VA","USA",35.1668118,-80.7514585,37119
+"310","43273","4372760","HighSchool",2018, 366,"Noah Boykin","Woodson H.D.","Notre Dame","CB",74.00,170,4,0.8916,"Washington","DC","USA",38.8949855,-77.0365708,11001
+"311","47162","4428872","HighSchool",2019, 366,"JD Bertrand","Blessed Trinity Catholic","Notre Dame","OLB",73.00,220,4,0.8918,"Roswell","GA","USA",34.02332,-84.360022,13121
+"312","2440",NA,"HighSchool",2003, 366,"John Carlson","Litchfield","Notre Dame","TE",78.00,220,3,0.8333,"Litchfield","MI","USA",42.044314,-84.7584316,26059
+"313","47163","4430737","HighSchool",2019, 367,"Kyren Williams","St. John Vianney","Notre Dame","RB",70.00,200,4,0.8918,"Saint Louis","MO","USA",38.6264178,-90.1998378,29510
+"314","8724",NA,"HighSchool",2006, 368,"Munir Prince","DeSmet","Notre Dame","RB",70.00,175,3,0.8701,"Saint Louis","MO","USA",38.6264178,-90.1998378,29510
+"315","17659","500931","HighSchool",2010, 368,"Danny Spond","Columbine","Notre Dame","ATH",75.00,232,3,0.8875,"Littleton","CO","USA",39.613321,-105.0166498,08005
+"316","25323","550962","HighSchool",2013, 368,"Corey Robinson","Christian Academy","Notre Dame","WR",76.00,205,3,0.8821,"San Antonio","TX","USA",29.4246002,-98.4951405,48029
+"317","4893",NA,"HighSchool",2004, 368,"John Kadous","Salpointe Catholic","Notre Dame","OG",79.00,310,3,0.8556,"Tucson","AZ","USA",32.2228765,-110.9748477,04019
+"318","15165","-1026551","HighSchool",2009, 369,"Roby Toma","Punahou","Notre Dame","WR",69.00,160,3,0.8333,"Honolulu","HI","USA",21.304547,-157.8556764,15003
+"319","43276","4372774","HighSchool",2018, 369,"Jarrett Patterson","Mission Viejo","Notre Dame","OT",77.00,285,4,0.8912,"Mission Viejo","CA","USA",33.5965685,-117.659405,06059
+"320","93722","4921264","HighSchool",2023, 369,"Joe Otting","Hayden","Notre Dame","IOL",76.00,265,4,0.8967,"Topeka","KS","USA",39.049011,-95.677556,20177
+"321","95510",NA,"HighSchool",2024, 370,"Leonard Moore","Round Rock","Notre Dame","CB",74.00,177,4,0.8965,"Round Rock","TX","USA",30.508235,-97.6788934,48491
+"322","8729",NA,"HighSchool",2006, 372,"Morrice Richardson","Westlake","Notre Dame","OLB",74.00,228,3,0.8701,"Atlanta","GA","USA",33.7490987,-84.3901849,13121
+"323","475",NA,"HighSchool",2002, 372,"Marcus Freeman","Cretin Derham Hall","Notre Dame","TE",76.00,240,3,0.8667,"Saint Paul","MN","USA",44.9504037,-93.1015026,27123
+"324","38995","4258591","HighSchool",2017, 373,"Dillan Gibbons","Clearwater Central Catholic","Notre Dame","OT",76.00,311,3,0.8847,"Clearwater","FL","USA",27.9658533,-82.8001026,12103
+"325","43283","4361323","HighSchool",2018, 376,"Micah Jones","Warren Township","Notre Dame","WR",77.00,206,4,0.8902,"Gurnee","IL","USA",42.3702996,-87.9020186,17097
+"326","95518",NA,"HighSchool",2024, 378,"Anthonie Knapp","Roswell","Notre Dame","OT",76.00,268,4,0.8955,"Roswell","GA","USA",34.02332,-84.360022,13121
+"327","32230","3932430","HighSchool",2015, 378,"Jalen Guyton","Allen","Notre Dame","WR",73.00,190,3,0.8838,"Allen","TX","USA",33.1031744,-96.6705503,48085
+"328","25328","-1026384","HighSchool",2013, 380,"Jacob Matuska","Bishop Hartley","Notre Dame","SDE",77.00,240,3,0.8800,"Columbus","OH","USA",39.9622601,-83.0007065,39049
+"329","2398",NA,"HighSchool",2003, 383,"Chase Anastasio","Robinson Secondary","Notre Dame","S",74.00,190,3,0.8333,"Fairfax","VA","USA",38.8462236,-77.3063733,51600
+"330","17677","500919","HighSchool",2010, 383,"Kendall Moore","Southeast Raleigh","Notre Dame","OLB",75.00,232,3,0.8844,"Raleigh","NC","USA",35.7803977,-78.6390989,37183
+"331","61954","4431005","HighSchool",2020, 390,"Xavier Watts","Burke","Notre Dame","WR",73.00,191,3,0.8884,"Omaha","NE","USA",41.2587459,-95.9383758,31055
+"332","71847",NA,"HighSchool",2021, 392,"Khari Gee","Woodward Academy","Notre Dame","S",75.00,185,3,0.8871,"Atlanta","GA","USA",33.7490987,-84.3901849,13121
+"333","71852","4683487","HighSchool",2021, 396,"Joe Alt","Totino-Grace","Notre Dame","OT",79.00,283,3,0.8864,"Minneapolis","MN","USA",44.9772995,-93.2654692,27053
+"334","13109",NA,"HighSchool",2008, 398,"Hafis Williams","Elizabeth","Notre Dame","DT",75.00,285,3,0.8795,"Elizabeth","NJ","USA",40.6639916,-74.2107006,34039
+"335","17375","-1026450","HighSchool",2010, 398,"Kona Schwenke","Kahuku","Notre Dame","WDE",77.00,215,3,0.8843,"Kahuku","HI","USA",21.679124,-157.94838,15003
+"336","35571","4046689","HighSchool",2016, 401,"Parker Boudreaux","Bishop Moore Catholic","Notre Dame","OG",76.00,287,3,0.8802,"Orlando","FL","USA",28.5421109,-81.3790304,12095
+"337","13110",NA,"HighSchool",2008, 402,"Mike Golic Jr.","Northwest Catholic","Notre Dame","OC",77.00,260,3,0.8795,"West Hartford","CT","USA",41.7629122,-72.75664456297505,09003
+"338","61969","4430121","HighSchool",2020, 405,"Aidan Keanaaina","J.K. Mullen","Notre Dame","DT",75.00,292,3,0.8871,"Denver","CO","USA",39.7392364,-104.9848623,08031
+"339","92656","4917982","HighSchool",2023, 406,"Sam Pendleton","Reagan","Notre Dame","IOL",76.00,305,4,0.8933,"Pfafftown","NC","USA",36.1526379,-80.3622753,37067
+"340","13113",NA,"HighSchool",2008, 407,"David Posluszny","Hopewell","Notre Dame","ILB",72.00,206,3,0.8795,"Aliquippa","PA","USA",40.6102386,-80.267726,42007
+"341","15328","483388","HighSchool",2009, 412,"Dan Fox","St. Ignatius","Notre Dame","ILB",76.00,219,3,0.8813,"Cleveland","OH","USA",41.5051613,-81.6934446,39035
+"342","47212","4427716","HighSchool",2019, 416,"Jack Kiser","Pioneer","Notre Dame","OLB",74.00,215,3,0.8880,"Royal Center","IN","USA",40.8644849,-86.4997266,18017
+"343","6752",NA,"HighSchool",2005, 418,"Scott Smith","Highland Park","Notre Dame","ILB",75.00,222,3,0.8556,"Highland Park","IL","USA",42.1816919,-87.8003438,17097
+"344","66076","-1026447","HighSchool",2010, 420,"Tommy Rees","Lake Forest","Notre Dame","PRO",75.00,192,3,0.8795,"Lake Forest","IL","USA",42.2586342,-87.840625,17097
+"345","17734",NA,"HighSchool",2010, 422,"Spencer Boyd","Cape Coral","Notre Dame","CB",70.00,178,3,0.8795,"Cape Coral","FL","USA",26.6059432,-81.9806771,12071
+"346","17722",NA,"HighSchool",2010, 423,"Chris Badger","Timpview","Notre Dame","S",72.00,178,3,0.8795,"Provo","UT","USA",40.2338438,-111.6585337,49049
+"347","8433",NA,"HighSchool",2006, 432,"Sergio Brown","Proviso East","Notre Dame","S",73.00,184,3,0.8622,"Maywood","IL","USA",41.8791979,-87.8431155,17031
+"348","43341","4372761","HighSchool",2018, 434,"TaRiq Bracy","Milpitas","Notre Dame","ATH",72.00,170,3,0.8843,"Milpitas","CA","USA",37.4282724,-121.9066238,06085
+"349","8793",NA,"HighSchool",2006, 436,"Jashaad Gaines","Las Vegas","Notre Dame","S",72.00,202,3,0.8622,"Las Vegas","NV","USA",36.1672559,-115.1485163,32003
+"350","8453",NA,"HighSchool",2006, 437,"Leonard Gordon","Fort Campbell","Notre Dame","CB",71.00,195,3,0.8622,"Fort Campbell","KY","USA",36.6411584,-87.4344543,21047
+"351","25389","-1026414","HighSchool",2013, 441,"Michael Deeb","American Heritage","Notre Dame","ILB",74.00,237,3,0.8737,"Fort Lauderdale","FL","USA",26.1223084,-80.1433786,12011
+"352","95591",NA,"HighSchool",2024, 446,"Jack Larsen","Charlotte Catholic","Notre Dame","TE",75.00,220,3,0.8900,"Charlotte","NC","USA",35.2272,-80.843083,37119
+"353","96103",NA,"HighSchool",2024, 449,"Logan Saldate","Palma","Notre Dame","WR",71.00,185,3,0.8900,"Salinas","CA","USA",36.6744117,-121.6550372,06053
+"354","22487","535947","HighSchool",2012, 451,"Chris Brown","Hanahan","Notre Dame","ATH",74.00,170,3,0.8787,"Charleston","SC","USA",32.7876012,-79.9402728,45019
+"355","22495","-1026405","HighSchool",2012, 452,"Romeo Okwara","Ardrey Kell","Notre Dame","WDE",76.00,230,3,0.8823,"Charlotte","NC","USA",35.2272,-80.843083,37119
+"356","35627","4046682","HighSchool",2016, 452,"Jonathan Jones","Oak Ridge","Notre Dame","OLB",72.00,225,3,0.8743,"Orlando","FL","USA",28.5421109,-81.3790304,12095
+"357","2439",NA,"HighSchool",2003, 453,"Labrose Hedgemon","Hoover","Notre Dame","CB",71.00,180,3,0.8333,"Hoover","AL","USA",33.3848933,-86.8070484,01073
+"358","90562","4832028","HighSchool",2022, 453,"Jayden Bellamy","Bergen Catholic","Notre Dame","CB",71.00,175,3,0.8870,"Oradell","NJ","USA",40.9543943,-74.0308504,34003
+"359","39076","4258599","HighSchool",2017, 455,"Jeremiah Owusu-Koramoah","Bethel","Notre Dame","ATH",74.00,197,3,0.8721,"Hampton","VA","USA",37.0520315,-76.2856365,51650
+"360","95611",NA,"HighSchool",2024, 459,"Bodie Kahoun","Patrick Henry","Notre Dame","LB",74.00,214,3,0.8892,"Roanoke","VA","USA",37.270973,-79.9414313,51770
+"361","32365","3932439","HighSchool",2015, 462,"Trevor Ruhland","Cary-Grove Community","Notre Dame","OG",76.00,270,3,0.8738,"Cary","IL","USA",42.2119684,-88.2381381,17111
+"362","10626",NA,"HighSchool",2007, 463,"Aaron Nagel","Lemont","Notre Dame","OLB",73.00,215,3,0.8622,"Lemont","IL","USA",41.6737149,-88.0016263,17031
+"363","47260","4427816","HighSchool",2019, 464,"Marist Liufau","Punahou","Notre Dame","OLB",75.00,210,3,0.8842,"Honolulu","HI","USA",21.304547,-157.8556764,15003
+"364","32323","3932450","HighSchool",2015, 468,"Mykelti Williams","Warren Central","Notre Dame","S",72.00,198,3,0.8728,"Indianapolis","IN","USA",39.7683331,-86.1583502,18097
+"365","39092","4258584","HighSchool",2017, 470,"Jafar Armstrong","Bishop Miege","Notre Dame","WR",73.00,205,3,0.8709,"Mission","KS","USA",39.0277832,-94.6557914,20091
+"366","39094","4258601","HighSchool",2017, 471,"Myron Tagovailoa-Amosa","Kapolei","Notre Dame","SDE",76.00,270,3,0.8708,"Kapolei","HI","USA",21.3340079,-158.0778491,15003
+"367","35651","4046680","HighSchool",2016, 474,"Jalen Elliott","Lloyd C. Bird","Notre Dame","ATH",73.00,175,3,0.8721,"Chesterfield","VA","USA",37.3770935,-77.5058196,51041
+"368","6283",NA,"HighSchool",2005, 474,"Evan Sharpley","Marshall","Notre Dame","PRO",74.00,200,3,0.8556,"Marshall","MI","USA",42.2721367,-84.9642008,26025
+"369","39098","4258604","HighSchool",2017, 474,"Michael Young","Destrehan","Notre Dame","WR",71.00,175,3,0.8706,"Destrehan","LA","USA",29.960933,-90.3705407077716,22089
+"370","17767","-1026456","HighSchool",2010, 476,"Lo Wood","Apopka","Notre Dame","CB",70.00,160,3,0.8764,"Apopka","FL","USA",28.6779683,-81.5115214,12095
+"371","35658","4046675","HighSchool",2016, 478,"Julian Love","Nazareth Academy","Notre Dame","CB",71.00,175,3,0.8711,"La Grange Park","IL","USA",41.8333646,-87.8677324,17031
+"372","35659","4046683","HighSchool",2016, 479,"D.J. Morgan","St. John Bosco","Notre Dame","S",75.00,205,3,0.8711,"Bellflower","CA","USA",33.8825705,-118.1167679,06037
+"373","20048","-1026452","HighSchool",2011, 479,"Tony Springmann","Bishop Dwenger","Notre Dame","SDE",78.00,275,3,0.8640,"Fort Wayne","IN","USA",41.0799898,-85.1386015,18003
+"374","35662","4039033","HighSchool",2016, 481,"Devin Studstill","Palm Beach Gardens","Notre Dame","S",73.00,180,3,0.8709,"Palm Beach Gardens","FL","USA",26.8418256,-80.13590694666684,12099
+"375","2321",NA,"HighSchool",2003, 483,"Mitchell Thomas","Smiths Station","Notre Dame","OLB",75.00,212,3,0.8333,"Smiths Station","AL","USA",32.5401394,-85.0985474,01081
+"376","43394","4372762","HighSchool",2018, 487,"DJ Brown","St. John's College HS","Notre Dame","CB",73.00,193,3,0.8802,"Washington","DC","USA",38.8949855,-77.0365708,11001
+"377","22518","-1026379","HighSchool",2012, 488,"Mark Harrell","Charlotte Catholic","Notre Dame","OT",77.00,270,3,0.8794,"Charlotte","NC","USA",35.2272,-80.843083,37119
+"378","20058","517616","HighSchool",2011, 489,"Chase Hounshell","Lake Catholic","Notre Dame","SDE",77.00,255,3,0.8634,"Mentor","OH","USA",41.6661573,-81.339552,39085
+"379","43397","4372780","HighSchool",2018, 490,"Tommy Tremble","Wesleyan School","Notre Dame","TE",76.00,225,3,0.8797,"Norcross","GA","USA",33.9412127,-84.2135309,13135
+"380","94053",NA,"HighSchool",2023, 492,"Christopher Terek","Glenbard West","Notre Dame","IOL",78.00,295,3,0.8872,"Glen Ellyn","IL","USA",41.8775293,-88.0670118,17043
+"381","71948","4683243","HighSchool",2021, 498,"Mitchell Evans","Wadsworth","Notre Dame","TE",79.00,240,3,0.8776,"Wadsworth","OH","USA",41.0256101,-81.7298519,39103
+"382","71996","4603192","HighSchool",2021, 500,"Logan Diggs","Archbishop Rummel","Notre Dame","RB",72.00,195,3,0.8776,"Metairie","LA","USA",30.001852,-90.1767149159888,22051
+"383","90615","4705639","HighSchool",2022, 502,"Donovan Hinish","Central Catholic","Notre Dame","DL",74.00,275,3,0.8837,"Pittsburgh","PA","USA",40.4416941,-79.9900861,42003
+"384","7101",NA,"HighSchool",2005, 511,"David Bruton","Miamisburg","Notre Dame","S",74.00,180,3,0.8333,"Miamisburg","OH","USA",39.6428362,-84.2866083,39113
+"385","43422","4372764","HighSchool",2018, 515,"John Dirksen","Marion Local","Notre Dame","OT",77.00,305,3,0.8776,"Maria Stein","OH","USA",40.4078249,-84.4932862,39107
+"386","35696","4046678","HighSchool",2016, 515,"Ian Book","Oak Ridge","Notre Dame","PRO",73.00,200,3,0.8681,"El Dorado Hills","CA","USA",38.6561185,-121.0743265,06017
+"387","22550","535946","HighSchool",2012, 516,"Nicky Baratti","Klein Oak","Notre Dame","ATH",74.00,215,3,0.8779,"Spring","TX","USA",30.0798826,-95.4172549,48201
+"388","62081","4565558","HighSchool",2020, 516,"Caleb Offord","Southaven","Notre Dame","CB",73.00,180,3,0.8776,"Southaven","MS","USA",34.9889818,-90.0125913,28033
+"389","43423","4372767","HighSchool",2018, 516,"Luke Jones","Pulaski Academy","Notre Dame","OT",77.00,292,3,0.8776,"Little Rock","AR","USA",34.7464809,-92.2895948,05119
+"390","39142","4258594","HighSchool",2017, 518,"Kurt Hinish","Central Catholic","Notre Dame","DT",74.00,283,3,0.8671,"Pittsburgh","PA","USA",40.4416941,-79.9900861,42003
+"391","90622","4831972","HighSchool",2022, 521,"Ashton Craig","Lawrenceburg","Notre Dame","OT",77.00,283,3,0.8789,"Lawrenceburg","IN","USA",39.090891,-84.8499504,18029
+"392","47317","4429413","HighSchool",2019, 521,"Brendon Clark","Manchester","Notre Dame","PRO",74.00,217,3,0.8796,"Midlothian","VA","USA",37.5062673,-77.649268,51041
+"393","17803","500914","HighSchool",2010, 522,"Bennett Jackson","Raritan","Notre Dame","WR",73.00,165,3,0.8733,"Hazlet","NJ","USA",40.4154057,-74.1905486,34025
+"394","35706","4039030","HighSchool",2016, 525,"Spencer Perry","IMG Academy","Notre Dame","S",75.00,202,3,0.8671,"Bradenton","FL","USA",27.4989278,-82.5748194,12081
+"395","9384",NA,"HighSchool",2006, 528,"Paddy Mullen","DeSmet","Notre Dame","TE",77.00,265,3,0.8556,"Saint Louis","MO","USA",38.6264178,-90.1998378,29510
+"396","47326","4426524","HighSchool",2019, 530,"Kendall Abdur-Rahman","Edwardsville","Notre Dame","ATH",73.00,180,3,0.8789,"Edwardsville","IL","USA",38.8114364,-89.953157,17119
+"397","20099","-1026402","HighSchool",2011, 530,"Nick Martin","Bishop Chatard","Notre Dame","OG",76.00,270,3,0.8610,"Indianapolis","IN","USA",39.7683331,-86.1583502,18097
+"398","92636","4871093","HighSchool",2023, 534,"Preston Zinter","Central Catholic","Notre Dame","LB",75.00,215,3,0.8844,"Lawrence","MA","USA",42.7070354,-71.1631137,25009
+"399","17789","500933","HighSchool",2010, 536,"Justin Utupo","Lakewood","Notre Dame","DT",74.00,240,3,0.8733,"Lakewood","CA","USA",33.8503463,-118.1171914,06037
+"400","5133",NA,"HighSchool",2004, 537,"Ronald Talley","Renaissance","Notre Dame","SDE",75.00,233,3,0.8333,"Detroit","MI","USA",42.3315509,-83.0466403,26163
+"401","94787","5078062","HighSchool",2023, 542,"Armel Mukam","Woodberry Forest","Notre Dame","DL",75.00,255,3,0.8839,"Woodberry Forest","VA","USA",35.1668118,-80.7514585,37119
+"402","43452","4361326","HighSchool",2018, 545,"Ovie Oghoufo","Harrison","Notre Dame","OLB",75.00,215,3,0.8755,"Farmington","MI","USA",42.4644795,-83.3763219,27037
+"403","32400","3932445","HighSchool",2015, 546,"Brandon Tiassum","Park Tudor","Notre Dame","DT",77.00,285,3,0.8665,"Indianapolis","IN","USA",39.7683331,-86.1583502,18097
+"404","95704",NA,"HighSchool",2024, 547,"Karson Hobbs","Archbishop Moeller","Notre Dame","CB",73.00,180,3,0.8836,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"405","93163",NA,"HighSchool",2023, 548,"Kaleb Smith","Reedy","Notre Dame","WR",72.00,175,3,0.8836,"Frisco","TX","USA",33.1506744,-96.8236116,48085
+"406","7115",NA,"HighSchool",2005, 551,"Ray Herring","Holy Trinity Episcopal Academy","Notre Dame","S",71.00,187,3,0.8333,"Melbourne","FL","USA",28.0836269,-80.6081089,12009
+"407","7078",NA,"HighSchool",2005, 553,"Patrick Kuntz","Roncalli","Notre Dame","SDE",76.00,255,3,0.8333,"Indianapolis","IN","USA",39.7683331,-86.1583502,18097
+"408","39178","4258590","HighSchool",2017, 553,"Jordan Genmark Heath","Cathedral Catholic","Notre Dame","S",74.00,205,3,0.8649,"San Diego","CA","USA",32.7174209,-117.1627714,06073
+"409","32408","3863052","HighSchool",2015, 553,"Micah Dew-Treadway","Bolingbrook","Notre Dame","SDE",77.00,275,3,0.8656,"Bolingbrook","IL","USA",41.7003302,-88.0717708,17197
+"410","95812",NA,"HighSchool",2024, 558,"Kennedy Urlacher","Chandler","Notre Dame","S",72.00,190,3,0.8833,"Chandler","AZ","USA",33.3062223,-111.8413317,04013
+"411","72015","4683717","HighSchool",2021, 561,"Ryan Barnes","Quince Orchard","Notre Dame","CB",74.00,185,3,0.8722,"Gaithersburg","MD","USA",39.1434406,-77.2013705,24031
+"412","72021","4686218","HighSchool",2021, 568,"Chance Tucker","Crespi","Notre Dame","CB",73.00,180,3,0.8721,"Encino","CA","USA",34.1591324,-118.5016166,06037
+"413","72022","4431605","HighSchool",2021, 569,"Justin Walters","Bolingbrook","Notre Dame","S",74.00,185,3,0.8721,"Bolingbrook","IL","USA",41.7003302,-88.0717708,17197
+"414","43477","4372766","HighSchool",2018, 570,"Ja'Mion Franklin","North Caroline","Notre Dame","DT",73.00,295,3,0.8742,"Ridgely","MD","USA",38.9480656,-75.8848665,24011
+"415","8915",NA,"HighSchool",2006, 581,"Robby Parris","St. Ignatius","Notre Dame","WR",76.00,185,3,0.8497,"Cleveland","OH","USA",41.5051613,-81.6934446,39035
+"416","72034","4597249","HighSchool",2021, 582,"Devin Aupiu","Pacifica","Notre Dame","OLB",77.00,220,3,0.8714,"Oxnard","CA","USA",34.1976308,-119.1803818,06111
+"417","15471","483387","HighSchool",2009, 582,"Tyler Eifert","Bishop Dwenger","Notre Dame","TE",78.00,220,3,0.8684,"Fort Wayne","IN","USA",41.0799898,-85.1386015,18003
+"418","72037","4592834","HighSchool",2021, 583,"Will Schweitzer","Los Gatos","Notre Dame","OLB",76.00,220,3,0.8713,"Los Gatos","CA","USA",37.226611,-121.9746797,06085
+"419","72048","4705623","HighSchool",2021, 594,"Kahanu Kia","Punahou","Notre Dame","OLB",74.00,220,3,0.8709,"Honolulu","HI","USA",21.304547,-157.8556764,15003
+"420","32452","3932448","HighSchool",2015, 598,"Ashton White","Bishop McNamara","Notre Dame","ATH",71.00,182,3,0.8625,"Washington","DC","USA",38.8949855,-77.0365708,11001
+"421","35778","4039032","HighSchool",2016, 599,"Kevin Stepherson","First Coast","Notre Dame","WR",72.00,180,3,0.8615,"Jacksonville","FL","USA",30.3321838,-81.655651,12031
+"422","28812","3129292","HighSchool",2014, 607,"Jonathan Bonner","Parkway Central","Notre Dame","SDE",76.00,250,3,0.8600,"Chesterfield","MO","USA",38.661953,-90.5643258,29189
+"423","95747",NA,"HighSchool",2024, 608,"Sean Sevillano Jr.","Clearwater Academy International","Notre Dame","DL",74.00,315,3,0.8811,"Clearwater","FL","USA",27.9658533,-82.8001026,12103
+"424","72068","4596542","HighSchool",2021, 608,"Pat Coogan","Marist","Notre Dame","OG",77.00,290,3,0.8701,"Chicago","IL","USA",41.8755616,-87.6244212,17031
+"425","43516","4361327","HighSchool",2018, 609,"Jahmir Smith","Lee County","Notre Dame","RB",72.00,205,3,0.8721,"Sanford","NC","USA",35.4798757,-79.1802994,37105
+"426","747",NA,"HighSchool",2002, 611,"Jake Carney","Lexington Catholic","Notre Dame","S",72.00,180,3,0.8333,"Lexington","KY","USA",38.0464066,-84.4970393,21067
+"427","62182","4432246","HighSchool",2020, 617,"Ramon Henderson","Liberty","Notre Dame","ATH",74.00,183,3,0.8706,"Bakersfield","CA","USA",35.3738712,-119.0194639,06029
+"428","93982","5078062","HighSchool",2023, 621,"Armel Mukam","Woodberry Forest","Notre Dame","EDGE",76.00,250,3,0.8781,"Woodberry Forest","VA","USA",35.1668118,-80.7514585,37119
+"429","72080","4594985","HighSchool",2021, 627,"Jason Onye","Bishop Hendricken","Notre Dame","WDE",77.00,260,3,0.8689,"Warwick","RI","USA",41.7002024,-71.4161108,44003
+"430","2326",NA,"HighSchool",2003, 629,"Geoffrey Price","Colleyville Heritage","Notre Dame","K",75.00,180,3,0.8333,"Colleyville","TX","USA",32.8809603,-97.155012,48439
+"431","43537","4372755","HighSchool",2018, 630,"Justin Ademilola","St. Peters Prep","Notre Dame","WDE",75.00,240,3,0.8709,"Jersey City","NJ","USA",40.7281575,-74.0776417,34017
+"432","17723",NA,"HighSchool",2010, 631,"Tom Rees","Lake Forest","Notre Dame","PRO",75.00,192,3,0.7975,"Lake Forest","IL","USA",42.2586342,-87.840625,17097
+"433","47440","4427404","HighSchool",2019, 644,"Cam Hart","Good Counsel","Notre Dame","WR",75.00,190,3,0.8710,"Olney","MD","USA",39.1532123,-77.0668408,24031
+"434","20215","517623","HighSchool",2011, 647,"Cam McDaniel","Coppell","Notre Dame","RB",70.00,192,3,0.8544,"Coppell","TX","USA",32.9552598,-97.0155703,48113
+"435","95805",NA,"HighSchool",2024, 650,"Cole Mullins","Mill Creek","Notre Dame","EDGE",76.00,240,3,0.8786,"Hoschton","GA","USA",34.096496,-83.7612839,13157
+"436","20218","-1026476","HighSchool",2011, 650,"Brad Carrico","Dublin Coffman","Notre Dame","SDE",78.00,270,3,0.8544,"Dublin","OH","USA",40.0992294,-83.1140771,39049
+"437","35831","4046693","HighSchool",2016, 650,"Adetokunbo Ogundeji","Walled Lake Central","Notre Dame","WDE",77.00,225,3,0.8584,"Walled Lake","MI","USA",42.537811,-83.4810481,26125
+"438","11108",NA,"HighSchool",2007, 653,"Taylor Dever","Nevada Union","Notre Dame","OT",78.00,289,3,0.8483,"Grass Valley","CA","USA",39.2190602,-121.0610575,06057
+"439","20236","-1026413","HighSchool",2011, 668,"Jalen Brown","MacArthur","Notre Dame","CB",72.00,180,3,0.8529,"Irving","TX","USA",32.8295183,-96.9442177,48113
+"440","28869","-1026422","HighSchool",2014, 669,"Kolin Hill","Samuel Clemens","Notre Dame","WDE",74.00,220,3,0.8574,"Schertz","TX","USA",29.5641617,-98.2695702,48187
+"441","837",NA,"HighSchool",2002, 670,"Dan Santucci","St. Patrick","Notre Dame","WDE",76.00,250,3,0.8000,"Chicago","IL","USA",41.8755616,-87.6244212,17031
+"442","22693","-1026409","HighSchool",2012, 672,"John Turner","Cathedral","Notre Dame","S",74.00,205,3,0.8664,"Indianapolis","IN","USA",39.7683331,-86.1583502,18097
+"443","17945","500929","HighSchool",2010, 676,"Daniel Smith","Clay","Notre Dame","WR",76.00,205,3,0.8653,"South Bend","IN","USA",41.6833813,-86.2500066,18141
+"444","32542","3932424","HighSchool",2015, 687,"Nick Coleman","Archbishop Alter","Notre Dame","CB",72.00,170,3,0.8584,"Dayton","OH","USA",39.7589478,-84.1916069,39113
+"445","6944",NA,"HighSchool",2005, 688,"David Grimes","Detroit City","Notre Dame","WR",69.00,157,3,0.8333,"Detroit","MI","USA",42.3315509,-83.0466403,26163
+"446","20270","-1026412","HighSchool",2011, 702,"Josh Atkinson","Granada","Notre Dame","CB",72.00,185,3,0.8515,"Livermore","CA","USA",37.6820583,-121.7680531,06001
+"447","72160",NA,"HighSchool",2021, 709,"JoJo Johnson","Merrillville","Notre Dame","ATH",71.00,180,3,0.8647,"MERRILLVILLE","IN","USA",41.4828144,-87.3328139,18089
+"448","7001",NA,"HighSchool",2005, 710,"Kyle McCarthy","Cardinal Mooney","Notre Dame","ATH",72.00,172,3,0.8333,"Youngstown","OH","USA",41.1035786,-80.6520161,39099
+"449","43623","4372771","HighSchool",2018, 716,"Cole Mabry","Brentwood","Notre Dame","OT",78.00,275,3,0.8655,"Brentwood","TN","USA",36.0325687,-86.7825235,47187
+"450","62293","4431226","HighSchool",2020, 728,"Clarence Lewis","Mater Dei","Notre Dame","CB",71.50,185,3,0.8647,"Middletown","NJ","USA",40.3942754,-74.117086,34025
+"451","96033",NA,"HighSchool",2024, 739,"Taebron Bennie-Powell","Lakota West","Notre Dame","ATH",73.00,180,3,0.8744,"West Chester","OH","USA",39.3303357,-84.408275,39017
+"452","43649","4372782","HighSchool",2018, 742,"Joe Wilkins","North Fort Myers","Notre Dame","ATH",74.00,180,3,0.8636,"North Fort Myers","FL","USA",26.6728666,-81.8840848,12071
+"453","7116",NA,"HighSchool",2005, 747,"Derrell Hand","West Philadelphia Catholic","Notre Dame","DT",75.00,298,3,0.8333,"Philadelphia","PA","USA",39.9527237,-75.1635262,42101
+"454","9527",NA,"HighSchool",2006, 766,"Will Yeatman","Rancho Bernardo","Notre Dame","TE",78.00,255,3,0.8333,"San Diego","CA","USA",32.7174209,-117.1627714,06073
+"455","35956","4046677","HighSchool",2016, 776,"Deon McIntosh","Cardinal Gibbons","Notre Dame","RB",71.00,175,3,0.8524,"Fort Lauderdale","FL","USA",26.1223084,-80.1433786,12011
+"456","62346","4565545","HighSchool",2020, 777,"Jay Brunelle","St John's","Notre Dame","WR",73.00,200,3,0.8627,NA,NA,NA,NA,NA,NA
+"457","5249",NA,"HighSchool",2004, 777,"David Wolke","Smyrna","Notre Dame","PRO",75.00,205,3,0.8111,"Smyrna","TN","USA",35.9828413,-86.5186045,47149
+"458","74969","4565545","HighSchool",2020, 781,"Jay Brunelle","St John's","Notre Dame","WR",73.00,200,3,0.8627,"Paxton","MA","USA",42.3122967,-71.934172,25027
+"459","95951",NA,"HighSchool",2024, 801,"Teddy Rezac","Westside","Notre Dame","ATH",76.00,200,3,0.8719,"Omaha","NE","USA",41.2587459,-95.9383758,31055
+"460","20386","-1026418","HighSchool",2011, 818,"Conor Hanratty","New Canaan","Notre Dame","OG",76.00,295,3,0.8453,"New Canaan","CT","USA",41.146763,-73.4948446,09001
+"461","32687","3932452","HighSchool",2015, 833,"Justin Yoon","Milton Academy","Notre Dame","K",71.00,185,3,0.8519,"Milton","MA","USA",42.2501425,-71.065573,25021
+"462","7208",NA,"HighSchool",2005, 837,"Asaph Schwapp","Weaver","Notre Dame","FB",72.00,247,3,0.8111,"Hartford","CT","USA",41.764582,-72.6908547,09003
+"463","18124","-1026445","HighSchool",2010, 857,"Luke Massa","St. Xavier","Notre Dame","PRO",76.00,205,3,0.8576,"Cincinnati","OH","USA",39.1014537,-84.5124602,39061
+"464","2556",NA,"HighSchool",2003, 857,"Nick Borseti","St. John's Prep","Notre Dame","ILB",75.00,215,3,0.8000,"Danvers","MA","USA",42.5750946,-70.9300507,25009
+"465","988",NA,"HighSchool",2002, 875,"Jeff Jenkins","Huron","Notre Dame","RB",73.00,185,3,0.8000,"Ann Arbor","MI","USA",42.2681569,-83.7312291,26161
+"466","20451","517611","HighSchool",2011, 883,"Matthias Farley","Charlotte Christian","Notre Dame","CB",72.00,194,3,0.8413,"Charlotte","NC","USA",35.2272,-80.843083,37119
+"467","18149","-1026469","HighSchool",2010, 886,"Tate Nichols","Ryle","Notre Dame","OT",79.00,278,3,0.8559,"Union","KY","USA",38.9458951,-84.680501,21015
+"468","5449",NA,"HighSchool",2004, 887,"Abdel Banda","Delbarton School","Notre Dame","OLB",74.00,215,2,0.7889,"Morristown","NJ","USA",40.7970384,-74.4809492,34027
+"469","5492",NA,"HighSchool",2004, 893,"Justin Brown","Bishop McNamara","Notre Dame","WDE",76.00,225,2,0.7889,"District Heights","MD","USA",38.8576128,-76.8894171,24033
+"470","43832","4372773","HighSchool",2018, 925,"Paul Moala","Penn","Notre Dame","S",72.00,200,3,0.8552,"Mishawaka","IN","USA",41.6619927,-86.1586156,18141
+"471","32808","3932428","HighSchool",2015, 955,"Nicco Fertitta","Bishop Gorman","Notre Dame","S",69.00,175,3,0.8471,"Las Vegas","NV","USA",36.1672559,-115.1485163,32003
+"472","39586","4258597","HighSchool",2017, 957,"Jonathon MacCollister","Bishop Moore Catholic","Notre Dame","SDE",76.00,238,3,0.8459,"Orlando","FL","USA",28.5421109,-81.3790304,12095
+"473","39602","4258603","HighSchool",2017, 973,"Drew White","St. Thomas Aquinas","Notre Dame","ILB",73.00,225,3,0.8452,"Fort Lauderdale","FL","USA",26.1223084,-80.1433786,12011
+"474","2889",NA,"HighSchool",2003, 973,"Ashley McConnell","Adairsville","Notre Dame","FB",71.00,240,3,0.8000,"Adairsville","GA","USA",34.3687021,-84.9341093,13015
+"475","29209",NA,"HighSchool",2014,1012,"Jhonathon Williams","Berrien Springs","Notre Dame","SDE",78.00,237,3,0.8400,"Berrien Springs","MI","USA",41.9464336,-86.3388965,26021
+"476","36211","4046688","HighSchool",2016,1032,"Jamir Jones","Aquinas Institute","Notre Dame","OLB",75.00,231,3,0.8415,"Rochester","NY","USA",43.157285,-77.615214,36055
+"477","39675","4258602","HighSchool",2017,1046,"Kofi Wardlow","St. John's College HS","Notre Dame","WDE",75.50,230,3,0.8427,"Washington","DC","USA",38.8949855,-77.0365708,11001
+"478","29265","3129305","HighSchool",2014,1071,"Pete Mokwuah","St. Joseph by the Sea","Notre Dame","DT",77.00,305,3,0.8377,"Staten Island","NY","USA",40.564209,-74.12530461995391,36085
+"479","20617","515407","HighSchool",2011,1083,"Kyle Brindza","Plymouth","Notre Dame","K",73.00,219,3,0.8313,"Canton","MI","USA",42.3076547,-83.4868961,28089
+"480","5687",NA,"HighSchool",2004,1103,"Darrin Bragg","Bellarmine Prep","Notre Dame","DUAL",73.00,190,2,0.7667,"San Jose","CA","USA",37.3361905,-121.8905833,06085
+"481","10623","237425","HighSchool",2007,1167,"Brandon Walker","Findlay","Notre Dame","K",74.00,190,3,0.8111,"Findlay","OH","USA",41.0413873,-83.6503982,39063
+"482","44106","4372765","HighSchool",2018,1199,"C'Bo Flemister","Pike County","Notre Dame","RB",71.00,197,3,0.8456,"Zebulon","GA","USA",33.1023454,-84.3426997,13231
+"483","18446","-1026520","HighSchool",2010,1260,"Derek Roback","Waverly","Notre Dame","ATH",75.00,221,3,0.8417,"Waverly","OH","USA",39.126735,-82.9854553,39131
+"484","18461","500910","HighSchool",2010,1271,"Austin Collinsworth","Highlands","Notre Dame","WR",72.00,178,3,0.8417,"Fort Thomas","KY","USA",39.0786242,-84.4483432,21037
+"485","16119","483398","HighSchool",2009,1284,"Nick Tausch","Jesuit","Notre Dame","K",73.00,180,3,0.8306,"Dallas","TX","USA",32.7762719,-96.7968559,48113
+"486","5781",NA,"HighSchool",2004,1340,"Leo Ferrine","St. Peters Prep","Notre Dame","S",72.00,180,2,0.7667,"Jersey City","NJ","USA",40.7281575,-74.0776417,34017
+"487","75025","4431683","HighSchool",2020,1381,"Alexander Ehrensberger","Germany","Notre Dame","SDE",79.00,238,3,0.8412,NA,NA,"GERM",NA,NA,NA
+"488","48343","4426768","HighSchool",2019,1545,"Jay Bramblett","Hillcrest","Notre Dame","P",74.00,175,3,0.8338,"Tuscaloosa","AL","USA",33.2095614,-87.5675258,01125
+"489","16351","-1026460","HighSchool",2009,1604,"Jordan Cowart","St. Thomas Aquinas","Notre Dame","OG",74.00,225,3,0.8066,"Fort Lauderdale","FL","USA",26.1223084,-80.1433786,12011
+"490","29869","3129309","HighSchool",2014,1720,"Tyler Newsome","Carrollton","Notre Dame","P",75.00,190,3,0.8055,"Carrollton","GA","USA",33.5801103,-85.0766113,13045
+"491","36853","4046684","HighSchool",2016,1733,"John Shannon","Loyola Academy","Notre Dame","LS",73.75,218,3,0.8146,"Wilmette","IL","USA",42.0757315,-87.7193768,17031
+"492","1725",NA,"HighSchool",2002,1753,"Mike Richardson","Warner Robins","Notre Dame","WR",73.00,180,2,0.7667,"Warner Robins","GA","USA",32.6200973,-83.606568,13153
+"493","23833","535948","HighSchool",2012,1835,"Scott Daly","Downers Grove South","Notre Dame","LS",76.00,230,2,0.7927,"Downers Grove","IL","USA",41.7938195,-88.010376,17043
+"494","40560","4258587","HighSchool",2017,1926,"Jonathan Doerer","South Mecklenburg","Notre Dame","K",75.00,188,3,0.8068,"Charlotte","NC","USA",35.2272,-80.843083,37119
+"495","92088","4906305","HighSchool",2022,1958,"Bryce McFerson","Metrolina Christian Academy","Notre Dame","P",73.00,185,3,0.8144,"Indian Trail","NC","USA",35.0768141,-80.6692352,37179
+"496","73419","4687325","HighSchool",2021,1970,"Josh Bryan","Sierra Canyon","Notre Dame","K",72.00,190,3,0.8189,"Chatsworth","CA","USA",34.2595715,-118.6023247,06037
+"497","6083",NA,"HighSchool",2004,2108,"Tregg Duerson","Loyola Academy","Notre Dame","CB",70.00,180,2,0.7000,"Wilmette","IL","USA",42.0757315,-87.7193768,17031
+"498","73555","4432801","HighSchool",2021,2114,"Ron Powlus III","Penn","Notre Dame","PRO",75.00,225,3,0.8126,"Mishawaka","IN","USA",41.6619927,-86.1586156,18141
+"499","92298","4878110","HighSchool",2022,2186,"Rino Monteforte","Kellenberg Memorial","Notre Dame","LS",69.00,215,2,0.7844,"Uniondale","NY","USA",40.7031115,-73.5895167364443,36059
+"500","19439","-1026438","HighSchool",2010,2312,"Bruce Heggie","Mt. Dora","Notre Dame","SDE",78.00,240,2,0.7667,"Mount Dora","FL","USA",28.818746750000003,-81.64585723799206,12069
+"501","49492","4427786","HighSchool",2019,2700,"Harrison Leonard","Avon Old Farms","Notre Dame","K",71.00,180,3,0.7978,"Avon","CT","USA",41.8098209,-72.8306541,09003
+"502","64283","4430600","HighSchool",2020,2720,"Alex Peitsch","St. John's","Notre Dame","LS",74.00,220,3,0.8030,"Washington","DC","USA",38.8949855,-77.0365708,11001
+"503","31301","-1026362","HighSchool",2014,3343,"Sam Bush","Newport Harbor","Notre Dame","OT",77.00,290,2,0.7331,"Newport Beach","CA","USA",33.6170092,-117.9294401,06059
+"504","62946","4431683","HighSchool",2020,NA,"Alexander Ehrensberger","Germany","Notre Dame","SDE",79.00,238,3,0.8412,NA,NA,NA,NA,NA,NA
