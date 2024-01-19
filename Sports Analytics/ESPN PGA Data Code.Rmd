@@ -1,0 +1,85 @@
+---
+title: "ESPN PGA Data"
+output: html_document
+date: "2023-12-03"
+---
+
+```{r}
+library(dplyr)
+library(rvest)
+library(tidyverse)
+```
+
+
+### Scrape Player Age Info from PGA Website
+
+This must be done by year, so we will scrape from 2013 to 2023
+
+```{r}
+url <- "https://www.espn.com/golf/stats/player/_/season/2013"
+
+golf <- read_html(url)
+
+all_tables <- golf %>% html_table(.)
+
+age_table <- all_tables[[1]]
+other_info_table <- all_tables[[2]]
+
+golf_df <- cbind.data.frame(age_table, other_info_table)
+
+golf_df$season <- 2013
+
+head(golf_df)
+```
+
+
+```{r}
+for (i in 2013:2023) {
+  
+  for(j in 1:8) {
+      # delay loop by 2 seconds
+      Sys.sleep(1)
+      
+      # create URL
+      url <- paste0("https://www.espn.com/golf/stats/player/_/season/", i, "?page=", j)
+      
+      try(golf <- read_html(url), silent = TRUE)
+      
+      try(all_tables <- golf %>% html_table(.), silent = TRUE)
+      
+      try(age_table <- all_tables[[1]], silent = TRUE)
+        
+      try(other_info_table <- all_tables[[2]], silent = TRUE)
+        
+      try(golf_roster <- cbind.data.frame(age_table, other_info_table), silent = TRUE)
+      
+      try(golf_roster$season <- i, silent = TRUE)
+      
+      # append to existing data from page 1
+      try(golf_df <- rbind(golf_df, golf_roster), silent = TRUE)
+  }
+  
+}
+```
+
+
+```{r}
+dim(golf_df)
+```
+
+Because of the loop, the first page (50 rows) of the first year which we used to instantiate the original table is repeated. So we must remove the first 50 rows to avoid duplicates.
+```{r}
+golf_df <- golf_df[-(1:50), ]
+
+dim(golf_df)
+head(golf_df)
+```
+
+We can now extract this table as a .csv file because knitting this code takes a few minutes.
+
+```{r}
+write.csv(golf_df, "./PGA Season Data.csv", row.names=FALSE)
+```
+
+
+
