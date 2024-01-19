@@ -1,0 +1,439 @@
+---
+title: "PGA Tour Data Analysis"
+author: "Connor Paszkiewicz, Jack Campanella"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Load Necessary Libraries
+```{r}
+library(lubridate)
+library(gifski)
+library(png)
+library(tidyverse)
+library(ggplot2)
+library(ggdark)
+library(gganimate)
+library(reshape2)
+library(ggridges)
+```
+
+### Load & View the Data
+```{r}
+pga_df <- read_csv("./PGA Tour Raw Data.csv")
+pga_season_df <- read_csv("./PGA Season Data.csv")
+```
+
+```{r}
+dim(pga_df)
+dim(pga_season_df)
+```
+
+```{r}
+head(pga_df)
+head(pga_season_df)
+```
+
+### Make sure both tables are properly loaded for analysis
+```{r}
+sapply(pga_df, class)
+sapply(pga_season_df, class)
+
+summary(pga_season_df$AGE)
+```
+
+We want to convert the AGE column to the numeric data type and also calculate a player's age during a specific season using their current age
+```{r}
+pga_season_df$AGE <- sapply(pga_season_df$AGE, as.numeric)
+
+pga_season_df$true_age <- pga_season_df$AGE - (year(Sys.Date()) - pga_season_df$season)
+```
+
+
+Before we can join any data, we have to match the naming conventions across the two tables so that we can join based on name. This assumes that no two players have the same First Initial Last Name (e.g. T. Woods) and therefore name serves as a unique key.
+```{r}
+# Extracting first initial
+first_initial <- substr(pga_season_df$Name, 1, 1)
+
+# Extracting last name
+last_name <- sub("^.*\\s", "", pga_season_df$Name)
+
+# Combine First Initial and Last Name
+pga_season_df$Player_initial_last <- paste(first_initial, '. ', last_name, sep = '')
+
+head(pga_season_df)
+```
+
+We also want to create a table that only contains unique players and their current ages.
+
+The ages are current no matter what season we are pulling the data from, so we can drop all columns except name and age
+```{r}
+age_df <- pga_season_df[c('Player_initial_last', 'season', 'true_age')]
+head(age_df)
+```
+
+Get unique players and their current ages.
+
+```{r}
+age_df <- distinct(age_df, Player_initial_last, .keep_all = TRUE)
+dim(age_df)
+head(age_df)
+```
+
+That leaves us with 810 unique player names and their ages.
+
+
+### Merge the Two Tables
+
+Having done all the prep work, we can now join the two tables.
+
+We will then need to look at if age is null for players and deal with that accordingly.
+```{r}
+pga_df <- merge(pga_df, 
+                pga_season_df, 
+                by = c('Player_initial_last', 'season'), 
+                all.x = TRUE)
+```
+
+```{r}
+dim(pga_df)
+head(pga_df)
+```
+
+
+### Data Cleaning
+```{r}
+# drop null columns and the extra name column
+pga_df <- subset(pga_df, select = -c(`Unnamed: 2`, `Unnamed: 3`, `Unnamed: 4`))
+dim(pga_df)
+
+# remove rows where shots gained variables are null
+pga_df <- pga_df[complete.cases(pga_df[ , 29:34]),]
+dim(pga_df)
+
+summary(pga_df)
+```
+
+There are 2610 null age values. Let's see which players these belong to.
+```{r}
+length(unique(pga_df[is.na(pga_df$AGE),]$Player_initial_last))
+length(unique(pga_df[!is.na(pga_df$AGE),]$Player_initial_last))
+
+unique(pga_df[is.na(pga_df$AGE),]$Player_initial_last)
+```
+
+These 299 unique players only make up 2610 rows in the dataset, whereas the 354 players with age values make up the other 27,272 rows in the data set. Therefore, we will drop the players with null ages for analyses dealing with age.
+```{r}
+pga_df_valid_age <- pga_df[!is.na(pga_df$AGE),]
+dim(pga_df_valid_age)
+```
+
+
+# Data Exploration
+
+## Shots Gained on Putts vs. Finish Position in Tournaments
+
+```{r}
+# Remove rows with "CUT" as the Finish
+pga_df_rank <- pga_df[pga_df$Finish != 'CUT', ]
+
+# Remove rows with Null values for season
+pga_df_rank <- pga_df_rank[!is.na(pga_df_rank$season), ]
+
+# Remove "T" from finishes that tied
+pga_df_rank$Finish_numeric <- gsub("[^0-9.-]", "", pga_df_rank$Finish)
+# Drop nulls
+pga_df_rank <- pga_df_rank[!is.na(pga_df_rank$Finish_numeric), ]
+# Convert back to numeric
+pga_df_rank$Finish_numeric <- as.numeric(pga_df_rank$Finish_numeric)
+```
+
+
+```{r}
+# Create plot
+g_1 <- ggplot(pga_df_rank, 
+              aes(x = sg_putt,
+                  y = Finish_numeric)) +
+  geom_point(alpha = 0.5,
+             aes(x = sg_putt, y = Finish_numeric, colour = sg_putt > 0)) + # Add geom point, set transperancy
+  scale_colour_manual(name = 'SG per Putt > 0', 
+                      values = setNames(c('green','red'), 
+                                        c(T, F))) + # add color scale
+  #scale_y_discrete(breaks = seq(1, 100, by = 5)) + # customize y axis tick marks
+  theme(panel.grid.major = element_blank(), # Remove grid
+        panel.grid.minor = element_blank(), # Remove grid
+        panel.border = element_blank(), # Remove grid
+        panel.background = element_blank()) + # Remove grid
+  dark_theme_bw() + # Set dark theme
+  transition_time(as.numeric(season)) + # Set transition by season
+  labs(title = "SG on Putts v Finish Position - {frame_time}", # Set labels
+       x = "Shots Gained on Putts", y = "Season Finish")
+
+# Animate plot
+animate(g_1, nframes = 8, duration = 4)
+
+anim_save("sg-putts-v-finish.gif")
+```
+
+```{r}
+a <- na.omit(pga_df_rank[c("sg_putt", "Finish_numeric")])
+
+# Calculate the correlation between 'strokes' and 'sg_putt'
+correlation <- cor(a$sg_putt, a$Finish_numeric)
+
+# Print the correlation coefficient
+print(correlation)
+```
+
+We wanted to look at how important shots gained while putting would be toward overall finish position at a given tournament. It is worth noting that there are still many entries in the data set of players who did not make the cut at a tournament and thus cannot be represented on a numeric y axis of overall finish. We can see that across all years the players closest to the bottom of the graph, being closest to 1st place, putt overwhelmingly better than the majority of the field, with very positive shots gained while putting. This would indicate that putting does play a crucial role in winning tournaments and consistently finishing in the top of the field, while players that are more average at putting can still make cuts (and therefore make money) and top 100 placements, but are less likely to reach the best players.
+
+
+
+## Bryson DeChambeau
+
+```{r}
+dechambeau_df <- pga_df_rank[pga_df_rank$Player_initial_last == 'B. DeChambeau', ]
+```
+
+```{r}
+ggplot(data = dechambeau_df, # Set dataset
+                 aes(x = sg_ott,
+                     y = sg_putt,
+                     size = Finish_numeric)) + 
+  geom_point() + # Set geom point to create scatter plot
+  scale_size(trans = 'reverse') + # reverse scale so placing closer to 1st gets a bigger point
+  dark_theme_bw() + # Set dark theme
+  geom_hline(yintercept = 0) + # Add line for 0 sg_putt
+  geom_vline(xintercept = 0) + # Add line for 0 sg_ott
+   labs(x = "SG Off the Tee", # Add labels
+       y = "SG Putting",
+       title = "Bryson DeChambeau Putting and Driving") 
+```
+
+Bryson DeChambeau is known for his power off the tee which he has used to cut off large sections of holes and reach holes that other players have to lay up for. We can see here that his best performances, indicated by larger dots, are usually when he is gaining shots on the field with his tee shots. His putting also seems to help although he has far more tournaments with negative shots gained putting compared to shots gained off the tee. Also, the small dots seem to be more concentrated on the overall left side of the graph as opposed to the bottom left or bottom of the distribution, indicating that putting has less of an effect for Bryson on overall placement. Thus, we can conclude that when Bryson can use his power off the tee effectively (i.e. by staying in the fairway while outdriving his opponents), he is more likely to finish higher in the tournament and win more money.
+
+## Shots Gained by Shot Type and Season
+
+```{r}
+# Select just season, sg_ott and sg_putt
+pga_df_3 <- pga_df[, c('season', 'sg_ott', 'sg_putt')]
+
+# melt the data into long form
+pga_df_melt <- melt(pga_df_3, id = 'season')
+```
+
+```{r fig.height= 5, fig.width= 4.5}
+# Create plot
+ggplot(pga_df_melt, # Set dataset 
+       aes(x = value, y = factor(season), fill = factor(variable))) + # Set aesthetics
+  geom_density_ridges(alpha = 0.5, scale = 0.8) + # Set density to create distribution
+  scale_x_continuous(limits = c(-3, 3)) + 
+  theme_minimal() + # Set plot theme
+  labs(x = "Shots Gained", title = "Shots Gained by Shot Type and Season", # Set plot labels
+       fill = "Shot Type", y = "Season") +
+  scale_fill_manual(values = c("sg_ott" = "red", "sg_putt" = "blue")) + # Set colors manually
+  dark_theme_bw() + # Set theme
+  geom_vline(xintercept = 0, linetype = 2, color = "white") # Add vertical line at 0
+```
+
+We wanted to look at whether there has been a shift over the last few seasons in focusing more on improvements in shots off the tee or putting. With the discussions over recent months concerning regulations for golf balls in an attempt to curb players from continuing to improve their long shot yardages, it may actually be too early for this analysis. The aim of these efforts is to prevent courses from having to continually lengthen their courses so that pros cannot just drive the greens and rely on a few clubs rather than have to play holes the way they were designed to be played. Thus, we were expecting to see a trend toward shots gained off the tee since the best of the best have been making steady improvements in their tee yardages for the last few years. However, there is no significant trend to be seen in this graph. What is notable from this graph is that shots gained from putting consistently has a more spread out distribution than shots off the tee, indicating that putting is where a lot of players can make or break their rounds. This tells us that most players won't gain any significant advantage off the tee, but they can certainly leap ahead or fall behind on the greens.
+
+## Plot 4
+
+```{r}
+ggplot(pga_df, aes(x = sg_putt, y = sg_arg)) +
+  geom_point() +
+  dark_theme_bw() +
+  labs(x = "SG Putt", y = "SG ARG") +
+  ggtitle("Relationship between SG Putt and SG ARG")
+```
+
+```{r}
+cleaned_data <- na.omit(pga_df[c("sg_arg", "sg_putt")])
+
+# Calculate the correlation between 'strokes' and 'sg_putt'
+correlation <- cor(cleaned_data$sg_arg, cleaned_data$sg_putt)
+
+# Print the correlation coefficient
+print(correlation)
+```
+
+As we can see, there is an extremely weak correlation between these two variables, which was unexpected. We now know that for each player, their strokes gained for putts vs approaching the green shots are uncorrelated.
+
+## Plot 5
+
+Now we will visualize the relationship between the number of pars a player has while on tour (hole_par) and their strokes gained off the tee (sg_ott). I would expect that the more pars a player has, the higher their strokes gained off the tee is. This means there would be a positive correlation between the two.
+
+```{r}
+ggplot(pga_df, aes(x = sg_ott, y = hole_par)) +
+  geom_point() +
+  dark_theme_bw() +
+  labs(x = "SG Off the Tee", y = "Number of Pars") +
+  ggtitle("Relationship between SG Off the Tee and Number of Pars")
+```
+
+Firstly, I did not expect the data to be grouped as it is above. Here we see that as the number of pars for a player increases, a player's SG Off the Tee generally goes up. This brings new meaning to the data for me. Although I did not realize it before, it seems that the best players play more rounds in the tour than the worse players due to the cut off. This clicked with me because there are four rounds in the tour, which is why the number of pars is in four groups, and, as the rounds go on, the players who remain have higher SG Off the Tee (because the player pool that remains at the end is better than the one in the beginning).
+
+## Plot 6
+
+Now knowing this, I modified the above graph to include whether or not a player made the cut by color, red being the player did not make the cut and green being the player made the cut. We should expect that after a certain number of rounds, all players will be green.
+
+```{r}
+# Create a scatter plot for 'strokes' vs 'sg_putt' with points colored based on 'made_cut'
+ggplot(pga_df, aes(x = sg_ott, y = hole_par, color = factor(made_cut))) +
+  geom_point() +
+  dark_theme_bw() +
+  labs(x = "SG Off the Tee", y = "Number of Pars") +
+  ggtitle("Relationship between SG Off the Tee and Number of Pars") +
+  scale_color_manual(values = c("red", "green"), labels = c("Not Made Cut", "Made Cut"))
+```
+This graph really clears things up. We can see that a player makes the cut for the tour if they make it past the second round.
+
+## Plot 7
+
+To completely confirm that the best players make it to the later rounds and the worse players do not, I next want to see the relationship between the total strokes gained for a player and the number of rounds they competed in. Now that I know there are four distinct groups of players, I will use a box and whisker plot to visualize this relationship.
+
+```{r}
+ggplot(pga_df, aes(x = factor(n_rounds), y = sg_total)) +
+  geom_boxplot() +
+  dark_theme_bw() +
+  labs(x = "Number of Rounds", y = "SG Total") +
+  ggtitle("Distribution of SG Total for Different Rounds")
+```
+Beautiful! In this data, we can see that as the number of rounds a player competes in goes up, their total strokes gained increases. Again, this stands to reason because in the later rounds, the worse players have been cut and only the best remain. As we became more familiar with the data, we were able to create better and better visualizations from which to draw insights from.
+
+## Age Analysis
+
+Let's create some age groups
+```{r}
+valid_age <- pga_df_rank[!is.na(pga_df_rank$true_age),]
+
+valid_age$age_group <- rep(NA, length(valid_age$true_age))
+
+for (i in 1:length(valid_age$true_age)) {
+  if (valid_age$true_age[i] > 50) {
+    valid_age$age_group[i] <- '50+'
+  } else if (valid_age$true_age[i] > 40) {
+    valid_age$age_group[i] <- '41-50'
+  } else if (valid_age$true_age[i] > 30) {
+    valid_age$age_group[i] <- '31-40'
+  } else if (valid_age$true_age[i] > 20) {
+    valid_age$age_group[i] <- '21-30'
+  } else if (valid_age$true_age[i] < 21) {
+    valid_age$age_group[i] <- '< 21'
+  }
+}
+```
+
+
+```{r}
+ggplot(data = valid_age, 
+       mapping = aes(x=age_group, 
+                     y=Finish_numeric)) + 
+  geom_boxplot() + 
+  xlab('Age Group') + 
+  ylab('Finish') +
+  dark_theme_bw() # Set dark theme
+```
+
+
+Let's look at Bryson's development as a player
+```{r}
+ggplot(data = dechambeau_df[!is.na(dechambeau_df$true_age), ], 
+       mapping = aes(x=as.factor(true_age), 
+                     y=Finish_numeric)) + 
+  geom_boxplot() + 
+  xlab('Age') + 
+  ylab('Finish') +
+  dark_theme_bw() # Set dark theme
+```
+
+Let's see how the average age of players in the PGA has changed over the years
+```{r}
+ggplot(data = valid_age, 
+       mapping = aes(x=as.factor(season), 
+                     y=true_age)) + 
+  geom_boxplot() + 
+  xlab('Season') + 
+  ylab('Age') +
+  dark_theme_bw() # Set dark theme
+```
+Interestingly, we actually see that the distribution of PGA player ages was trending younger until 2021, when it suddenly jumped back up and then down again in 2022.
+
+Now, let's see how different shot type metrics compare across age groups.
+```{r}
+season_age_grouped <- valid_age %>% 
+  dplyr::group_by(season, age_group) %>%
+  summarise(Count = length(Player_initial_last), 
+            Avg_sg_putt = mean(sg_putt),
+            Avg_sg_arg = mean(sg_arg), 
+            Avg_sg_app = mean(sg_app), 
+            Avg_sg_ott = mean(sg_ott), 
+            Avg_sg_t2g = mean(sg_t2g), 
+            Avg_sg_total = mean(sg_total))
+```
+
+
+```{r}
+season_age_grouped[order(season_age_grouped$Count), c('season', 'age_group', 'Count')]
+```
+We can see that the under 21 age group only has 8 total data points (1 for the 2016 season and 7 for the 2019), which is far less than the other age groups, so we will remove these data points in our visuals.
+
+### Calculate % Change of SG Metrics by Age Group over the years
+
+Next, let's calculate the percentage change for each of our shots gained metrics from season to season for each age group.
+```{r}
+season_age_grouped <- season_age_grouped %>%
+  group_by(season) %>%
+  arrange(age_group) %>%
+  mutate(across(c('Avg_sg_putt', 'Avg_sg_arg', 'Avg_sg_app', 'Avg_sg_ott', 'Avg_sg_t2g', 'Avg_sg_total'), 
+                ~ (./lag(.) - 1) * 100, 
+                .names = "perc_change_{.col}"))
+```
+
+
+``` {r}
+ggplot(data = season_age_grouped[season_age_grouped$age_group != '< 21', ], # remove the under 21 data points
+       aes(x = season, 
+           y = Avg_sg_ott, 
+           color = age_group)) + 
+  geom_line() + 
+  xlab('Season') + 
+  ylab('Shots Gained Off the Tee') +
+  dark_theme_bw() # Set dark theme
+```
+We can see that over the last few years, the performance gap has widened between age groups off the tee. This is indicative of the trends that we have seen with technological innovations and an influx of younger talent leading to more explosive players with longer yardages to gain an advantage over the rest of the field. Younger players (21-30) have seen an increase in strokes gained from the tee box while all other age groups have seen decreases over the same period of 7 years.
+
+
+Let's look at the percentage changes instead
+```{r}
+colnames(season_age_grouped)
+
+season_age_grouped
+
+ggplot(data = season_age_grouped[season_age_grouped$age_group != '< 21', ], 
+       aes(x = season, 
+           y = perc_change_Avg_sg_total, 
+           color = age_group)) + 
+  geom_line() + 
+  xlab('Season') + 
+  ylab('% Change Shots Gained Total') +
+  dark_theme_bw() # Set dark theme
+
+
+ggplot(data = season_age_grouped[season_age_grouped$age_group != '< 21', ], 
+       aes(x = age_group, 
+           y = perc_change_Avg_sg_total, 
+           fill = factor(season))) + 
+  geom_bar(stat="identity", position = 'dodge2') + 
+  scale_x_discrete(limits = c('31-40', '41-50', '50+')) + 
+  xlab('Season') + 
+  ylab('% Change Shots Gained Total') +
+  dark_theme_bw() # Set dark theme
+```
+Here we can see that as when we calculate the percentage change from the 21-30 age group through to 50+, the overwhelming trend is that PGA professionals worsen as they age. Nearly all of the changes in average total shots gained on the field are negative, showing that players will typically be in their prime when in the 21-30 age range. Thus, for veteran players like Tiger Woods or Adam Scott, two players in the 41-50 age range, to still be competing at a high level against fields far younger than them is truly an impressive feat.
+
